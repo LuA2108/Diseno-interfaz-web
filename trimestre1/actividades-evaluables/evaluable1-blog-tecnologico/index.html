@@ -1,15 +1,18 @@
 <!-- LUCERO ANAY CAHUANA CORNEJO -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="mystyle.css">
 </head>
+
 <body>
-    <header>
-        <h1>Mi blog de tecnologia</h1>
-        <nav>
+    <header class="main-header">
+        <h1>Mi Blog de tecnologia</h1>
+        <nav class="main-nav">
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Categoria</a></li>
@@ -18,43 +21,54 @@
             </ul>
         </nav>
     </header>
-    
+
 
     <main>
-        <article>
-            <h2>El futuro de CSS: Flexbox vs Grid</h2>
-            <p>Publicado el 19 de Octubro de 2025</p>
-            <p>Una inmersion profunda en las herramientas de maquetacion que estan revolucionando el diseño web...</p>
-            <p><a href="#" style="text-decoration: none; color: black">Leer mas</a></p>
-        </article>
-        <article>
-            <h3>Ultimas entradas</h3>
-            <section>
-                <h3>Nuevas API's de JavaScript</h3>
-                <p>Las últimas novedades que debes conocer en ES2025.</p>
+        <article class="articulo-principal">
+            <section class="seccion1">
+                <h2>El futuro de CSS: Flexbox vs Grid</h2>
+                <p>Publicado el 19 de Octubro de 2025</p>
+                <p>Una inmersion profunda en las herramientas de maquetacion que estan revolucionando el diseño web...
+                </p>
+                <p><a href="#" style="text-decoration: none; color: black">Leer mas</a></p>
             </section>
-            <section>
-                <h3>Diseño Responsive con solo 10 lineas</h3>
-                <p>Trucos y consejos para optimizar tu codigo.</p>
-            </section>
+
+            <section class="seccion2">
+                <h3>Ultimas entradas</h3>
+
+                <section>
+                    <h3>Nuevas API's de JavaScript</h3>
+                    <p>Las últimas novedades que debes conocer en ES2025.</p>
+                </section>
+
+                <section>
+                    <h3>Diseño Responsive con solo 10 lineas</h3>
+                    <p>Trucos y consejos para optimizar tu codigo.</p>
+                </section>
         </article>
+
         <aside>
-            <section>
+            <article class="categoria">
                 <h3>Categorias</h3>
                 <ul>
                     <li>Web (25)</li>
                     <li>Móvil (12)</li>
                     <li>DevOps (8)</li>
                 </ul>
-            </section>
-            <section>
+            </article>
+            <article class="siguenos">
                 <h3>Siguenos</h3>
                 <p>Encuentra mas contenido en nuestras redes sociales</p>
-            </section>
+            </article>
         </aside>
+
+    </main>
+
+    
     </main>
     <footer>
         <p>&copy; Mi blog Flexible. Todos los derechos reservados.</p>
     </footer>
 </body>
+
 </html>
