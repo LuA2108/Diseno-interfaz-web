@@ -67,22 +67,23 @@ main {
 
 .seccion2 {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     border-radius: 10px;
-    gap: 40px;
+    gap: 20px;
     text-align: left;
-}
-
-.seccion2 h3 {
-    padding: 10px;
+    
 }
 
 .seccion2 section {
     background-color: rgb(255, 255, 255);
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
-    text-align: left;
+    
+}
+
+.seccion2 section h3,
+.seccion2 section p {
+    margin: 2px;
+    padding: 8px;
 }
 
 /* ---- Aside dentro del main ---- */
@@ -112,10 +113,11 @@ hr {
     border: 1px solid color gray;
 }
 
-/*Pie de pagina*/
+/* ------ Pie de pagina ------ */
 footer {
     color: aliceblue;
     background-color: rgb(16, 80, 92);
     padding: 10px;
     text-align: center;
+    justify-content:last baseline;
 }
