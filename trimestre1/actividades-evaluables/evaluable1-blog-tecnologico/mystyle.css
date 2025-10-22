@@ -4,7 +4,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/*Cabecera*/
+/* ------- Cabecera -------*/
 header {
     color: aliceblue;
 }
@@ -15,8 +15,7 @@ header {
     padding: 20px;
 }
 
-/*Navegador
-*/
+/* ------- Navegador ------- */
 
 .main-nav ul {
     text-align: start;
@@ -35,60 +34,82 @@ header {
     
 }
 
-/*Cuerpo*/
+/* ------- Cuerpo ------- */
 /*Estilo general del main*/
 main {
     display: flex;
-    background-color: rgb(241, 243, 232);
+    background-color: rgb(229, 234, 241);
     justify-content: center;
-    padding: 1%
-    
+    gap: 20px;
+    padding: 1%;
 }
 
 /*Articulo principal*/
 .articulo-principal {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    gap: 10px;
 }
 
+.articulo-principal h2 {
+    margin: 20px;
+}
+
+.articulo-principal p {
+    margin: 20px;
+}
 
 /*Secciones dentro del articulo principal*/
 .seccion1 {
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
 }
+
 .seccion2 {
     display: flex;
     flex-direction: row;
-    background-color: rgb(255, 255, 255);
+    justify-content: space-around;
     border-radius: 10px;
-    
+    gap: 40px;
+    text-align: left;
 }
 
-/*Aside dentro del main*/
+.seccion2 h3 {
+    padding: 10px;
+}
+
+.seccion2 section {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+/* ---- Aside dentro del main ---- */
 
 /*Configuracion general*/
 aside {
     display: flex;
     flex-direction: column;
+    background-color:rgba(255, 255, 255, 0.493);
+    border-radius: 10px;
+    padding: 10px;
     justify-content: space-around;
 }
 
-/*Estilo al articulo categoria*/
-.categoria  {
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
+aside h3 {
+    color: rgb(0, 89, 255);
+    
 }
 
-.categoria ul li {
+aside ul li {
     list-style-type: none;
+    color: black;
 }
 
-/*Estilo al articulo siguenos*/
-.siguenos  {
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
+/*Separador*/
+hr {
+    border: 1px solid color gray;
 }
 
 /*Pie de pagina*/
