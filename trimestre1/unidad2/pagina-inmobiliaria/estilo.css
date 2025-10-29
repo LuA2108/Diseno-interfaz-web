@@ -176,13 +176,12 @@ body {
 @media (max-width: 1300px ) {
     nav ul li{
         display: flex;
-        flex-direction: column;
-        margin: 0px;
+        justify-content: center;
+        text-align: center;
     }
 
     main   {
         display: flex;
-        flex-direction: column;
         height: auto;
         flex-wrap: wrap;
     }
