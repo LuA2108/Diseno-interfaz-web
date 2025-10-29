@@ -6,11 +6,6 @@
     
 }
 
-/*Fuente de toda la pagina*/
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 /* CSS Cabecera*/
 header {
     background-image: url("img/img1.jpg");
@@ -26,11 +21,11 @@ header > h1 {
 
 /*Afecta el estilo del boton del header*/
 header button {
-    width: 150px;
+    width: 140px;
     border-radius: 200px;
     background-color: rgba(0, 95, 150, 0.774);
     border: 1px solid whitesmoke;
-    padding: 15px;
+    padding: 10px;
 }
 
 /*El enlace dentro del boton*/
@@ -44,7 +39,7 @@ header button a {
 
 /*El enlace que esta dentro de una lista desondenada de enlaces*/
 nav ul li a {
-    padding: 25px;
+    padding: 5px;
     color: rgb(240, 218, 148);
     text-decoration: none;
     
@@ -67,9 +62,8 @@ nav ul li {
 
 /* CSS Main*/
 
-section img {
+main section img {
     width: 300px;
-    flex-wrap: wrap;
 }
 
 main {
@@ -172,6 +166,24 @@ footer section  > hr {
     display: block;
 }
 
-/* */
+/*Fuente de toda la pagina*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+/* Diseño Responsive (completar) (Relacion a un punto del examen)*/
 
+@media (max-width: 1300px ) {
+    nav ul li{
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+    }
+
+    main   {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        flex-wrap: wrap;
+    }
+}
