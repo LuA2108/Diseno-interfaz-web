@@ -1,0 +1,177 @@
+/*Reseteo de los espacios*/
+* {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    
+}
+
+/*Fuente de toda la pagina*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CSS Cabecera*/
+header {
+    background-image: url("img/img1.jpg");
+    color: aliceblue;
+    height: 150px;
+}
+
+/*Solo la etiqueta h1 hijo del header tendra un padding de 20px*/
+header > h1 {
+    padding: 20px;
+
+}
+
+/*Afecta el estilo del boton del header*/
+header button {
+    width: 150px;
+    border-radius: 200px;
+    background-color: rgba(0, 95, 150, 0.774);
+    border: 1px solid whitesmoke;
+    padding: 15px;
+}
+
+/*El enlace dentro del boton*/
+header button a {
+    color: aliceblue;
+    text-decoration: none;
+    
+}
+
+/* CSS navegador */
+
+/*El enlace que esta dentro de una lista desondenada de enlaces*/
+nav ul li a {
+    padding: 25px;
+    color: rgb(240, 218, 148);
+    text-decoration: none;
+    
+}
+
+/**/
+nav ul {
+    text-align: left;
+    background-color: rgba(0, 95, 150, 0.774);
+    padding: 18px;
+}
+
+nav ul li {
+    text-align: left;
+    list-style-type: none;
+    display: inline;
+    margin-right: 2px;
+
+}
+
+/* CSS Main*/
+
+section img {
+    width: 300px;
+    flex-wrap: wrap;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    height: 270px;
+}
+
+/* CSS footer*/
+
+footer {
+    display: flex;
+    background-color:  rgba(0, 95, 150, 0.774);
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+footer section {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+footer section  > hr {
+    border: 1px solid rgb(232, 197, 79);
+}
+
+
+/* --------- POLITICAS -------------*/
+#footer-siguenos {margin-top: 40px;}
+
+#footer-siguenos h2 {
+    color: rgb(232, 197, 79);
+    text-align: left;
+    
+}
+
+#footer-siguenos ul li{
+    list-style: none;
+    text-align: left;
+}
+
+#footer-siguenos ul li a{
+    text-decoration: none;
+    color: rgb(232, 197, 79);
+    
+}
+
+/* ------- REDES SOCIALES --------*/
+
+#footer-redes h2 {
+    color: rgb(232, 197, 79);
+    text-align: left;
+}
+
+#footer-redes figure img {
+    width: 100px;
+    margin: 15px;
+}
+
+#footer-redes figure {
+    text-align: left;
+}
+
+
+
+/* ------ FORMULARIO ------- */
+#footer-form {
+    margin-top: 15px;
+    
+}
+
+#footer-form h2 {
+    color: rgb(232, 197, 79);
+}
+
+#footer-form label {
+    display: inline-block;
+    width: 80px; 
+    text-align: left;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+#footer-form input {
+    text-align: left;
+    width: 150px;
+}
+
+#footer-form button {
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    width: 120px;
+    padding: 7px;
+    text-align: center;
+    display: block;
+}
+
+/* */
+
+
