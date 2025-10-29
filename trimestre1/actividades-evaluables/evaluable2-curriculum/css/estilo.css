@@ -1,7 +1,8 @@
 body {
     background-image: url("../img//fondo-abstracto.jpg");
-    background-size: cover; /* Escala la imagen proporcionalmente*/
-    
+    background-size: cover;
+    /* Escala la imagen proporcionalmente*/
+
     font-family: 'Times New Roman', Times, serif;
 
     /*Formateo*/
@@ -44,25 +45,28 @@ header nav ul {
     margin: 30px;
 }
 
+/*Formateo del cuerpo principal*/
 main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     text-align: center;
 }
 
 /* Cuerpo Principal*/
 main h1 {
-    text-align: center;
     font-size: 50px;
     font-family: 'Times New Roman', Times, serif;
     font-style: italic
 }
 
+
 .article-principal {
     display: flex;
-    justify-content: center;
-    text-align: left;
     align-items: flex-start;
-    margin: 30px;
-    padding: 10px;
+    text-align: left;
+    margin: auto;
+    width: 950px;
     background-color: rgba(242, 232, 218, 0.63);
 }
 
@@ -90,8 +94,9 @@ main article figure img {
 
 .perfil-profesional ul {
     padding: 0px;
-    
+
 }
+
 .perfil-profesional ul li {
     list-style-type: none;
 }
@@ -102,15 +107,27 @@ main article figure img {
 
 /* Articulo de Datos personales*/
 
+.datos-personales h2{
+    text-align: center;
+}
+
 .datos-personales {
+    background-color: rgba(247, 238, 225, 0.922);
+    border-radius: 15px;
+    margin: 10px;
+    padding: 20px;
+}
+.contenedor-2 {
     display: flex;
     flex-direction: column;
-    align-items: center;    
-    text-align: start;       
+    align-items: center;
+    text-align: start;
     background-color: rgba(242, 232, 218, 0.63);
     margin: auto;
-    width: 400px; ;
+    width: 950px;
+    ;
 }
+
 
 .datos-personales ul li img {
     width: 30px;
@@ -119,23 +136,26 @@ main article figure img {
 }
 
 
-.datos-personales ul li  {
+.datos-personales ul li {
     list-style-type: none;
     padding: 15px;
 }
 
 
 button {
+    align-self: center;
     margin: 20px;
     border-radius: 15px;
     padding: 10px;
     width: 100px;
     background-color: slategray;
+
 }
 
 button a {
     text-decoration: none;
     color: aliceblue;
+
 }
 
 /* Estilo del pie de pagina*/
@@ -144,13 +164,14 @@ footer {
     text-align: center;
     flex-direction: column;
     justify-items: end;
-    
+
 }
 
-.contacto ul li{
+.contacto ul li {
     display: inline;
 
 }
+
 footer ul {
     list-style: none;
     padding: 0;
@@ -158,6 +179,8 @@ footer ul {
 }
 
 footer ul li img {
-    width: 120px;        /* ancho fijo */
-    height: 110px;       /* alto fijo */
+    width: 120px;
+    /* ancho fijo */
+    height: 110px;
+    /* alto fijo */
 }
