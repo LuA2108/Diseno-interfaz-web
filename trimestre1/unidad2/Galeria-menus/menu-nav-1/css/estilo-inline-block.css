@@ -1,0 +1,47 @@
+/* --------------------------------- INLINE-BLOCK ---------------------------------*/
+/* Reseteo global de posicionamiento*/
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Cabecera: formateo de alienacion y color*/
+header {
+    background-color: brown;
+    padding: 15px;
+}
+
+/* Imagen de la cabecera: tamaño */
+.logo {
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    text-align: left;
+    vertical-align: middle; /* centra verticalmente con el nav */
+}
+
+/* NAVEGADOR: Formatea el posicionamiento y espacio*/
+nav {
+    display: inline-block;
+    margin-left:750px;
+    vertical-align: middle; /* centra verticalmente con el nav */
+}
+
+/* Espacio de la lista dentro del nav */
+header ul {
+    padding: 15px;
+}
+
+/* Quita los puntos*/
+nav ul > li {
+    list-style-type: none;
+    display: inline;
+}
+
+
+/* Estilo de los enlaces dentro de los li*/
+nav ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 10px;
+}
