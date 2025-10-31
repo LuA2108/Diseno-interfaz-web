@@ -1,0 +1,40 @@
+/* --------------------------------- FLEX ---------------------------------*/
+/* Reseteo global de posicionamiento*/
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* CABECERA: formateo de posicion y el color del fondo*/
+header {
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Imagen de la cabecera: tamaño */
+.logo {
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+}
+
+/* Espacio de la lista dentro del nav */
+header ul {
+    padding: 15px;
+    display: flex;
+}
+
+/* Quita los puntos*/
+nav ul > li {
+    list-style-type: none;
+}
+
+
+/* Estilo de los enlaces dentro de los li*/
+nav ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 10px;
+}
