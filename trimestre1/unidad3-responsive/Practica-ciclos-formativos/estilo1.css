@@ -1,99 +1,99 @@
-/* Formateo global de espacio*/
+/* Reset global: quita márgenes y padding por defecto */
 * {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
+/* Espacio interno para artículos */
 article {
     padding: 25px;
 }
 
+/* Listas con algo de espacio */
 ul {
     padding: 15px;
 }
 
+/* Enlaces en negrita */
 a {
-    color: rgb(128, 2, 247);
     font-weight: bold;
 }
 
-.especializacion ul li a{
+/* Quitar subrayado de enlaces especiales */
+.especializacion ul li a {
     text-decoration: none;
 }
 
+/* Título principal con padding */
 h1 {
     padding: 25px;
 }
 
+/* Secciones con margen, padding y bordes redondeados */
 section {
-    margin:10px;
+    margin: 10px;
     padding: 10px;
     border-radius: 15px;
-    background-color: rgb(253, 251, 245);
 }
 
-
+/* Pantallas grandes (>1200px): artículos en fila */
 @media (min-width: 1200px) {
-    body {
-        background-color: rgb(248, 224, 250);
-    }
 
+    /*Formatea los elementos de artivle y los posiciona*/
     article {
         display: flex;
         justify-content: space-between;
         gap: 10px;
     }
 
+    /*Formate el espacio entre las listas*/
     article section ul {
         padding: 15px;
     }
 }
 
+/* Pantallas medianas (600px–1200px) */
 @media (min-width: 600px) and (max-width: 1200px) {
-    body {
-        background-color: rgb(204, 241, 241);
-    }
-
-    main {
-        display: inline;
-
-    }
-
+    /* La clase ciclo-formativos se coloca a la izquierda con un tamaño del 35%*/
     .ciclos-formativos {
-        display: flex;
-        flex-direction: column;
-        height: auto;
+        float: left;
+        width: 30%;
     }
 
+    /* Se comporta como bloque*/
     .ciclos-formativos ul li strong {
         display: block;
     }
-
+    
+    /*Espacio entre los elementos de la lista*/
     .ciclos-formativos ul li {
         padding: 5px;
     }
 
+    /*Formato de los puntos de lista*/
     .ciclos-formativos ul {
         list-style-type: none;
-        padding: 0px;
+        padding: 0;
     }
+
+    /*Se formatea el interior del contenido de las clases especializaciony modalida*/
     .especializacion, .modalidad {
         display: flex;
         flex-direction: column;
+        gap: 5px;
     }
-
 }
 
+/* Pantallas pequeñas (<600px) */
 @media (max-width: 600px) {
-    body {
-        background-color: rgb(222, 248, 222);
-    }
-
     section {
         display: flex;
         flex-direction: column;
+        gap: 15px;
+        margin: 0;
     }
 
+    /* Línea debajo de subtítulos h2 */
     h2::after {
         content: "";
         display: block;
@@ -101,5 +101,22 @@ section {
         height: 2px;
         background-color: black;
         margin-top: 5px;
+    }
+
+    /*Vuelve un bloque a los elementos strong y a, sin decoraxion de texto*/
+    strong, a {
+        display: block;
+        text-decoration: none;
+    }
+
+    /* Se formatea el espacio*/
+    ul {
+        padding: 0;
+    }
+
+    /* Se formatea el estilo de lista y el espacio entre ellos*/
+    li {
+        list-style-type: none;
+        padding-bottom: 10px;
     }
 }
