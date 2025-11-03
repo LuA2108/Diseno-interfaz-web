@@ -48,7 +48,7 @@ header nav ul {
 /* ------ CUERPO ------ */
 
 /* CONTENEDOR PRINCIPAL: Formateo de posiciones del articulo principal */
-.container-principal {
+#container-principal {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -57,7 +57,7 @@ header nav ul {
 }
 
 /* FORMATEAR CONTENEDOR PRINCIPAL: Formateo de estilo de la etiqueta h1 del contenedor principal  */
-.container-principal h1 {
+#container-principal h1 {
     font-size: 35px;
     font-family: 'Times New Roman', Times, serif;
     font-style: italic
@@ -143,14 +143,14 @@ button {
     border-radius: 15px;
     padding: 10px;
     width: 100px;
-    background-color: slategray;
+    background-color: rgb(245, 249, 226);
 
 }
 
 /* BOTON: Estilo del enlace en el boton*/
 button a {
     text-decoration: none;
-    color: aliceblue;
+    color: rgba(240, 248, 255, 0.493);
 
 }
 
@@ -188,3 +188,4 @@ footer {
     background-color: rgba(206, 195, 171, 0.867);
     
 }
+
