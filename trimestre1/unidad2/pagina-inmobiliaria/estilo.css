@@ -2,8 +2,6 @@
 * {
     padding: 0px;
     margin: 0px;
-    text-align: center;
-    
 }
 
 /* CSS Cabecera*/
@@ -11,12 +9,14 @@ header {
     background-image: url("img/img1.jpg");
     color: aliceblue;
     height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /*Solo la etiqueta h1 hijo del header tendra un padding de 20px*/
 header > h1 {
     padding: 20px;
-
 }
 
 /*Afecta el estilo del boton del header*/
@@ -42,23 +42,20 @@ nav ul li a {
     padding: 5px;
     color: rgb(240, 218, 148);
     text-decoration: none;
-    
 }
 
 /**/
 nav ul {
-    text-align: left;
     background-color: rgba(0, 95, 150, 0.774);
     padding: 18px;
 }
 
 nav ul li {
-    text-align: left;
-    list-style-type: none;
-    display: inline;
+    list-style: none;
+    display: inline-block;
     margin-right: 2px;
-
 }
+
 
 /* CSS Main*/
 
@@ -71,11 +68,11 @@ main {
     gap: 20px;
     justify-content: space-around;
     align-items: center;
-    height: 270px;
+    height: 270;
+    
 }
 
-/* CSS footer*/
-
+/*--------- PIE DE PAGINA ---------*/
 footer {
     display: flex;
     background-color:  rgba(0, 95, 150, 0.774);
@@ -96,6 +93,7 @@ footer section  > hr {
 
 
 /* --------- POLITICAS -------------*/
+
 #footer-siguenos {margin-top: 40px;}
 
 #footer-siguenos h2 {
@@ -130,8 +128,6 @@ footer section  > hr {
 #footer-redes figure {
     text-align: left;
 }
-
-
 
 /* ------ FORMULARIO ------- */
 #footer-form {
@@ -169,20 +165,55 @@ footer section  > hr {
 /*Fuente de toda la pagina*/
 body {
     font-family: Arial, Helvetica, sans-serif;
+
 }
 
 /* Diseño Responsive (completar) (Relacion a un punto del examen)*/
 
-@media (max-width: 1300px ) {
-    nav ul li{
-        display: flex;
-        justify-content: center;
+/* Punto 1: Pantallas medianas y grandes (>=768px) */
+@media (min-width: 768px) {
+    nav ul li {
+        display: inline-block;
         text-align: center;
     }
 
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    html, body {
+        height: 100%;
+
+    }
+    main {
+        flex: 1;
+    }
+}
+
+/* Punto 2: Pantallas pequeñas (<=767px) */
+@media (max-width: 767px ) {
+    nav ul li {
+    display: block;
+    text-align: center;
+    margin: 5px 0;
+}
+
     main   {
         display: flex;
+        flex-direction: column;
         height: auto;
         flex-wrap: wrap;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
