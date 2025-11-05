@@ -1,0 +1,38 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+header {
+    background-color: darkslategray;
+}
+
+nav ul li {
+    display: inline;
+    
+}
+/*ESTILO BASE*/
+
+
+@media (max-width: 600px){
+    /*Centra todos los elementos del body*/
+    body{
+        background-color: rgb(196, 247, 247);
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra horizontalmente*/
+        text-align: center;
+        justify-content: center; /* Centra verticalmente*/
+    }
+
+    nav ul li {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        background-color: rgb(255, 216, 216);
+    }
+}
