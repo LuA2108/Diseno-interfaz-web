@@ -5,11 +5,18 @@
 
 header {
     background-color: darkslategray;
+    display: block;
 }
 
+nav {
+    background-color : rgb(91, 121, 121);
+}
 nav ul li {
     display: inline;
-    
+}
+
+a {
+    color: aliceblue;
 }
 /*ESTILO BASE*/
 
