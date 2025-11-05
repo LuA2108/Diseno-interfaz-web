@@ -1,0 +1,24 @@
+
+.color-footer{ background-color: yellow;}
+
+/* Cambia el color si es mayor a 768px - equivalente a md */
+@media (min-width:768px)  {
+    .color-header { background-color: greenyellow; }
+    .color-main-primary { background-color: red;}
+    .color-main-secundary { background-color: red;}
+    
+}
+
+/* Cambia el color si es mayor a 576px - equivalente a sm */
+@media (min-width:576px) and (max-width: 768px) {
+    .color-header { background-color: aqua; }
+    .color-main-primary { background-color: red;}
+    .color-main-secundary { background-color: greenyellow;}
+}
+
+/* Cambia el color si es menor que 576px - equivalente a X-Small */
+@media (max-width: 576px) {
+    .color-header { background-color: burlywood; }
+    .color-main-primary { background-color: red;}
+    .color-main-secundary { background-color: aqua;}
+}
