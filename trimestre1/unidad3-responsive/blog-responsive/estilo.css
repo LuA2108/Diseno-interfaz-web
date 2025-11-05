@@ -131,15 +131,9 @@ footer section a {
     /*Centra todos los elementos del body*/
     body{
         background-color: #ededed;
-        display: flex;
-        flex-direction: column;
         text-align: center;
     }
 
-    header {
-        width: 100%;
-    }
-    
     nav ul li {
         display: flex;
         flex-direction: column;
@@ -149,19 +143,7 @@ footer section a {
     main {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
         text-align: left
-    }
-
-
-    .secciones {
-        text-align: left;
-    }
-
-    .listado {
-        width: 100%;
-        padding: 20px;
-        
     }
 
     footer {
