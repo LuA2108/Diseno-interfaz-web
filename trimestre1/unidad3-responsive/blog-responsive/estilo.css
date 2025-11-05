@@ -1,30 +1,65 @@
+/*Formateo General*/
 * {
     margin: 0%;
     padding: 0%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+/*BODY*/
+
+/*CABECERA*/
+
+/*Cabecera: configuracion del fondo de color, posicionamiento, alineamiento mediante flex*/
 header {
-    background-color: darkslategray;
-    display: block;
+    background-color: rgb(21, 35, 35);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-nav {
-    background-color : rgb(91, 121, 121);
+/* Se formate de la cabecera el h1: color y espacio interior*/
+header h1 {
+    color: aliceblue;
+    padding: 15px;
 }
+
+/* Barra de navegacion: Se configura el color, tamaño, alineamiento y espacio interior*/
+nav {
+    background-color: rgb(111, 137, 137);
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+
+/*El listado de la barra de navegacion, los alinea en fila, los centra y da espacio interior*/
 nav ul li {
     display: inline;
+    text-align: center;
+    padding: 15px;
 }
 
+/* Solo quita los puntos a la lista de la cabecera*/
+header nav ul li{
+    list-style-type: none;
+}
+
+/*Todos los enlaces tendran color blanco*/
 a {
     color: aliceblue;
 }
-/*ESTILO BASE*/
 
+/* PIE DE PAGINA*/
+footer {
+    display: flex;
+    justify-content: space-around;
+}
 
+/*Estilo definido a pantallas menores a 600px*/
 @media (max-width: 600px){
     /*Centra todos los elementos del body*/
     body{
-        background-color: rgb(196, 247, 247);
+        background-color: #ededed;
         display: flex;
         flex-direction: column;
         align-items: center; /* Centra horizontalmente*/
@@ -32,12 +67,23 @@ a {
         justify-content: center; /* Centra verticalmente*/
     }
 
+    header {
+        width: 100%;
+    }
+    
     nav ul li {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    footer {
         display: flex;
         flex-direction: column;
     }
 }
 
+/*Estilo definido a pantallas mayores a 600px*/
 @media (min-width: 600px) {
     body {
         background-color: rgb(255, 216, 216);
