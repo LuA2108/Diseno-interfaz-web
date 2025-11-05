@@ -6,9 +6,20 @@
 }
 
 /*BODY*/
+html, body {
+    height: 100%; /* asegura que body ocupe toda la pantalla */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
 
 /*CABECERA*/
-
 /*Cabecera: configuracion del fondo de color, posicionamiento, alineamiento mediante flex*/
 header {
     background-color: rgb(21, 35, 35);
@@ -21,7 +32,7 @@ header {
 /* Se formate de la cabecera el h1: color y espacio interior*/
 header h1 {
     color: aliceblue;
-    padding: 15px;
+    padding: 25px;
 }
 
 /* Barra de navegacion: Se configura el color, tamaño, alineamiento y espacio interior*/
@@ -29,7 +40,7 @@ nav {
     background-color: rgb(111, 137, 137);
     width: 100%;
     text-align: center;
-    padding: 5px;
+    padding: 10px;
 }
 
 /*El listado de la barra de navegacion, los alinea en fila, los centra y da espacio interior*/
@@ -49,10 +60,70 @@ a {
     color: aliceblue;
 }
 
+/* CUERPO*/
+/*Articulo de secciones: */
+.secciones {
+    float: left;
+    padding: 20px;
+}
+
+/* Se formatea dentro de la clase secciones el posicionamiento, alineamiento, 
+    tamaño interno y espacio interior de las secciones internas
+*/
+.secciones section {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Se define el estilo de espacio interno inferior de h2*/
+.secciones section h2{
+    padding-bottom: 15px;
+}
+
+/* --------- ARTICULO : LISTADO ----------*/
+/*Articulo de listado*/
+.listado {
+    float: right;
+    background-color: #d6d6d6;
+    padding: 20px;
+}
+
+/* Da espacio del elemento ul (separa el h2 con la lista)*/
+.listado ul {
+    padding: 15px;
+    
+}
+
+/* Da un margen izquierdo a los elementos de la lista */
+.listado ul li {
+    margin-left: 25px;
+}
+
 /* PIE DE PAGINA*/
 footer {
+    clear: both;
     display: flex;
     justify-content: space-around;
+    background-color: rgb(21, 35, 35);
+    padding: 50px;
+    text-align: center;
+}
+
+/* Las secciones del footer tendran un espacio interno de 20px*/
+footer section {
+    padding: 20px;
+}
+
+/* Las secciones dentro del footer: h3 y p tendran color blanco*/
+footer section h3, footer section p {
+    color: aliceblue;
+    padding: 5px;
+}
+
+footer section a {
+    text-decoration: none;
 }
 
 /*Estilo definido a pantallas menores a 600px*/
@@ -62,9 +133,7 @@ footer {
         background-color: #ededed;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centra horizontalmente*/
         text-align: center;
-        justify-content: center; /* Centra verticalmente*/
     }
 
     header {
@@ -77,15 +146,31 @@ footer {
         padding: 5px;
     }
 
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left
+    }
+
+
+    .secciones {
+        text-align: left;
+    }
+
+    .secciones section {
+
+    }
+    .listado {
+        width: 100%;
+        padding: 20px;
+        
+    }
+
     footer {
         display: flex;
         flex-direction: column;
-    }
-}
-
-/*Estilo definido a pantallas mayores a 600px*/
-@media (min-width: 600px) {
-    body {
-        background-color: rgb(255, 216, 216);
+        text-align: center;
+        justify-content: center;
     }
 }
