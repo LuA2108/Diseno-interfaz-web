@@ -1,29 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    </head>
-    <body>
-        <header>
-            <h1>Header</h1>
-            <p>12 Columnas</p>
-        </header>
-        <main>
-            <article>
-                <h2>Articulo</h2>
-                <p></p>
-                <p>Parrafo 1</p>
-                <p>Parrafo 2</p>
-            </article>
-        </main>
-        <footer>
-            <h2>Footer</h2>
-            <p>12 Columnas</p>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Ejercicio Bootstrap 2</title>
+    <meta name="author" content="Lucero Anay Cahuana Cornejo">
+    <meta name="description" content="Desarrollo de una pagina responsive con bootstrap">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<!-- Contenedor : BODY -->
+
+<body class="container">
+    <!-- CABECERA -->
+    <header class="row" style="background-color: rgb(56, 54, 111); color: aliceblue;">
+        <h1 class="col-md-12 col-xs-12">Header</h1>
+        <p class="col-md-12 col-xs-12">12 Columnas</p>
+    </header>
+
+    <!-- CUERPO PRINCIPAL -->
+    <main class="row" style="background-color: aliceblue;">
+
+        <!-- ARTICULO -->
+        <article class="col-md-8 col-12">
+            <h2>Article</h2>
+            <p class="d-none d-sm-block">8 Columnas</p>
+            <p class="d-md-none d-md-block">12 Columnas</p>
+            <p>Este es un párrafo de dos líneas, escrito de forma continua. Sirve para representar un bloque de texto
+                más extenso dentro de una página web. Su objetivo es mostrar cómo se ve un párrafo con varias oraciones.
+            </p>
+            <p>Este es un párrafo de dos líneas, escrito de forma continua. Sirve para representar un bloque de texto
+                más extenso dentro de una página web. Su objetivo es mostrar cómo se ve un párrafo con varias oraciones
+            </p>
+        </article>
+
+        <!-- ASIDE -->
+        <aside class="col-md-4" style="background-color: rgb(43, 128, 154); color: aliceblue;">
+            <h2>Aside</h2>
+            <p class="d-none d-sm-block">4 Columnas</p>
+            <p class="d-md-none d-md-block">12 Columnas</p>
+        </aside>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="row" style="background-color: rgb(141, 49, 49); color: aliceblue;">
+        <h2>Footer</h2>
+        <p>12 Columnas</p>
         </footer>
-    </body>
+</body>
+
 </html>
