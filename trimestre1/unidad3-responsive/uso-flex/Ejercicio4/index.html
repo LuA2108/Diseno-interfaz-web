@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        * {
+            padding: 0%;
+            margin: 0px;
+        }
+
+        body {
+            background-color: aquamarine;
+        }
+
+        /*CABECERA --------------------------------*/
+        header {
+            background-color: aqua;
+            padding: 10px;
+        }
+
+        header article {
+            display: flex;
+            justify-content: right;
+            gap: 60px;
+        }
+
+        /*----------------------------------------*/
+
+        /*NAVEGADOR ------------------------------*/
+        nav {
+            background-color: cadetblue;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+        }
+
+        nav ul li {
+            list-style-type: none;
+            display: inline;
+            margin: 20px;
+        }
+
+        /*---------------------------------------*/
+
+        /*MAIN ---------------------------------*/
+        main {
+            padding: 10px;
+            height: 400px;
+            width: 90%;
+        }
+
+        .container section {
+            background-color: darkseagreen;
+            margin: 5px;
+            padding: 10px;
+            height: 100px;
+            width: 0 auto;
+        }
+
+        .izquierda {
+            float: left;
+            width: 20%;
+        }
+
+        .derecha {
+            float: left;
+            width: 20%;
+        }
+
+        /* ASIDE -----------------------------*/
+        aside {
+            background-color: darkslategrey;
+            float: left;
+            padding: 10px;
+            height: 400px;
+
+            width: 25%;
+        }
+
+        aside section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /*-----------------------------------*/
+        /*---------------------------------------*/
+
+        footer {
+            clear: both;
+            background-color: darkcyan;
+            display: flex;
+            padding: 20px;
+            justify-content: space-around;
+        }
+
+        footer section {
+            background-color: darkseagreen;
+            margin: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Header</h1>
+        <article>
+            <section>
+                <p>Elemento 1</p>
+            </section>
+            <section>
+                <p>Elemento 2</p>
+            </section>
+            <section>
+                <p>Elemento 3</p>
+            </section>
+            <img src="#">
+        </article>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Enlace 1</a></li>
+            <li><a href="#">Enlace 2</a></li>
+            <li><a href="#">Enlace 3</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Main</h2>
+        <article class="container">
+            <section class="izquierda">
+                <h3>Section 1</h3>
+            </section>
+            <section class="derecha">
+                <h3>Section 3</h3>
+            </section>
+            <p>Parrafo de texto en el</p>
+        </article>
+    </main>
+    <aside>
+        <h2>Aside</h2>
+        <section>
+            <img src="#">
+            <p>Texto descriptivo para rellenar en la pagina</p>
+        </section>
+    </aside>
+
+    <footer>
+        <h3>Footer</h3>
+        <section>
+            <h3>Imagen</h3>
+        </section>
+        <section>
+            <h3>Elemento 2</h3>
+        </section>
+    </footer>
+</body>
+
+</html>

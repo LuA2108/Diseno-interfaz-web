@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        * {
+            padding: 0%;
+            margin: 0px;
+        }
+
+        header {
+            background-color: aqua;
+            padding: 10px;
+        }
+
+        body {
+            background-color: aquamarine;
+        }
+
+        nav {
+            background-color: cadetblue;
+            padding: 10px;
+        }
+
+        main article {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        main {
+            padding: 10px;
+        }
+        
+        main section {
+            background-color: darkseagreen;
+            height: 350px;
+            margin: 10px;
+            padding: 5px;
+        }
+
+        footer section {
+            background-color: darkseagreen;
+            margin: 10px;
+            padding: 15px;
+        }
+
+        .izquierda {
+            float: left;
+            width: 20%;
+        }
+
+        .centro {
+            float: left;
+            width: 40%;
+
+        }
+
+        .derecha {
+            float: left;
+            width: 20%;
+        }
+
+        footer article {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        footer {
+            clear: both;
+            background-color: darkcyan;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Header</h1>
+    </header>
+
+    <nav>
+        <h2>Nav</h2>
+    </nav>
+
+    <main>
+        <h2>Main</h2>
+        <article>
+            <section class="izquierda">
+                <h3>Section 1</h3>
+            </section>
+            <section class="centro">
+                <h3>Section 2</h3>
+            </section>
+            <section class="derecha">
+                <h3>Section 3</h3>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <h2>Footer</h2>
+        <article>
+            <section>
+                <h3>Elemento 1</h3>
+            </section>
+            <section>
+                <h3>Elemento 2</h3>
+            </section>
+        </article>
+    </footer>
+</body>
+
+</html>
