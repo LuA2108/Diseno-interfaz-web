@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="autor" content="Lucero Anay Cahuana Cornejo">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="bg-dark">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+
+            <!-- LOGO + TÍTULO -->
+            <div class="d-flex align-items-center p-2">
+                <img src="img/logo.png" alt="" height="58" class="me-3">
+                <h1 class="text-light">BY BIKE!!!</h1>
+            </div>
+
+            <!-- Botón hamburguesa (solo visible en XS) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- MENÚ + BUSCADOR -->
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <!-- MENU -->
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Bicicletas</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Accesorios</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Componentes</a>
+                    </li>
+
+                    <!-- Dropdown 1 -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" ariahaspopup="true" aria-expanded="false"> Productos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Sillines</a>
+                            <a class="dropdown-item" href="#">Cascos</a>
+                            <a class="dropdown-item" href="#">Tijas</a>
+                        </div>
+                    </li>
+
+                    <!-- Dropdown 2 -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" ariahaspopup="true" aria-expanded="false"> Sobre nosotros...
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">About</a>
+                            <a class="dropdown-item" href="#">Contact</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- BUSCADOR -->
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+        </nav>
+
+    </header>
+
+    <!-- Contenido principal con cards -->
+    <main class="container-fluid p-4 d-flex gap-5 flex-column justify-content-center flex-md-row">
+
+        <div class="row g-4">
+
+            <!-- Card Bicicletas -->
+            <!-- Diseño de tamaño, xs -> 12 & md -> 4 -->
+            <div class="col-12 col-md-4">
+                <div class="card h-100">
+
+                    <!-- Imagen del card -->
+                    <img src="img/orbea.jpg" class="card-img-top p-2" alt="">
+
+                    <!-- Cuerpo del card -->
+                    <div class="card-body d-flex flex-column ga">
+
+                        <!-- Titulo del card -->
+                        <h5 class="card-title">Bicicletas</h5>
+
+                        <!-- Texto del card -->
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisl
+                            tellus,
+                            suscipit a orci eu, bibendum aliquam felis. Fusce sollicitudin congue laoreet. Nam sit amet
+                            quam
+                            ex. Donec nec dui ultricies, accumsan purus ac, consequat lectus.</p>
+                    </div>
+
+                    <!-- Texto semi-transparente -->
+                    <p class="text-muted p-3"> Actualizado hace 3 minutos</p>
+                </div>
+            </div>
+
+            <!-- Card Accesorios -->
+            <div class="col-12 col-md-4">
+                <div class="card h-100">
+
+                    <!-- Imagen del card -->
+                    <img src="img/accesorios.jpg" class="card-img-top  p-2" alt="...">
+
+                    <!-- Cuerpo del card -->
+                    <div class="card-body d-flex flex-column">
+
+                        <!-- Titulo del card -->
+                        <h5 class="card-title">Accesorios</h5>
+
+                        <!-- Texto del card -->
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisl
+                            tellus,
+                            suscipit a orci eu, bibendum aliquam felis. Fusce sollicitudin congue laoreet.</p>
+                    </div>
+
+                    <!-- Texto semi-transparente -->
+                    <p class="text-muted p-3"> Actualizado hace 3 minutos</p>
+                </div>
+            </div>
+
+            <!-- Card Componentes -->
+            <div class="col-12 col-md-4">
+                <div class="card h-100">
+
+                    <!-- Imagen del card -->
+                    <img src="img/componentes.jpg" class="card-img-top  p-2" alt="...">
+
+                    <!-- Cuerpo del card -->
+                    <div class="card-body d-flex flex-column">
+
+                        <!-- Titulo del card -->
+                        <h5 class="card-title ">Componentes</h5>
+
+                        <!-- Texto del card -->
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisl
+                            tellus,
+                            suscipit a orci eu, bibendum aliquam felis.</p>
+                    </div>
+
+                    <!-- Texto semi-transparente -->
+                    <p class="text-muted p-3"> Actualizado hace 3 minutos</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="text-center">
+        <p>&copy; Lucero Anay Cahuana Cornejo</p>
+
+        <!-- Scripts de JavaScript para el uso de bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+            integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+            crossorigin="anonymous"></script>
+
+    </footer>
+</body>
+
+</html>
