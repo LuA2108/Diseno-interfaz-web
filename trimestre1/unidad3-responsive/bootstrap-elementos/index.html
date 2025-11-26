@@ -7,42 +7,55 @@
     <title>Elementos bootstrap</title>
     <meta name="autor" content="Lucero Cahuana Cornejo">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Enlace al CSS de Bootstrap 5.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
 
     <style>
+        /* Reseteo básico de padding y margin en todo el documento */
         * {
             padding: 0px;
             margin: 0px;
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        /* Fondo rosa para la barra de navegación */
         .navbar {
             background-color: pink;
 
         }
 
+        /* Header con imagen de fondo y color de texto marrón */
         header {
             background-image: url(img/old_map.png);
             color: brown;
         }
+
+        /* Estilo personalizado para los botones dentro de cards */
         .boton {background-color: fuchsia; color: white;}
     </style>
 </head>
 
 <body>
     <div>
+        <!-- Header principal -->
         <header class="container-fluid">
-            <div class="row header">
+            <div class="row">
+
+                <!-- Contenedor flexible para logo e h1 -->
                 <div class="d-flex gap-3 align-items-center">
                     <img src="img/logo.png" alt="" height="58" class="d-inline">
                     <h1>CURSO HTML5</h1>
                 </div>
             </div>
         </header>
+        
+        <!-- Barra de navegación -->
         <nav class="navbar navbar-light">
             <div class="container-fluid d-flex flex-column flex-md-row justify-content-around align-items-center">
+                
+                <!-- Cada enlace de la navbar con ícono y texto centrado verticalmente -->
                 <a class="navbar-brand d-flex flex-column align-items-center fs-6" href="#">
                     <img src="img/mail.png" alt="" width="38" height="38" class="d-inline-block align-text-top">
                     HTML5
@@ -57,11 +70,23 @@
                 </a>
             </div>
         </nav>
+
+        <!-- Contenido principal con cards -->
         <main class="container-fluid p-4 d-flex gap-5 flex-column align-items-center flex-md-row">
+            
+            <!-- Card HTML5 -->
             <div class="card" style="width: 18rem;">
+
+                <!-- Imagen del card -->
                 <img src="img/html5.png" class="card-img-top p-2" alt="">
+                
+                <!-- Cuerpo del card -->
                 <div class="card-body d-flex flex-column align-items-center ga">
+                    
+                    <!-- Titulo del card -->
                     <h5 class="card-title">HTML5</h5>
+
+                    <!-- Texto del card -->
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisl tellus,
                         suscipit a orci eu, bibendum aliquam felis. Fusce sollicitudin congue laoreet. Nam sit amet quam
                         ex. Donec nec dui ultricies, accumsan purus ac, consequat lectus. Ut augue dui, ultrices a elit
@@ -69,14 +94,26 @@
                         accumsan, metus suscipit maximus vestibulum, sem odio suscipit nibh, vel varius sem lacus vitae
                         magna. Fusce aliquet sodales sem non feugiat. Vivamus id faucibus nisl.</p>
                 </div>
+
+                <!-- Botón dentro de la card -->
                 <div class="card-body">
                     <a href="#" class="boton btn">Card link</a>
                 </div>
             </div>
+
+            <!-- Card CSS3 -->
             <div class="card" style="width: 18rem;">
+
+                <!-- Imagen del card -->
                 <img src="img/css3.png" class="card-img-top  p-2" alt="...">
+                
+                <!-- Cuerpo del card -->
                 <div class="card-body d-flex flex-column align-items-center">
+                    
+                    <!-- Titulo del card -->
                     <h5 class="card-title">CSS3</h5>
+
+                    <!-- Texto del card -->
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisl tellus,
                         suscipit a orci eu, bibendum aliquam felis. Fusce sollicitudin congue laoreet. Nam sit amet quam
                         ex. Donec nec dui ultricies, accumsan purus ac, consequat lectus. Ut augue dui, ultrices a elit
@@ -84,14 +121,26 @@
                         accumsan, metus suscipit maximus vestibulum, sem odio suscipit nibh, vel varius sem lacus vitae
                         magna. Fusce aliquet sodales sem non feugiat. Vivamus id faucibus nisl.</p>
                 </div>
+
+                <!-- Botón dentro de la card -->
                 <div class="card-body">
                     <a href="#" class="boton btn">Card link</a>
                 </div>
             </div>
+
+            <!-- Card JavaScript -->
             <div class="card" style="width: 18rem;">
+
+                <!-- Imagen del card -->
                 <img src="img/javascript.png" class="card-img-top  p-2" alt="...">
+                
+                <!-- Cuerpo del card -->
                 <div class="card-body d-flex flex-column align-items-center">
+                    
+                    <!-- Titulo del card -->
                     <h5 class="card-title ">JavaScript</h5>
+
+                    <!-- Texto del card -->
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisl tellus,
                         suscipit a orci eu, bibendum aliquam felis. Fusce sollicitudin congue laoreet. Nam sit amet quam
                         ex. Donec nec dui ultricies, accumsan purus ac, consequat lectus. Ut augue dui, ultrices a elit
@@ -99,6 +148,7 @@
                         accumsan, metus suscipit maximus vestibulum, sem odio suscipit nibh, vel varius sem lacus vitae
                         magna. Fusce aliquet sodales sem non feugiat. Vivamus id faucibus nisl.</p>
                 </div>
+                <!-- Botón dentro de la card -->
                 <div class="card-body">
                     <a href="#" class="boton btn">Card link</a>
                 </div>
