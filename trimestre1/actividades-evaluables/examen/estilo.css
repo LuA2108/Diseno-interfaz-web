@@ -1,0 +1,163 @@
+/* Estilo general para todo el archivo: formateo de espacios, formato de fuente y tamaño*/
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+/* Estilo cuerpo: color de fondo para todo el cuerpo*/
+body {
+    background-color: #ece0cf;
+    width: 100%;
+}
+
+/*ESTILO CABECERA (GENERAL)* ------------------------------------------/
+/*Header: li centra horizontalmente*/
+header {
+    text-align: center;
+}
+
+/*Estilo al navegador: color de fondo y espacio interno*/
+nav {
+    background-color: #1A0c01;
+    padding: 15px;
+}
+
+/*Uso de flex para centrar los elementos del navegador. Ademas, ocupar */
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Estilo navegador: alinea los elementos en linea*/
+nav ul li {
+    list-style-type: none;
+}
+
+/*Estilo a los enlaces: color de texto y descartar decoracion*/
+nav ul li a {
+    color: #ece0cf;
+    text-decoration: none;
+}
+
+/*EFECTO HOVER: el texto se vuelve mas naranja naranja */
+a:hover {
+    color:#f2c14e;
+}
+/*----------------------------------------------------------*/
+
+/*CUERPO PRINCIPAL -----------------------------------------*/
+/*Elemetnos*/
+
+/*Main*/
+main {
+    background-image: url("imagenes/imagen\ central.jpg");
+    background-position: 50%;
+    text-align: center;
+    min-height: max-content;
+    height: 700px;
+}
+
+/*Un articulo dentro del main*/
+article {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* el estilo del titulo del main*/
+.titulo {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+/*----------------------------------------------------------*/
+
+/*ASIDE------------------------------------------*/
+/*Estilo en el aside, posicionamiento, color direccion, alineamiento, espacio interno color y espacio*/
+aside {
+    display: flex;
+    flex-direction: column;
+    background-color: #f57c00;
+    justify-items: end;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+/*-----------------------------------------------*/
+
+/*Footer---------------------------------------------------*/
+footer {
+    display: flex;
+    gap: 30px;
+    padding: 15px;
+    margin: 50px;
+}
+
+section {
+    text-align: center;
+}
+
+.div h3 {
+    color: #f57c00;
+}
+
+.div p {
+    padding: 5px;
+}
+
+.div a {
+    text-decoration: none;
+    color: #f57c00;
+}
+
+/*Estilo del formulario: posicion*/
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #f57c00;
+    width: 300px;
+}
+
+/*Estilo del input del formulario: borde y tamaño interno*/
+form input {
+    border: none;
+    padding: 2px;
+}
+
+/*Se formatea el tamaño del elemento textare del formulario*/
+textarea {
+    height: 80px;
+    border: none;
+}
+
+/*Estilo del boton: color, borde y espacio interno */
+button {
+    background-color: #f57c00;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+/*---------------------------------------------------------*/
+
+
+/* Pantallas menores o iguales a 650px */
+@media (max-width: 650px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+
+}
+
