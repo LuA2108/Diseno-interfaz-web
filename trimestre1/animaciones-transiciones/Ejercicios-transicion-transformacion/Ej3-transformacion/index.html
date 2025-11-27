@@ -23,7 +23,7 @@
             color: aliceblue;
         }
 
-        /* Color de fondo ----------------------- */
+        /* Escala ------------------------------- */
         .container-scale {
             background-color: rgb(239, 32, 32);
             transition: transform 0.5s linear;
@@ -35,7 +35,7 @@
         }
         /* -------------------------------------- */
 
-        /* Tamaño fuente ------------------------ */
+        /* Rotacion  ---------------------------- */
         .container-rotate {
             background-color: rgb(247, 150, 46);
             font-size: 18px;
@@ -48,7 +48,7 @@
         /* ------------------------------------- */
 
 
-        /* Interlineado ------------------------ */
+        /* Translate --------------------------- */
         .container-translate {
             background-color: rgb(30, 132, 138);
             line-height: 0;
@@ -61,7 +61,7 @@
         }
         /* ------------------------------------- */
 
-        /* Border Radius ------------------------*/
+        /* Skew  ------------------------------- */
         .container-skew {
             background-color: rgb(61, 66, 216);
             transition: transform 1.2s ease;
@@ -69,11 +69,11 @@
         }
 
         .container-skew:hover {
-            transform: skew(40deg, 20deg);
+            transform: skew(30deg, 30deg);
         }
         /* ------------------------------------- */
 
-        /* Sombra ------------------------------ */
+        /* Skew Y ------------------------------ */
         .container-skewy {
             background-color: rgb(180, 32, 239);
             transition: transform 1.2s ease;
@@ -84,7 +84,7 @@
         }
         /* ------------------------------------- */
 
-        /* Opacidad ---------------------------- */
+        /* Skew X ---------------------------- */
         .container-skewx {
             background-color: rgb(247, 46, 123);
             transition: transform 0.5s ease-in;
@@ -95,7 +95,7 @@
         }
         /* ------------------------------------- */
 
-        /* Borde ------------------------------- */
+        /* Translate Y ------------------------------- */
         .container-translatey {
             background-color: rgb(8, 97, 23);
             transition: transform 0.5s ease;
@@ -106,7 +106,7 @@
         }
         /* ------------------------------------- */
 
-        /* Margen ------------------------------ */
+        /* Translate X ------------------------------ */
         .container-translatex {
             background-color: rgb(94, 55, 4);
             transition: transform 0.5s linear;
@@ -116,13 +116,39 @@
             transform: translateX(50px)
         }
 
-        /* Padding ------------------------------*/
-        .container-padding {
-            background-color: rgb(0, 0, 0);
-            transition: padding 0.5s linear;
+        /* ------------------------------------- */
+
+        /* Perspectiva Rotacion A --------------- */
+        .container-perspa {
+            background-color: rgb(8, 19, 83);
+            transition: transform 1.5s ease;
+            perspective: 800;
         }
-        .container-padding:hover {
-            padding: 15px;
+        .container-perspa:hover {
+            transform: rotateY(180deg)
+            
+        }
+        /* ------------------------------------- */
+
+        /* Perspectiva Rotacion B -------------- */
+        .container-perspb {
+            background-color: rgb(71, 11, 51);
+            transition: transform 1.5s ease;
+            perspective: 800;
+        }
+
+        .container-perspb:hover {
+            transform: rotateX(180deg)
+        }
+        /* ------------------------------------- */
+
+        /* Matrix ------------------------------ */
+        .container-mat {
+            background-color: rgb(37, 182, 8);
+            transition: transform 1.5s ease;
+        }
+        .container-mat:hover {
+            transform: matrix(1.2, 0.4, -0.3, 1.1, 60, -80)
         }
         /* ------------------------------------- */
 
@@ -164,6 +190,17 @@
             <h1>TranslateY</h1>
         </section>
 
+        <section class="container-perspa">
+            <h1>Perspective Rotate</h1>
+        </section>
+
+        <section class="container-perspb">
+            <h1>Perspective Rotate</h1>
+        </section>
+
+        <section class="container-mat">
+            <h1>Matrix</h1>
+        </section>
     </article>
 </body>
 
