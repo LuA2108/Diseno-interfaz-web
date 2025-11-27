@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
-    <meta name="description" content="">
+    <meta name="autor" content="Lucero Anay Cahuana">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         .container-main {
@@ -23,45 +23,120 @@
             color: aliceblue;
         }
 
+        /* Color de fondo ----------------------- */
         .container-background {
             background-color: rgb(239, 32, 32);
+            transition: background-color 0.8s ease;
         }
 
+        /* Transicion fondo*/
+        .container-background:hover {
+            background-color: rgb(75, 10, 10);
+        }
+        /* -------------------------------------- */
+
+        /* Tamaño fuente ------------------------ */
         .container-fontsize {
             background-color: rgb(247, 150, 46);
+            font-size: 18px;
+            transition: font-size 2.5s ease;
         }
 
+        .container-fontsize:hover {
+            font-size: 40px;
+        }
+        /* ------------------------------------- */
+
+        /* Color texto ------------------------- */
         .container-color {
             background-color: rgb(187, 232, 51);
+            transition: color 0.6s ease;
         }
 
+        .container-color:hover {
+            color: rgb(21, 104, 1) ;
+        }
+        /* ------------------------------------- */
+
+        /* Interlineado ------------------------ */
         .container-lineheight {
             background-color: rgb(30, 132, 138);
+            line-height: 0;
+            transition: line-height 0.9s ease;
+            flex-direction: column;
         }
 
+        .container-lineheight:hover {
+            line-height: 4 ;
+        }
+        /* ------------------------------------- */
+
+        /* Border Radius ------------------------*/
         .container-borderadius {
             background-color: rgb(61, 66, 216);
+            transition: border-radius 1.2s ease;
+            text-align: center;
         }
 
+        .container-borderadius:hover {
+            border-radius: 100px;
+        }
+        /* ------------------------------------- */
+
+        /* Sombra ------------------------------ */
         .container-shadow {
-            background-color: rgb(239, 32, 32);
+            background-color: rgb(180, 32, 239);
+            transition: box-shadow 1.2s ease;
         }
 
+        .container-shadow:hover {
+            box-shadow: 15px 15px 15px black;
+        }
+        /* ------------------------------------- */
+
+        /* Opacidad ---------------------------- */
         .container-opacity {
-            background-color: rgb(247, 150, 46);
+            background-color: rgb(247, 46, 123);
+            transition: opacity 0.5s ease-in;
         }
 
+        .container-opacity:hover {
+            background-color: rgb(247, 46, 123);
+            opacity: 0.5;
+        }
+        /* ------------------------------------- */
+
+        /* Borde ------------------------------- */
         .container-border {
-            background-color: rgb(187, 232, 51);
+            background-color: rgb(8, 97, 23);
+            border: 1px solid rgb(8, 97, 23);
+            transition: border 0.5s ease-out
         }
 
+        .container-border:hover {
+            border: 10px solid rgb(7, 44, 13);
+        }
+        /* ------------------------------------- */
+
+        /* Margen ------------------------------ */
         .container-margin {
-            background-color: rgb(30, 132, 138);
+            background-color: rgb(94, 55, 4);
+            transition: margin 0.5s linear;
         }
 
-        .container-padding {
-            background-color: rgb(61, 66, 216);
+        .container-margin:hover {
+            margin: 10px
         }
+
+        /* Padding ------------------------------*/
+        .container-padding {
+            background-color: rgb(0, 0, 0);
+            transition: padding 0.5s linear;
+        }
+        .container-padding:hover {
+            padding: 15px;
+        }
+        /* ------------------------------------- */
 
     </style>
 </head>
@@ -82,7 +157,8 @@
         </section>
 
         <section class="container-lineheight">
-            <h1>Line height</h1>
+            <p>Line height 1</p>
+            <p>Line heigth 2</p>
         </section>
 
         <section class="container-borderadius">
