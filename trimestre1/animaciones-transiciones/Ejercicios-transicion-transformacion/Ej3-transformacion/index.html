@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="autor" content="Lucero Anay Cahuana">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .container-main {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        section {
+            width: 180px;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: aliceblue;
+        }
+
+        /* Color de fondo ----------------------- */
+        .container-scale {
+            background-color: rgb(239, 32, 32);
+            transition: transform 0.5s linear;
+        }
+
+        /* Transicion fondo*/
+        .container-scale:hover {
+            transform: scale(1.5);
+        }
+        /* -------------------------------------- */
+
+        /* Tamaño fuente ------------------------ */
+        .container-rotate {
+            background-color: rgb(247, 150, 46);
+            font-size: 18px;
+            transition: transform 1.5s ease;
+        }
+
+        .container-rotate:hover {
+            transform: rotate(180deg)
+        }
+        /* ------------------------------------- */
+
+
+        /* Interlineado ------------------------ */
+        .container-translate {
+            background-color: rgb(30, 132, 138);
+            line-height: 0;
+            transition: transform 0.9s ease;
+            flex-direction: column;
+        }
+
+        .container-translate:hover {
+            transform: translate(50px, 20px);
+        }
+        /* ------------------------------------- */
+
+        /* Border Radius ------------------------*/
+        .container-skew {
+            background-color: rgb(61, 66, 216);
+            transition: transform 1.2s ease;
+            text-align: center;
+        }
+
+        .container-skew:hover {
+            transform: skew(40deg, 20deg);
+        }
+        /* ------------------------------------- */
+
+        /* Sombra ------------------------------ */
+        .container-skewy {
+            background-color: rgb(180, 32, 239);
+            transition: transform 1.2s ease;
+        }
+
+        .container-skewy:hover {
+            transform: skewY(40deg)
+        }
+        /* ------------------------------------- */
+
+        /* Opacidad ---------------------------- */
+        .container-skewx {
+            background-color: rgb(247, 46, 123);
+            transition: transform 0.5s ease-in;
+        }
+
+        .container-skewx:hover {
+            transform: skewX(40deg)
+        }
+        /* ------------------------------------- */
+
+        /* Borde ------------------------------- */
+        .container-translatey {
+            background-color: rgb(8, 97, 23);
+            transition: transform 0.5s ease;
+        }
+
+        .container-translatey:hover {
+            transform: translateY(50px)
+        }
+        /* ------------------------------------- */
+
+        /* Margen ------------------------------ */
+        .container-translatex {
+            background-color: rgb(94, 55, 4);
+            transition: transform 0.5s linear;
+        }
+
+        .container-translatex:hover {
+            transform: translateX(50px)
+        }
+
+        /* Padding ------------------------------*/
+        .container-padding {
+            background-color: rgb(0, 0, 0);
+            transition: padding 0.5s linear;
+        }
+        .container-padding:hover {
+            padding: 15px;
+        }
+        /* ------------------------------------- */
+
+    </style>
+</head>
+
+<body>
+    <article class="container-main">
+
+        <section class="container-scale">
+            <h1>Scale</h1>
+        </section>
+
+        <section class="container-rotate">
+            <h1>Rotate</h1>
+        </section>
+
+        <section class="container-translate">
+            <h1>Translate</h1>
+        </section>
+
+        <section class="container-skew">
+            <p>Skew</p>
+        </section>
+
+        <section class="container-skewy">
+            <h1>SkewY</h1>
+        </section>
+
+        <section class="container-skewx">
+            <h1>SkewX</h1>
+        </section>
+
+        <section class="container-translatex">
+            <h1>TranslateX</h1>
+        </section>
+
+        <section class="container-translatey">
+            <h1>TranslateY</h1>
+        </section>
+
+    </article>
+</body>
+
+</html>
