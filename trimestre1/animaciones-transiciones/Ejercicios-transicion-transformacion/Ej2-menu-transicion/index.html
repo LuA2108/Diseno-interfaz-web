@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            * { padding: 0%; margin: 0%; font-family: Verdana, Geneva, Tahoma, sans-serif;}
+            
+            /* Configuracion del navegador ------------------ */
+            nav {
+                background-color: black;
+                
+            }
+            nav ul {
+                display: flex;
+                justify-content:center ;
+            }
+
+            li {
+                list-style-type: none;
+            }
+
+            a {
+                text-decoration: none;
+                color: aliceblue;
+            }
+            /* -------------------------------------------- */
+
+            /* Servicios ---------------------------------- */
+            .serv {
+                border-top: 5px solid yellow;
+                padding: 25px;
+                transition: background-color 0.5s linear;
+            }
+
+            .serv:hover {
+                background-color: yellow;
+            }
+            /* ------------------------------------------- */
+
+            /* Proyectos --------------------------------- */
+            .proj {
+                border-top: 5px solid rgb(9, 255, 0);
+                padding: 25px;
+                transition: background-color 0.5s linear;
+            }
+            .proj:hover {
+                background-color: rgb(9, 255, 0);
+
+            }
+            /* ------------------------------------------- */
+
+            /* Recursos ---------------------------------- */
+            .rec {
+                border-top: 5px solid red;
+                padding: 25px;
+                transition: background-color 0.5s linear;
+            }
+            .rec:hover {
+                background-color: red;
+            }
+            /* ------------------------------------------- */
+
+            /* Contacto ---------------------------------- */
+            .cont {
+                border-top: 5px solid purple;
+                padding: 25px;
+                transition: background-color 0.5s linear;
+            }
+            .cont:hover {
+                background-color: purple;
+            }
+            /* ------------------------------------------- */
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li class="serv"><a href="#" >Servicios</a></li>
+                    <li class="proj"><a href="#">Proyectos</a></li>
+                    <li class="rec"><a href="#">Recursos</a></li>
+                    <li class="cont"><a href="#">Contacto</a></li>
+                </ul>
+            </nav>      
+        </header>
+    </body>
+</html>
