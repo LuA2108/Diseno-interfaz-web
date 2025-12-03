@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-        <style>
-            img {
-                width: 600px;
-            }
 
-            .container {
-                position: absolute;
-                transition: transform 1.5s ease;
-            }
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        .im {
+            width: 600px;
+            border-radius: 15px;
+        }
 
-            .container:hover {
-                transform: translate(100%, 100%);
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <img src="gato.jfif" alt="gato">
-        </div>
-    </body>
+        .container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: transform 1.5s ease;
+        }
+
+        .container:hover {
+            transform: translate(50%, 50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="gato.png" alt="gato" class="im">
+    </div>
+</body>
+
 </html>
