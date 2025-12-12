@@ -1,13 +1,17 @@
+/* Estilo universal ------------------------- */
 * {
     padding: 0%;
     margin: 0%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+/* ----------------------------------------- */
 
+/* Cuerpo ---------------------------------- */
 body {
     background-color: #FFF1E4;
 }
 
+/* Navegador ------------------------------- */
 nav {
     background-color: #4C0000;
     display: flex;
@@ -36,18 +40,20 @@ nav ul li a {
     align-items: end;
 }
 
-h1 {
-    color: #7B6200;
-    text-align: center;
-    margin: 15px;
-}
-
 .buscador input {
     background-color: #FFF9DE;
     border: 0px;
     border-radius: 10px;
     padding: 5px;
     width: 400px;
+}
+/* ----------------------------------------- */
+
+/* Seccion 1 : Galeria --------------------- */
+main > h1 {
+    color: #7B6200;
+    text-align: center;
+    margin: 15px;
 }
 
 .galeria {
@@ -61,6 +67,9 @@ h1 {
     width: 33.99%;
     height: 600px;
 }
+/* ----------------------------------------- */
+
+/* Seccion 2: Botones  --------------------- */
 
 .botones {
     display: flex;
@@ -69,43 +78,183 @@ h1 {
 .novedad,
 .buscado,
 .prox {
-    height: 250px;
+    height: 230px;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
+.boton-nov {
+    background-color: #AF6F42;
+}
+.boton-bus {
+    background-color: #E0A47A;
+}
+.boton-prox {
+    background-color: #602D08;
+}
+.novedad {
+    background-color: #E8BC9D;
+}
+.buscado {
+    background-color: #241001;
+}
+.prox {
+    background-color: #8E4918;
+}
+/* ----------------------------------------- */
+
+/* Estilo predefinido a todos botones ------ */
 button {
     border-radius: 10px;
     padding: 10px;
     border: 0px;
 }
+/* ----------------------------------------- */
 
-.boton-nov {
-    background-color: #AF6F42;
+/* Seccion 3: Tarjetas --------------------- */
+.tarjetas {
+    display: flex;
+    flex-direction: column;
 }
 
-.boton-bus {
-    background-color: #E0A47A;
+.tarjeta-a, .tarjeta-b, .tarjeta-c {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border: 2px solid rgb(35, 18, 1);
+    margin: 15px;
 }
 
-.boton-prox {
-    background-color: #602D08;
+.fondo-a {
+    background-image: url("../img/fondo/10.jpg");
+    background-size: 1800px;
 }
 
-.novedad {
-    background-color: #E8BC9D;
+.fondo-b {
+    background-image: url("../img/fondo/1503701_6113.jpg");
+    background-size: 900px;
 }
 
-.buscado {
-    background-color: #241001;
+.fondo-c {
+    background-image: url("../img/fondo/8ba3e33f-7aba-41ea-8252-6695bd348f3d.jpg");
+    background-size: 1800px;
+    
 }
 
-.prox {
-    background-color: #8E4918;
+/* Detalles tarjeta -------------------- */
+.detalles {
+    display: block;
+    margin-left: 30px;
+    margin-right: 70px;
 }
 
+.description {
+    display: flex;
+    align-items: baseline;
+}
+.portada {
+    width: 200px;
+    height: 300px;
+}
+/* ------------------------------------- */
+
+/* Puntuacion ---------------------- */
+.puntuacion {
+    display: flex;
+    justify-content: left;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.star {
+    width: 20px;
+    height: 20px;
+}
+/* --------------------------------- */
+
+/* Precio -------------------------- */
+.precio {
+    display: flex;
+    justify-content: left;    
+}
+
+.moneda {
+    width: 25px;
+    height: 25px;
+}
+
+.precio p {
+    display: flex;
+    text-align: left;
+    align-items: center;
+}
+/* --------------------------------- */
+
+/* Seccion 4: Inscripcion ------------------ */
+
+.inscripcion {
+    background-color: #EBD3BD;
+    margin: 10px;
+    border-radius: 15px;
+    display: flex;
+}
+
+.des-ins {
+    margin: 30px;
+    display: block;
+}
+
+.des-ins p {
+    width: 620px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+}
+
+.formulario button {
+    background-color: #BC8D02;
+    color: white;
+}
+
+/* ----------------------------------------- */
+
+/* Footer -------------------------------------- */
 footer {
     background-color: #4C0000;
+    
+}
+
+footer article {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+footer p {
+    text-align: center;
+    color: white;
+}
+
+footer ul li {
+    list-style-type: none;
+}
+
+.redes img {
+    width: 50px;
+    height: 50px;
+}
+/* --------------------------------------------- */
+
+@media (max-width:600px) {
+    
+    
 }
