@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Libreria online</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -14,34 +14,58 @@
 
 <body>
     <header>
-        <nav class="navegador">
-            <img src="img/navegador/logo.png" alt="logo libro" height="100" width="100">
-
+        <nav class="navegador"> <img src="img/navegador/logo.png" alt="logo libro" height="60" width="60">
             <form class="buscador" action="#" method="GET">
                 <img src="img/navegador/buscar.png" alt="icono-buscar" height="30px" width="30px">
                 <input type="search" name="query" placeholder="Buscar...">
             </form>
 
-
-            <ul>
+            <!-- Menu normal -->
+            <ul class="menu-normal">
                 <li><a href="#"><img src="img/navegador/escritura.png" height="40px" width="40px"> Escribir</a></li>
                 <li><a href="#"><img src="img/navegador/simbolo-de-interfaz-de-lista.png" height="40px"
                             width="40px">Género</a></li>
                 <li><a href="#"><img src="img/navegador/libros.png" height="40px" width="40px">Mis historias</a></li>
                 <li><a href="#"><img src="img/navegador/carro-de-la-carretilla.png" height="40px"
                             width="40px">Compras</a></li>
-                <li><a href="#"><img src="img/navegador/usuario (1).png" height="40px" width="40px">Usuario</a></li>
+                <li><a href="#"><img src="img/navegador/usuario.png" height="40px" width="40px">Usuario</a></li>
             </ul>
+
+            <!-- Dropdown para pantallas pequeñas -->
+            <!-- Dropdown para móvil -->
+            <div class="btn-group dropdown-menu-movil">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Menú
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Escribir</a></li>
+                    <li><a class="dropdown-item" href="#">Género</a></li>
+                    <li><a class="dropdown-item" href="#">Mis historias</a></li>
+                    <li><a class="dropdown-item" href="#">Compras</a></li>
+                    <li><a class="dropdown-item" href="#">Usuario</a></li>
+                </ul>
+            </div>
+
         </nav>
     </header>
+
 
     <main>
         <h1>Lecturas para inspirarte</h1>
         <section class="galeria">
-            <img class="im1" src="img/portadas/portada-a-sintitulo.png" alt="portada">
-            <img class="im2" src="img/portadas/portada-b-sintitulo.png" alt="portada">
-            <img class="im3" src="img/portadas/portada-c-sintitulo.png" alt="portada">
+            <img class="im1" src="img/portadas/Copilot_20251204_155315.png" alt="portada">
+
+            <div class="galeria-princ">
+                <img src="img/portadas/Copilot_20251204_155858.png" alt="Portada" class="img-tarjeta">
+                <form action="#">
+                    <button class="btn-tarjeta">Ver Más</button>
+                </form>
+            </div>
+
+            <img class="im3" src="img/portadas/Copilot_20251204_160134.png" alt="portada">
         </section>
+
         <h2>¿Qué quieres descubrir hoy?</h2>
 
         <section class="botones">
@@ -63,110 +87,86 @@
                 </form>
             </section>
         </section>
+        <h2>Elige un libro!</h2>
+        <article class="tarjetas">
 
-        <section class="tarjetas">
-            <article class="fondo-a">
-                <section class="tarjeta-a">
+            <!-- Tarjeta 1 -->
+            <section class="tarjeta">
 
-                    <img class="portada" src="img/portadas/Copilot_20251204_160134.png" alt="portada">
+                <img class="portada" src="img/portadas/Copilot_20251204_160134.png">
 
-                    <section class="detalles">
-                        <h2 class="titulo">Susurros en la Niebla</h2>
-                        <section class="puntuacion">
-                            <img class="star" src="img/otros/estella.png">
-                            <img class="star" src="img/otros/estella.png">
-                            <img class="star" src="img/otros/estella.png">
-                            <img class="star" src="img/otros/estrella-media.png">
-                            <img class="star" src="img/otros/estrella-vacia.png">
-                        </section>
-                        <section class="precio">
-                            <p><img class="moneda" src="img/otros/euro.png">9.99</p>
-                        </section>
+                <h2 class="titulo">Susurros en la Niebla</h2>
+
+                <section class="detalles">
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a ex
+                        id
+                        ligula sollicitudin ultricies. In mi diam, molestie eu erat nec, hendrerit interdum ipsum.
+                        Proin
+                        orci arcu, faucibus sed finibus et. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+
+                    <a href="#">Mas informacion</a>
+                    <section class="puntuacion">
+                        <img class="star" src="img/otros/estella.png">
+                        <img class="star" src="img/otros/estella.png">
+                        <img class="star" src="img/otros/estella.png">
+                        <img class="star" src="img/otros/estrella-media.png">
+                        <img class="star" src="img/otros/estrella-vacia.png">
                     </section>
-
-                    <section class="Sinopsis">
-                        <h2>Sinopsis</h2>
-                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a ex
-                            id
-                            ligula sollicitudin ultricies. In mi diam, molestie eu erat nec, hendrerit interdum ipsum.
-                            Proin
-                            orci arcu, faucibus sed finibus et. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Phasellus a ex id
-                            ligula sollicitudin ultricies. In mi diam, molestie eu erat nec, hendrerit interdum ipsum.
-                            Proin
-                            orci arcu, faucibus sed finibus et.</p>
-                        <a href="#">Enlace</a>
-                    </section>
-
+                    <section class="precio">9.99€</section>
                 </section>
-            </article>
+            </section>
 
-            <article class="fondo-b">
-                <section class="tarjeta-b">
-                    <img class="portada" src="img/portadas/Copilot_20251204_155315.png">
-                    <section class="detalles">
-                        <h2 class="titulo">Susurros en la Niebla</h2>
-                        <section class="puntuacion">
-                            <img class="star" src="img/otros/estella.png">
-                            <img class="star" src="img/otros/estella.png">
-                            <img class="star" src="img/otros/estella.png">
-                            <img class="star" src="img/otros/estrella-media.png">
-                            <img class="star" src="img/otros/estrella-vacia.png">
-                        </section>
-                        <section class="precio">
-                            <p><img class="moneda" src="img/otros/euro.png">9.99</p>
-                        </section>
+            <!-- Tarjeta 2 -->
+            <section class="tarjeta">
+                <img class="portada" src="img/portadas/Copilot_20251204_155858.png">
 
+                <h2 class="titulo">Sombras en la lluvia</h2>
+
+                <section class="detalles">
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a ex
+                        id
+                        ligula sollicitudin ultricies. In mi diam, molestie eu erat nec, hendrerit interdum ipsum.
+                        Proin
+                        orci arcu, faucibus sed finibus et. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <a href="#">Mas informacion</a>
+                    <section class="puntuacion">
+                        <img class="star" src="img/otros/estella.png">
+                        <img class="star" src="img/otros/estella.png">
+                        <img class="star" src="img/otros/estella.png">
+                        <img class="star" src="img/otros/estrella-media.png">
+                        <img class="star" src="img/otros/estrella-vacia.png">
                     </section>
-
-                    <section class="Sinopsis">
-                        <h2>Sinopsis</h2>
-                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a ex
-                            id
-                            ligula sollicitudin ultricies. In mi diam, molestie eu erat nec, hendrerit interdum ipsum.
-                            Proin
-                            orci arcu, faucibus sed finibus et. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Phasellus a ex id
-                            ligula sollicitudin ultricies. In mi diam, molestie eu erat nec, hendrerit interdum ipsum.
-                            Proin
-                            orci arcu, faucibus sed finibus et.</p>
-                        <a href="#">Enlace</a>
-                    </section>
+                    <section class="precio">9.99€</section>
                 </section>
-            </article>
-            <article class="fondo-c">
-                <section class="tarjeta-c">
-                    <img class="portada" src="img/portadas/Copilot_20251204_155858.png">
-                    <section class="detalles">
-                        <h2 class="titulo">Susurros en la Niebla</h2>
-                        <section class="puntuacion">
-                            <img class="star" src="img/otros/estella.png">
-                            <img class="star" src="img/otros/estella.png">
-                            <img class="star" src="img/otros/estella.png">
-                            <img class="star" src="img/otros/estrella-media.png">
-                            <img class="star" src="img/otros/estrella-vacia.png">
-                        </section>
-                        <section class="precio">
-                            <p><img class="moneda" src="img/otros/euro.png">9.99</p>
-                        </section>
-                    </section>
+            </section>
 
-                    <section class="Sinopsis">
-                        <h2>Sinopsis</h2>
-                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a ex
-                            id
-                            ligula sollicitudin ultricies. In mi diam, molestie eu erat nec, hendrerit interdum ipsum.
-                            Proin
-                            orci arcu, faucibus sed finibus et. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Phasellus a ex id
-                            ligula sollicitudin ultricies. In mi diam, molestie eu erat nec, hendrerit interdum ipsum.
-                            Proin
-                            orci arcu, faucibus sed finibus et.</p>
-                        <a href="#">Enlace</a>
+            <!-- Tarjeta 3 -->
+            <section class="tarjeta">
+                <img class="portada" src="img/portadas/Copilot_20251204_155315.png">
+
+                <h2 class="titulo">Book Title </h2>
+
+                <section class="detalles">
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a ex
+                        id
+                        ligula sollicitudin ultricies. In mi diam, molestie eu erat nec, hendrerit interdum ipsum.
+                        Proin
+                        orci arcu, faucibus sed finibus et. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <a href="#">Mas informacion</a>
+                    <section class="puntuacion">
+                        <img class="star" src="img/otros/estella.png">
+                        <img class="star" src="img/otros/estella.png">
+                        <img class="star" src="img/otros/estella.png">
+                        <img class="star" src="img/otros/estrella-media.png">
+                        <img class="star" src="img/otros/estrella-vacia.png">
                     </section>
+                    <section class="precio">9.99€</section>
                 </section>
-            </article>
-        </section>
+            </section>
+        </article>
 
         <section class="inscripcion">
             <section class="des-ins">
@@ -174,9 +174,7 @@
                 <p>Déjanos tu correo y te enviaremos novedades, recomendaciones personalizadas y descuentos que no
                     encontrarás en otro lugar.</p>
             </section>
-            <form class="formulario" action="#" method="post">
-                <label for="emial">Email:</label>
-                <input type="email" id="email" name="nombre" placeholder="ejemplo@gmail.com"></input><br>
+            <form class="enviar" action="#" method="post">
                 <button type="submit">Inscribirme</button>
         </section>
         </section>
@@ -189,19 +187,12 @@
                 <li><a href="#">Mapa web</a></li>
             </ul>
 
-            <section class="redes">
-                <img src="img/redes/gmail.png">
-                <img src="img/redes/instagram.png">
-                <img src="img/redes/facebook.png">
-                <img src="img/redes/gorjeo.png">
-            </section>
         </article>
         <p>&copy; Copyright 2025. Todos los derechos reservados.</p>
-        <!-- Script BootStrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"></script>
+        <!-- Bootstrap JS (necesario para dropdown) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     </footer>
+
 
 </body>
 

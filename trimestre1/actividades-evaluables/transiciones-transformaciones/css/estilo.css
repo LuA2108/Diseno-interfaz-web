@@ -4,11 +4,28 @@
     margin: 0%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 /* ----------------------------------------- */
 
 /* Cuerpo ---------------------------------- */
+main {
+    background-color: #FFF9E3;
+    margin: 30px;
+    border-radius: 20px;
+    padding-left: 95px;
+    padding-right: 95px;
+    ;
+    padding-bottom: 50px;
+    border: 4px solid #7B6200;
+}
+
 body {
-    background-color: #FFF1E4;
+    background-color: #4C0000;
+}
+
+h2 {
+    text-align: center;
+    margin: 25px;
 }
 
 /* Navegador ------------------------------- */
@@ -18,6 +35,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     padding: 10px;
+    flex-wrap: wrap;
 }
 
 nav ul {
@@ -26,18 +44,33 @@ nav ul {
     padding: 30px;
     gap: 28px;
     border-radius: 20px;
-    
+
 }
 
 nav ul li {
     list-style-type: none;
 }
 
+/*Transicion 1: Cambio de color de fondo y agrandar padding en los elementos del navegador*/
 nav ul li a {
     text-decoration: none;
     color: white;
     display: flex;
     align-items: end;
+    transition: 
+        background-color 0.8s ease,  /* 1ª transición: fondo */
+        padding 0.5s linear;;        /* 2ª transición: espacio interior */
+}
+
+nav ul li a:hover {
+    background-color: rgb(207, 160, 5);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+
+nav ul li a img {
+    padding-right: 8px;
 }
 
 .buscador input {
@@ -47,62 +80,163 @@ nav ul li a {
     padding: 5px;
     width: 400px;
 }
+
+/* Por defecto, se oculta el dropdownl */
+.dropdown-menu-movil {
+    display: none;
+}
+
 /* ----------------------------------------- */
 
 /* Seccion 1 : Galeria --------------------- */
-main > h1 {
+main>h1 {
     color: #7B6200;
     text-align: center;
-    margin: 15px;
+    margin: 30px;
 }
 
 .galeria {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 600px;
+    justify-content: center;
+    background-color: #FFDFC2;
+    border-radius: 10px;
+    padding: 20px;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
-.galeria img {
-    width: 33.99%;
-    height: 600px;
+/* 2ª Transicion en las imagenes de la galeria de portada. 
+Ademas con transformaciones de escala y rotacion*/
+.galeria img, .galeria-princ {
+    width: 300px;
+    height: auto;
+    margin: 5px;
+    border-radius: 10px;
 }
+.galeria img {
+    transition: box-shadow 1.5s ease, transform 0.5s ease;
+}
+
+.galeria-princ {
+    transition: transform 0.5s ease;;
+}
+
+.galeria img:hover {
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.723);
+    transform: scale(1.08) rotate(360deg); /* Transformaciones */
+}
+
+.galeria-princ img:hover {
+    transform: rotateY(180deg) scale(1.08);
+}
+
+.galeria img:hover .galeria-princ:hover {
+    box-shadow: 15px 15px 15px black;
+}
+
+.galeria-princ {
+    position: relative;
+    /* necesario para que el título se posicione sobre la imagen */
+}
+
+.titulo-tarjeta {
+    position: absolute;
+    /* encima de la imagen */
+    bottom: 350px;
+    /* distancia desde el borde inferior */
+    left: 65px;
+    /* distancia desde el borde izquierdo */
+    color: white;
+    /* color del texto */
+    background-color: rgba(0, 0, 0, 0);
+    /* fondo semitransparente para legibilidad */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 40px;
+}
+
+.btn-tarjeta {
+    position: absolute;
+    bottom: 65px;
+    /* al fondo de la imagen */
+    left: 110px;
+    background-color: #FFDFC2;
+    /* tu color personalizado */
+    color: rgb(60, 1, 1);
+    border: none;
+    padding: 8px 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+}
+
 /* ----------------------------------------- */
 
 /* Seccion 2: Botones  --------------------- */
 
 .botones {
     display: flex;
+    border: 3px solid #9E7F03;
+    border-radius: 5px;
+    padding: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+
 }
 
 .novedad,
 .buscado,
 .prox {
-    height: 230px;
-    width: 100%;
+    height: 180px;
+    width: 400px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-radius: 5px;
 }
 
+/*Uso de sombreado en el boton novedad*/
 .boton-nov {
     background-color: #AF6F42;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.30);
+    
 }
+
+.boton-nov, .boton-bus, .boton-prox {
+    transition: color 0.6s ease;
+}
+.boton-nov:hover, .boton-bus:hover, .boton-prox:hover {
+    color: #bab7b6;
+}
+
+
+/*Uso de sombreado en el boton busqueda*/
 .boton-bus {
     background-color: #E0A47A;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.30);
 }
+
+/*Uso de sombreado en el boton proximamente*/
 .boton-prox {
     background-color: #602D08;
+    box-shadow: 5px 10px 10px rgba(182, 174, 174, 0.3);
 }
-.novedad {
-    background-color: #E8BC9D;
-}
+
+/* Uso de gradiente en el fondo del boton buscado*/
 .buscado {
-    background-color: #241001;
+    background: linear-gradient(to bottom, #E0A47A, #a7581f);
 }
+
+/* Uso de gradiente en el fondo del boton novedad*/
+.novedad {
+    background: linear-gradient(to bottom, #bab7b6, #a22e1a);
+}
+
+/* Uso de gradiente en el fondo del boton proximos*/
 .prox {
-    background-color: #8E4918;
+    background: linear-gradient(to bottom, #461e01, #ff7715);
 }
+
 /* ----------------------------------------- */
 
 /* Estilo predefinido a todos botones ------ */
@@ -111,59 +245,63 @@ button {
     padding: 10px;
     border: 0px;
 }
+
 /* ----------------------------------------- */
 
 /* Seccion 3: Tarjetas --------------------- */
 .tarjetas {
     display: flex;
-    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+    /* permite que se muevan a otra fila */
+    justify-content: center;
+    /* centra las tarjetas */
+    align-items: center;
 }
 
-.tarjeta-a, .tarjeta-b, .tarjeta-c {
+/* 3ª Transicion: Transicion con el borde de la tarjeta*/
+.tarjeta {
+    border: 3px solid #9E7F03;
+    position: relative;
+    background-image: url("../img/fondo/fondo_tarjeta.jpg");
     display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    border: 2px solid rgb(35, 18, 1);
-    margin: 15px;
-}
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-position: 60%;
+    border-radius: 10px;
 
-.fondo-a {
-    background-image: url("../img/fondo/10.jpg");
-    background-size: 1800px;
-}
-
-.fondo-b {
-    background-image: url("../img/fondo/1503701_6113.jpg");
-    background-size: 900px;
-}
-
-.fondo-c {
-    background-image: url("../img/fondo/8ba3e33f-7aba-41ea-8252-6695bd348f3d.jpg");
-    background-size: 1800px;
+    flex: 1 1 300px;
+    /* base 300px, puede crecer y encoger */
+    max-width: 400px;
+    /* evita que se estire demasiado */
     
+    /*Transicion*/
+    transition: border 0.5s ease-out
 }
 
-/* Detalles tarjeta -------------------- */
-.detalles {
-    display: block;
-    margin-left: 30px;
-    margin-right: 70px;
+/*Hover*/
+.tarjeta:hover {
+    border: 10px solid #9E7F03;
 }
 
 .description {
-    display: flex;
-    align-items: baseline;
+    width: 400px;
+    padding: 15px;
 }
-.portada {
-    width: 200px;
-    height: 300px;
-}
-/* ------------------------------------- */
 
-/* Puntuacion ---------------------- */
+/* Portada  ----------- */
+.portada {
+    padding: 20px;
+    width: 100%;
+}
+
+/* ------------------- */
+
+/* Puntuacion -------------- */
 .puntuacion {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -172,17 +310,13 @@ button {
     width: 20px;
     height: 20px;
 }
-/* --------------------------------- */
 
-/* Precio -------------------------- */
+/* ------------------------ */
+
+/* Precio ----------------- */
 .precio {
     display: flex;
-    justify-content: left;    
-}
-
-.moneda {
-    width: 25px;
-    height: 25px;
+    justify-content: center;
 }
 
 .precio p {
@@ -190,36 +324,29 @@ button {
     text-align: left;
     align-items: center;
 }
-/* --------------------------------- */
+
+/* ----------------------- */
 
 /* Seccion 4: Inscripcion ------------------ */
 
 .inscripcion {
     background-color: #EBD3BD;
-    margin: 10px;
     border-radius: 15px;
     display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .des-ins {
-    margin: 30px;
-    display: block;
+    padding: 30px;
 }
 
-.des-ins p {
-    width: 620px;
-}
-
-.formulario {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 400px;
-}
-
-.formulario button {
+.enviar button {
     background-color: #BC8D02;
     color: white;
+    width: 200px;
 }
 
 /* ----------------------------------------- */
@@ -227,18 +354,16 @@ button {
 /* Footer -------------------------------------- */
 footer {
     background-color: #4C0000;
-    
-}
-
-footer article {
-    display: flex;
-    justify-content: space-between;
 }
 
 footer ul li a {
     color: white;
     text-decoration: none;
+    background-color: #3d0101;
+    padding: 20px;
+    border-radius: 20px;
 }
+
 footer p {
     text-align: center;
     color: white;
@@ -246,15 +371,72 @@ footer p {
 
 footer ul li {
     list-style-type: none;
+
 }
 
-.redes img {
-    width: 50px;
-    height: 50px;
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 40px;
+
 }
+
 /* --------------------------------------------- */
 
-@media (max-width:600px) {
-    
-    
+@media (max-width: 600px) {
+
+    .menu-normal {
+        display: none;
+        /* ocultamos el menú normal */
+    }
+
+    .dropdown-menu-movil {
+        display: inline-block;
+        /* mostramos dropdown */
+    }
+
+    .navegador {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .dropdown-menu-movil .btn {
+        background-color: #7e6501;
+        /* color de fondo */
+        color: white;
+        /* color del texto */
+        border: none;
+        /* sin borde */
+    }
+
+    .botones {
+        border: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    .novedad,
+    .buscado,
+    .prox {
+        height: 100px;
+        border-radius: 50px;
+    }
+
+    .boton-nov, .boton-bus, .boton-prox {
+        border-radius: 30px;
+    }
+
+    footer article ul {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        text-align: center;
+    }
+
+    footer ul li a {
+        border-radius: 5px;
+    }
+
 }
