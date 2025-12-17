@@ -1,0 +1,45 @@
+$color: red;
+$color-menu: black;
+$color-enlace: white;
+$color-hover: blue;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+header {
+    background-color: rgb(175, 175, 175);
+    padding: 15px;
+    padding-bottom: 70px;
+
+    h1 {
+    color: $color;
+    }
+
+    nav > ul {
+        display: flex;
+        gap: 15px;
+        padding-top: 20px;
+
+        li {
+            list-style-type: none;
+            
+            a {
+                text-decoration: none;
+                color: $color-enlace;
+                transition: color 0.5s ease-in;
+            }
+
+            a:hover {
+                color: $color-hover;
+            }
+        }
+        
+        li:first-child a {
+            color: $color-menu;
+        }
+    }
+}

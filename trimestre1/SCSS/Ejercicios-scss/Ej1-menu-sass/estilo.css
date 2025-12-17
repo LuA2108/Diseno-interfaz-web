@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: rgb(175, 175, 175);
+  padding: 15px;
+  padding-bottom: 70px;
+}
+header h1 {
+  color: red;
+}
+header nav > ul {
+  display: flex;
+  gap: 15px;
+  padding-top: 20px;
+}
+header nav > ul li {
+  list-style-type: none;
+}
+header nav > ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.5s ease-in;
+}
+header nav > ul li a:hover {
+  color: blue;
+}
+header nav > ul li:first-child a {
+  color: black;
+}/*# sourceMappingURL=estilo.css.map */
