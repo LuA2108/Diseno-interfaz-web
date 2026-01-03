@@ -1,4 +1,118 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   font-family: "nunito", sans-serif;
+  background-color: #edebeb;
+  font-weight: 400;
+  font-size: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.titulo a {
+  color: red;
+}
+
+.subtitulo {
+  color: green;
+}
+
+.titulos {
+  width: 90%;
+  text-align: center;
+}
+
+.logo {
+  float: left;
+  width: 10%;
+  height: auto;
+}
+
+header {
+  padding: 3px;
+}
+
+header::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header, nav, footer section {
+  background-color: rgb(193, 193, 193);
+}
+
+nav {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+ul {
+  display: flex;
+  gap: 1px;
+  justify-content: center;
+}
+ul li {
+  list-style-type: none;
+  padding: 2px;
+  display: flex;
+}
+ul li a {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+ul li a:hover {
+  color: red;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+
+main {
+  min-height: 20em;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  text-align: center;
+}
+footer .iconos img {
+  width: 3em;
+}
+footer .iconos ul {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+footer .copy p {
+  font-size: 0.8rem;
 }/*# sourceMappingURL=estilo.css.map */

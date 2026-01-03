@@ -1,7 +1,139 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@300;400;700&display=swap');
 
 $font-main: 'nunito', sans-serif;
+$rojo: red;
+$verde: green;
+$gris: rgb(193, 193, 193);
 
+// ESTILO UNIVERSAL ////////////////
+* {
+    padding: 0;
+    margin: 0;
+}
+
+// CUERPO ///////////////////
 body {
     font-family: $font-main;
+    background-color: #edebeb;
+    font-weight: 400;
+    font-size: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+// TITULOS ///////////////
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+// Ocupa un 50% mas ////
+h3 { font-size: 1.5rem; }
+
+// Ocupa un 100% mas ///
+h2 { font-size: 2rem; }
+
+// Ocupa un 200% mas //
+h1 { font-size: 3rem; }
+
+// Color del titulo //
+.titulo a {
+    color: $rojo;
+}
+
+// Color del subtitulo //
+.subtitulo {
+    color: $verde;
+}
+
+// Estilo de alineacion y tamaño //
+.titulos {
+    width: 90%;
+    text-align: center;
+}
+
+// LOGO: posicion y tamaño ////////
+.logo {
+    float: left;
+    width: 10%;
+    height: auto;
+}
+
+// CABECERA ///////////////
+header {
+    padding: 3px;
+}
+
+header::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header, nav, footer section {
+    background-color: $gris;
+}
+
+// 
+nav {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ul {
+    display: flex;
+    gap: 1px;
+    justify-content: center;
+
+    li {
+        list-style-type: none;
+        padding: 2px;
+        display: flex;
+
+        a {
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            transition: color 0.3s ease, font-weight 0.3s ease;
+
+            &:hover {
+            color: $rojo;
+            font-weight: 700;
+            }
+        }
+
+        
+    }
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+main {
+    min-height: 20em;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    text-align: center;
+
+    .iconos img {
+        width: 3em;
+    }
+
+    .iconos ul {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .copy p {
+        font-size: 0.8rem;
+    }
 }
