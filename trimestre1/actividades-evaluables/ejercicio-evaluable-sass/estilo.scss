@@ -1,0 +1,165 @@
+/* =========================
+        VARIABLES
+========================= */
+
+$color-texto: #eee;
+$color-hover-texto: lighten($color-texto, 10%);
+$color-fondo: #15a;
+$color-hover-fondo: lighten($color-fondo, 10%);
+$color-titulo: darken($color-fondo, 10%);
+
+/* =========================
+        MIXINS
+========================= */
+
+// Mixin para transiciones
+@mixin transition($property, $duration, $timing: linear) {
+    transition: $property $duration $timing;
+    -webkit-transition: $property $duration $timing;
+    -moz-transition: $property $duration $timing;
+}
+
+// Mixin para animaciones
+@mixin animation($name, $duration, $timing: linear) {
+    animation: $name $duration $timing;
+    -webkit-animation: $name $duration $timing;
+}
+
+@mixin responsive($size) {
+    @if $size ==medium {
+        @media (max-width: 1024px) {
+            @content
+        }
+    }
+
+    @else if $size ==small {
+        @media (max-width: 800px) {
+            @content
+        }
+    }
+}
+
+@include responsive(small) {
+    nav {
+        display: none
+    }
+}
+
+/* =========================
+    RESET
+========================= */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* =========================
+        HEADER: CABECERA
+========================= */
+header {
+    background-color: gray;
+    width: 100%;
+    padding: 8px;
+    font-size: 2em;
+    font-style: initial;
+
+
+}
+
+/* =========================
+    NAV / MENÚ
+========================= */
+nav {
+    background-color: $color-fondo;
+
+    ul {
+        list-style: none;
+
+        li {
+            position: relative;
+            display: inline-block;
+
+            a {
+                color: $color-texto;
+                text-decoration: none;
+                padding: 10px 15px;
+                display: block;
+
+                @include transition(background-color, 0.3s)
+            }
+
+            &:hover>a {
+                color: $color-hover-texto;
+                background-color: $color-hover-fondo;
+            }
+
+            ul {
+                display: none; // submenú oculto
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: $color-fondo;
+            }
+
+            &:hover>ul {
+                display: block;
+                @include animation(desplegar, 0.3s)
+            }
+        }
+    }
+}
+
+
+/* =========================
+    ANIMACIÓN
+========================= */
+@keyframes desplegar {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================
+    MAIN
+========================= */
+
+main {
+    display: flex;
+
+    h1 {
+        color: $color-titulo;
+    }
+}
+
+
+/* =========================
+    RESPONSIVE
+========================= */
+@include responsive(small) {
+    nav {
+        display: none;
+    }
+}
+
+body {
+    min-width: 800px;
+}
+
+/* =========================
+    FOOTER
+========================= */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: $color-fondo;
+    color: $color-texto;
+    text-align: center;
+    padding: 10px;
+}

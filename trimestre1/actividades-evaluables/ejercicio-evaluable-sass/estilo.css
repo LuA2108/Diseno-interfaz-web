@@ -1,0 +1,115 @@
+@charset "UTF-8";
+/* =========================
+        VARIABLES
+========================= */
+/* =========================
+        MIXINS
+========================= */
+@media (max-width: 800px) {
+  nav {
+    display: none;
+  }
+}
+/* =========================
+    RESET
+========================= */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* =========================
+        HEADER: CABECERA
+========================= */
+header {
+  background-color: gray;
+  width: 100%;
+  padding: 8px;
+  font-size: 2em;
+  font-style: initial;
+}
+
+/* =========================
+    NAV / MENÚ
+========================= */
+nav {
+  background-color: #15a;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  position: relative;
+  display: inline-block;
+}
+nav ul li a {
+  color: #eee;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  transition: background-color 0.3s linear;
+  -webkit-transition: background-color 0.3s linear;
+  -moz-transition: background-color 0.3s linear;
+}
+nav ul li:hover > a {
+  color: white;
+  background-color: rgb(21.6363636364, 108.1818181818, 216.3636363636);
+}
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #15a;
+}
+nav ul li:hover > ul {
+  display: block;
+  animation: desplegar 0.3s linear;
+  -webkit-animation: desplegar 0.3s linear;
+}
+
+/* =========================
+    ANIMACIÓN
+========================= */
+@keyframes desplegar {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* =========================
+    MAIN
+========================= */
+main {
+  display: flex;
+}
+main h1 {
+  color: rgb(12.3636363636, 61.8181818182, 123.6363636364);
+}
+
+/* =========================
+    RESPONSIVE
+========================= */
+@media (max-width: 800px) {
+  nav {
+    display: none;
+  }
+}
+body {
+  min-width: 800px;
+}
+
+/* =========================
+    FOOTER
+========================= */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #15a;
+  color: #eee;
+  text-align: center;
+  padding: 10px;
+}/*# sourceMappingURL=estilo.css.map */
