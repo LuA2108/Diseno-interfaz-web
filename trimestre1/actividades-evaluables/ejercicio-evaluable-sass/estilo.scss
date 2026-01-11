@@ -1,110 +1,162 @@
 /* =========================
-        VARIABLES
+    VARIABLES
+    Se definen colores base reutilizables en todo el sitio.
 ========================= */
 
-$color-texto: #eee;
-$color-hover-texto: lighten($color-texto, 10%);
-$color-fondo: #15a;
-$color-hover-fondo: lighten($color-fondo, 10%);
-$color-titulo: darken($color-fondo, 10%);
+$color-texto: #eee; // Color principal del texto
+$color-hover-texto: lighten($color-texto, 10%); // Texto al pasar el mouse
+$color-fondo: #15a; // Color base del fondo (nav, footer, botones)
+$color-hover-fondo: lighten($color-fondo, 10%); // Fondo al hacer hover
+$color-titulo: darken($color-fondo, 10%); // Color para títulos
 
 /* =========================
         MIXINS
+        Fragmentos reutilizables de código SCSS
 ========================= */
 
-// Mixin para transiciones
+// Mixin para aplicar transiciones con prefijos
 @mixin transition($property, $duration, $timing: linear) {
     transition: $property $duration $timing;
     -webkit-transition: $property $duration $timing;
     -moz-transition: $property $duration $timing;
 }
 
-// Mixin para animaciones
+// Mixin para animaciones con prefijos
 @mixin animation($name, $duration, $timing: linear) {
     animation: $name $duration $timing;
     -webkit-animation: $name $duration $timing;
 }
 
+// MIXIN para diseño responsive - tamaños
 @mixin responsive($size) {
+
+    // Tablets y pantallas medianas
     @if $size ==medium {
         @media (max-width: 1024px) {
-            @content
+            @content;
         }
     }
 
+    // Móviles y pantallas pequeñas
     @else if $size ==small {
         @media (max-width: 800px) {
-            @content
+            @content;
         }
-    }
-}
-
-@include responsive(small) {
-    nav {
-        display: none
     }
 }
 
 /* =========================
-    RESET
+    ANIMACIÓN
+    Animación usada en el despliegue del submenú
+========================= */
+@keyframes desplegar {
+    from {
+        opacity: 0; // Empieza invisible
+    }
+
+    to {
+        opacity: 1; // Termina visible
+    }
+}
+
+/* =========================
+    RESET: Estilo general - universal
+    Elimina estilos por defecto del navegador
 ========================= */
 
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
+
 
 /* =========================
         HEADER: CABECERA
 ========================= */
 header {
-    background-color: gray;
-    width: 100%;
-    padding: 8px;
-    font-size: 2em;
-    font-style: initial;
+    background-color: rgb(203, 201, 201); // Fondo del header
+    width: 100%; // Ocupa todo el ancho
+    padding: 5px 20px; // Espaciado interno
 
 
+    h1 {
+        font-size: 2em; // Tamaño del título
+        font-family: Georgia, 'Times New Roman', Times, serif; // Fuente
+        color: rgb(54, 54, 54); // Color del texto
+    }
 }
 
 /* =========================
     NAV / MENÚ
 ========================= */
+
+// Lista principal del menú
+nav ul {
+    display: flex; // hace que los li se alineen horizontalmente
+    list-style: none;
+    justify-content: flex-start; // Alineación a la izquierda
+    margin: 0;
+    padding: 0;
+    gap: 50px; // Espacio entre elementos
+
+}
+
+// Contenedor principal del nav
 nav {
     background-color: $color-fondo;
+    width: 100%;
+    margin-bottom: 10px; // Separación inferior
 
     ul {
-        list-style: none;
+        list-style: none; // Elimina el estilo
 
         li {
-            position: relative;
-            display: inline-block;
+            position: relative; // Necesario para el submenú absoluto
 
             a {
                 color: $color-texto;
                 text-decoration: none;
-                padding: 10px 15px;
+                padding: 15px 20px;
                 display: block;
+                text-align: center;
 
-                @include transition(background-color, 0.3s)
+                &:hover {
+                    color: $color-hover-texto; // Color al pasar el mouse
+                    transform: scale(1.05); // Aumenta ligeramente
+                    @include transition(all, 0.3s, ease); // Usamos el mixin para la transicion
+                }
             }
 
-            &:hover>a {
-                color: $color-hover-texto;
-                background-color: $color-hover-fondo;
-            }
-
+            // SUBMENU // 
             ul {
                 display: none; // submenú oculto
-                position: absolute;
-                top: 100%;
-                left: 0;
-                background-color: $color-fondo;
+                position: absolute; // Posicionado respecto al li
+                list-style: none;
+
             }
 
+            // Muestra el submenú al hacer hover
             &:hover>ul {
                 display: block;
-                @include animation(desplegar, 0.3s)
+                background-color: $color-hover-fondo;
+                @include animation(desplegar, 0.3s); // Animación 
+            }
+
+            // Elementos del submenú
+            ul li {
+                display: block;
+                width: 100%;
+
+                a {
+                    padding: 8px 15px;
+                    display: block;
+
+                    &:hover {
+                        background-color: $color-fondo;
+                        color: $color-hover-texto;
+                    }
+                }
             }
         }
     }
@@ -112,54 +164,115 @@ nav {
 
 
 /* =========================
-    ANIMACIÓN
+    MAIN / CONTENEDOR PRINCIPAL 
 ========================= */
-@keyframes desplegar {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-
-/* =========================
-    MAIN
-========================= */
-
 main {
     display: flex;
+    gap: 30px;
+    height: auto;
+    padding: 10px 15px;
 
-    h1 {
-        color: $color-titulo;
+    // Último article (contenido principal)
+    article:last-child {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex: 1; // Ocupa el espacio disponible
+
+        h1 {
+            padding: 5px 0px;
+            color: $color-titulo;
+
+        }
+    }
+}
+
+/* =========================
+    FORMULARIO
+========================= */
+
+.login {
+    width: 20rem; // Ancho fijo del formulario
+    display: flex;
+    flex-direction: column; // Elementos en columnas    
+    gap: 15px; // Separacion vertical
+
+    // Inputs y botón comparten estilos
+    input,
+    button {
+        width: 100%; // ocupan todo el ancho del formulario
+        height: 25px;
+        border-radius: 5px; // Bordes redondeados
+        padding-left: 5px;
+        box-sizing: border-box
+    }
+
+    input {
+        border: 2px solid gray;
+    }
+
+    button {
+        border: none;
+        background-color: $color-fondo;
+        color: white;
     }
 }
 
 
 /* =========================
-    RESPONSIVE
+    RESPONSIVE (PANTALLAS PEQUEÑAS)
 ========================= */
 @include responsive(small) {
+
+    // Oculta el menú en móvil
     nav {
         display: none;
     }
+
+    // Ajusta el layout principal
+    main {
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        gap: 0;
+
+        article:first-child {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+    // El formulario ocupa todo el ancho
+    .login {
+        width: 100%  !important; // ocupa todo el ancho del article, de manera que lo fuerza
+        max-width: 100%;
+    }
 }
 
-body {
-    min-width: 800px;
+/* =========================
+    RESPONSIVE (PANTALLAS MEDIANAS)
+========================= */
+@include responsive(medium) {  // ← ¡AÑADE ESTO TAMBIÉN!
+    main {
+        gap: 20px;
+    }
+    
+    nav ul {
+        gap: 25px;
+    }
+    
+    .login {
+        width: 18rem;
+    }
 }
 
 /* =========================
     FOOTER
 ========================= */
 footer {
-    position: fixed;
-    bottom: 0;
+    background-color: $color-fondo; // Fondo del footer
+    color: $color-texto; // Color del texto
+    text-align: left; // Alineación del texto
+    padding: 15px; // Espaciado interno
     width: 100%;
-    background-color: $color-fondo;
-    color: $color-texto;
-    text-align: center;
-    padding: 10px;
 }

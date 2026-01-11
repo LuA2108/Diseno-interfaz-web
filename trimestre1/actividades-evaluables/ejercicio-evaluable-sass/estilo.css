@@ -1,75 +1,15 @@
 @charset "UTF-8";
 /* =========================
-        VARIABLES
+    VARIABLES
+    Se definen colores base reutilizables en todo el sitio.
 ========================= */
 /* =========================
         MIXINS
+        Fragmentos reutilizables de código SCSS
 ========================= */
-@media (max-width: 800px) {
-  nav {
-    display: none;
-  }
-}
-/* =========================
-    RESET
-========================= */
-* {
-  padding: 0;
-  margin: 0;
-}
-
-/* =========================
-        HEADER: CABECERA
-========================= */
-header {
-  background-color: gray;
-  width: 100%;
-  padding: 8px;
-  font-size: 2em;
-  font-style: initial;
-}
-
-/* =========================
-    NAV / MENÚ
-========================= */
-nav {
-  background-color: #15a;
-}
-nav ul {
-  list-style: none;
-}
-nav ul li {
-  position: relative;
-  display: inline-block;
-}
-nav ul li a {
-  color: #eee;
-  text-decoration: none;
-  padding: 10px 15px;
-  display: block;
-  transition: background-color 0.3s linear;
-  -webkit-transition: background-color 0.3s linear;
-  -moz-transition: background-color 0.3s linear;
-}
-nav ul li:hover > a {
-  color: white;
-  background-color: rgb(21.6363636364, 108.1818181818, 216.3636363636);
-}
-nav ul li ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #15a;
-}
-nav ul li:hover > ul {
-  display: block;
-  animation: desplegar 0.3s linear;
-  -webkit-animation: desplegar 0.3s linear;
-}
-
 /* =========================
     ANIMACIÓN
+    Animación usada en el despliegue del submenú
 ========================= */
 @keyframes desplegar {
   from {
@@ -80,36 +20,179 @@ nav ul li:hover > ul {
   }
 }
 /* =========================
-    MAIN
+    RESET: Estilo general - universal
+    Elimina estilos por defecto del navegador
+========================= */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+        HEADER: CABECERA
+========================= */
+header {
+  background-color: rgb(203, 201, 201);
+  width: 100%;
+  padding: 5px 20px;
+}
+header h1 {
+  font-size: 2em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: rgb(54, 54, 54);
+}
+
+/* =========================
+    NAV / MENÚ
+========================= */
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  gap: 50px;
+}
+
+nav {
+  background-color: #15a;
+  width: 100%;
+  margin-bottom: 10px;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  position: relative;
+}
+nav ul li a {
+  color: #eee;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: block;
+  text-align: center;
+}
+nav ul li a:hover {
+  color: white;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+}
+nav ul li ul {
+  display: none;
+  position: absolute;
+  list-style: none;
+}
+nav ul li:hover > ul {
+  display: block;
+  background-color: rgb(21.6363636364, 108.1818181818, 216.3636363636);
+  animation: desplegar 0.3s linear;
+  -webkit-animation: desplegar 0.3s linear;
+}
+nav ul li ul li {
+  display: block;
+  width: 100%;
+}
+nav ul li ul li a {
+  padding: 8px 15px;
+  display: block;
+}
+nav ul li ul li a:hover {
+  background-color: #15a;
+  color: white;
+}
+
+/* =========================
+    MAIN / CONTENEDOR PRINCIPAL 
 ========================= */
 main {
   display: flex;
+  gap: 30px;
+  height: auto;
+  padding: 10px 15px;
 }
-main h1 {
+main article:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+main article:last-child h1 {
+  padding: 5px 0px;
   color: rgb(12.3636363636, 61.8181818182, 123.6363636364);
 }
 
 /* =========================
-    RESPONSIVE
+    FORMULARIO
+========================= */
+.login {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.login input,
+.login button {
+  width: 100%;
+  height: 25px;
+  border-radius: 5px;
+  padding-left: 5px;
+  box-sizing: border-box;
+}
+.login input {
+  border: 2px solid gray;
+}
+.login button {
+  border: none;
+  background-color: #15a;
+  color: white;
+}
+
+/* =========================
+    RESPONSIVE (PANTALLAS PEQUEÑAS)
 ========================= */
 @media (max-width: 800px) {
   nav {
     display: none;
   }
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    gap: 0;
+  }
+  main article:first-child {
+    width: 100%;
+    max-width: 100%;
+  }
+  .login {
+    width: 100% !important;
+    max-width: 100%;
+  }
 }
-body {
-  min-width: 800px;
+/* =========================
+    RESPONSIVE (PANTALLAS MEDIANAS)
+========================= */
+@media (max-width: 1024px) {
+  main {
+    gap: 20px;
+  }
+  nav ul {
+    gap: 25px;
+  }
+  .login {
+    width: 18rem;
+  }
 }
-
 /* =========================
     FOOTER
 ========================= */
 footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
   background-color: #15a;
   color: #eee;
-  text-align: center;
-  padding: 10px;
+  text-align: left;
+  padding: 15px;
+  width: 100%;
 }/*# sourceMappingURL=estilo.css.map */
