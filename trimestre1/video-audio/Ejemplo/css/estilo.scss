@@ -1,0 +1,104 @@
+/* =========================
+    VARIABLES
+============================ */
+$background-header: #15a;
+$background-nav: orange;
+$color-hover-texto: lighten($background-nav, 10%); // Texto al pasar el mouse
+$texto: white;
+
+// Mixin para aplicar transiciones con prefijos
+@mixin transition($property, $duration, $timing: linear) {
+    transition: $property $duration $timing;
+    -webkit-transition: $property $duration $timing;
+    -moz-transition: $property $duration $timing;
+}
+
+
+// Mixin para animaciones con prefijos
+@mixin animation($name, $duration, $timing: linear) {
+    animation: $name $duration $timing;
+    -webkit-animation: $name $duration $timing;
+}
+
+/* =========================
+    ANIMACIÓN
+    Animación usada en el despliegue del submenú
+========================= */
+@keyframes desplegar {
+    from { opacity: 0; } // Empieza invisible 
+    to { opacity: 1; } // Termina visible
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 0;
+}
+
+header:first-child {
+    color: $texto;
+    background-color: $background-header;
+
+}
+
+
+nav {
+    background-color: $background-nav;
+
+    ul {
+        display: flex;
+        gap: 40px;
+
+        li {
+            position: relative;
+            list-style: none;
+
+            a {
+                color: $texto;
+                text-decoration: none;
+                display: block;
+
+                &:hover {
+                    color: $color-hover-texto;
+                    @include transition(all, 0.3s, ease);
+                }
+            }
+
+            ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: $background-nav;
+                z-index: 1000;
+            }
+
+            &:hover > ul {
+                display: block;
+                animation: desplegar(0.3s ease);
+            }
+
+            ul li a {
+                padding: 8px 15px;
+
+                &:hover {
+                    background-color: $color-fondo;
+                }
+            }
+        }
+    }
+}
+
+.container {
+    position: relative;
+    width: 300px;
+
+    header {
+        position: absolute;
+        top: 25px;
+        left: 50px;
+    }
+
+}

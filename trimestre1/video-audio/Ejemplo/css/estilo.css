@@ -1,0 +1,38 @@
+/* =========================
+    VARIABLES
+============================ */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header:first-child {
+  color: white;
+  background-color: #15a;
+}
+
+nav {
+  background-color: orange;
+}
+nav ul {
+  display: flex;
+  gap: 40px;
+}
+nav ul li {
+  list-style-type: none;
+  position: relative;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  text-align: center;
+}
+nav ul li a:hover {
+  color: #ffb733;
+}
+nav ul li ul {
+  display: none;
+  position: absolute;
+  list-style: none;
+}/*# sourceMappingURL=estilo.css.map */
