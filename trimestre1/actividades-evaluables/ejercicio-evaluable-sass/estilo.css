@@ -8,18 +8,6 @@
         Fragmentos reutilizables de código SCSS
 ========================= */
 /* =========================
-    ANIMACIÓN
-    Animación usada en el despliegue del submenú
-========================= */
-@keyframes desplegar {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-/* =========================
     RESET: Estilo general - universal
     Elimina estilos por defecto del navegador
 ========================= */
@@ -46,15 +34,6 @@ header h1 {
 /* =========================
     NAV / MENÚ
 ========================= */
-nav ul {
-  display: flex;
-  list-style: none;
-  justify-content: flex-start;
-  margin: 0;
-  padding: 0;
-  gap: 50px;
-}
-
 nav {
   background-color: #15a;
   width: 100%;
@@ -62,45 +41,54 @@ nav {
 }
 nav ul {
   list-style: none;
+  display: flex;
+  list-style: none;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
 }
 nav ul li {
   position: relative;
+  transition: background-color 0.3s linear;
+  -webkit-transition: background-color 0.3s linear;
+  -moz-transition: background-color 0.3s linear;
+}
+nav ul li:hover {
+  background-color: rgb(21.6363636364, 108.1818181818, 216.3636363636);
 }
 nav ul li a {
   color: #eee;
   text-decoration: none;
-  padding: 15px 20px;
+  padding: 15px 30px;
   display: block;
   text-align: center;
+  transition: color, 0.3;
 }
 nav ul li a:hover {
   color: white;
-  transform: scale(1.05);
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
 }
 nav ul li ul {
   display: none;
   position: absolute;
   list-style: none;
+  background-color: rgb(21.6363636364, 108.1818181818, 216.3636363636);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
 }
 nav ul li:hover > ul {
   display: block;
-  background-color: rgb(21.6363636364, 108.1818181818, 216.3636363636);
-  animation: desplegar 0.3s linear;
-  -webkit-animation: desplegar 0.3s linear;
+  opacity: 1;
 }
 nav ul li ul li {
   display: block;
   width: 100%;
 }
 nav ul li ul li a {
-  padding: 8px 15px;
   display: block;
 }
 nav ul li ul li a:hover {
-  background-color: #15a;
   color: white;
 }
 

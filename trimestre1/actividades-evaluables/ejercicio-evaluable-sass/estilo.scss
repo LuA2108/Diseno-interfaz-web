@@ -46,20 +46,6 @@ $color-titulo: darken($color-fondo, 10%); // Color para títulos
 }
 
 /* =========================
-    ANIMACIÓN
-    Animación usada en el despliegue del submenú
-========================= */
-@keyframes desplegar {
-    from {
-        opacity: 0; // Empieza invisible
-    }
-
-    to {
-        opacity: 1; // Termina visible
-    }
-}
-
-/* =========================
     RESET: Estilo general - universal
     Elimina estilos por defecto del navegador
 ========================= */
@@ -91,17 +77,6 @@ header {
     NAV / MENÚ
 ========================= */
 
-// Lista principal del menú
-nav ul {
-    display: flex; // hace que los li se alineen horizontalmente
-    list-style: none;
-    justify-content: flex-start; // Alineación a la izquierda
-    margin: 0;
-    padding: 0;
-    gap: 50px; // Espacio entre elementos
-
-}
-
 // Contenedor principal del nav
 nav {
     background-color: $color-fondo;
@@ -110,21 +85,31 @@ nav {
 
     ul {
         list-style: none; // Elimina el estilo
+        display: flex; // hace que los li se alineen horizontalmente
+        list-style: none;
+        justify-content: flex-start; // Alineación a la izquierda
+        margin: 0;
+        padding: 0;
 
         li {
             position: relative; // Necesario para el submenú absoluto
+            @include transition(background-color, 0.3s); // Transición suave
+
+            // Hover en el li (cambia fondo del contenedor)
+            &:hover {
+                background-color: $color-hover-fondo;
+            }
 
             a {
                 color: $color-texto;
                 text-decoration: none;
-                padding: 15px 20px;
+                padding: 15px 30px;
                 display: block;
                 text-align: center;
+                transition: (color, 0.3);
 
                 &:hover {
                     color: $color-hover-texto; // Color al pasar el mouse
-                    transform: scale(1.05); // Aumenta ligeramente
-                    @include transition(all, 0.3s, ease); // Usamos el mixin para la transicion
                 }
             }
 
@@ -133,14 +118,16 @@ nav {
                 display: none; // submenú oculto
                 position: absolute; // Posicionado respecto al li
                 list-style: none;
+                background-color: $color-hover-fondo;
+                opacity: 0; // Empieza invisible
+                @include transition(opacity, 0.3s, ease);
 
             }
 
             // Muestra el submenú al hacer hover
             &:hover>ul {
                 display: block;
-                background-color: $color-hover-fondo;
-                @include animation(desplegar, 0.3s); // Animación 
+                opacity: 1;
             }
 
             // Elementos del submenú
@@ -149,11 +136,9 @@ nav {
                 width: 100%;
 
                 a {
-                    padding: 8px 15px;
                     display: block;
 
                     &:hover {
-                        background-color: $color-fondo;
                         color: $color-hover-texto;
                     }
                 }
@@ -244,7 +229,7 @@ main {
 
     // El formulario ocupa todo el ancho
     .login {
-        width: 100%  !important; // ocupa todo el ancho del article, de manera que lo fuerza
+        width: 100% !important; // ocupa todo el ancho del article, de manera que lo fuerza
         max-width: 100%;
     }
 }
@@ -252,15 +237,17 @@ main {
 /* =========================
     RESPONSIVE (PANTALLAS MEDIANAS)
 ========================= */
-@include responsive(medium) {  // ← ¡AÑADE ESTO TAMBIÉN!
+@include responsive(medium) {
+
+    // ← ¡AÑADE ESTO TAMBIÉN!
     main {
         gap: 20px;
     }
-    
+
     nav ul {
         gap: 25px;
     }
-    
+
     .login {
         width: 18rem;
     }

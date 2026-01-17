@@ -1,0 +1,26 @@
+html {
+  background-color: #ccc;
+}
+
+body {
+  font: 100% Arial, sans-serif;
+  color: #f00;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #000;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+  color: #fff;
+}/*# sourceMappingURL=style_ej1_scss.css.map */
