@@ -1,0 +1,35 @@
+/* =========================
+        MIXINS
+        Fragmentos reutilizables de código SCSS
+========================= */
+
+// Mixin para aplicar transiciones con prefijos
+@mixin transition($property, $duration, $timing: linear) {
+    transition: $property $duration $timing;
+    -webkit-transition: $property $duration $timing;
+    -moz-transition: $property $duration $timing;
+}
+
+// Mixin para animaciones con prefijos
+@mixin animation($name, $duration, $timing: linear) {
+    animation: $name $duration $timing;
+    -webkit-animation: $name $duration $timing;
+}
+
+// MIXIN para diseño responsive - tamaños
+@mixin responsive($size) {
+
+    // Tablets y pantallas medianas
+    @if $size ==medium {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+
+    // Móviles y pantallas pequeñas
+    @else if $size ==small {
+        @media (max-width: 800px) {
+            @content;
+        }
+    }
+}
