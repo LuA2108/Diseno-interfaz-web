@@ -46,6 +46,22 @@ $color-titulo: darken($color-fondo, 10%); // Color para títulos
 }
 
 /* =========================
+    ANIMACIONES
+========================= */
+
+@keyframes iluminar {
+    from {
+        background-color: darken($color-fondo, 10%);
+        color: $color-texto;
+    }
+
+    to {
+        background-color: lighten($color-fondo, 10%);
+        color: lighten($color-texto, 10%);
+    }
+}
+
+/* =========================
     RESET: Estilo general - universal
     Elimina estilos por defecto del navegador
 ========================= */

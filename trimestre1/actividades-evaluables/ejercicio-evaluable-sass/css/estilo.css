@@ -8,6 +8,19 @@
         Fragmentos reutilizables de código SCSS
 ========================= */
 /* =========================
+    ANIMACIONES
+========================= */
+@keyframes iluminar {
+  from {
+    background-color: rgb(12.3636363636, 61.8181818182, 123.6363636364);
+    color: #eee;
+  }
+  to {
+    background-color: rgb(21.6363636364, 108.1818181818, 216.3636363636);
+    color: white;
+  }
+}
+/* =========================
     RESET: Estilo general - universal
     Elimina estilos por defecto del navegador
 ========================= */
