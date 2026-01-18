@@ -1,0 +1,10 @@
+/* =========================
+    VARIABLES
+    Se definen colores base reutilizables en todo el sitio.
+========================= */
+
+$color-texto: #eee; // Color principal del texto
+$color-hover-texto: lighten($color-texto, 10%); // Texto al pasar el mouse
+$color-fondo: #15a; // Color base del fondo (nav, footer, botones)
+$color-hover-fondo: lighten($color-fondo, 10%); // Fondo al hacer hover
+$color-titulo: darken($color-fondo, 10%); // Color para títulos
