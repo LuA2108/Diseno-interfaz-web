@@ -1,0 +1,73 @@
+/* =========================
+    NAV / MENÚ
+========================= */
+
+// Contenedor principal del nav
+nav {
+    background-color: $color-fondo;
+    width: 100%;
+    margin-bottom: 10px; // Separación inferior
+
+    ul {
+        list-style: none; // Elimina el estilo
+        display: flex; // hace que los li se alineen horizontalmente
+        list-style: none;
+        justify-content: flex-start; // Alineación a la izquierda
+        margin: 0;
+        padding: 0;
+
+        li {
+            position: relative; // Necesario para el submenú absoluto
+            @include transition(background-color, 0.3s); // Transición suave
+
+            // Hover en el li (cambia fondo del contenedor)
+            &:hover {
+                background-color: $color-hover-fondo;
+            }
+
+            a {
+                color: $color-texto;
+                text-decoration: none;
+                padding: 15px 30px;
+                display: block;
+                text-align: center;
+                transition: (color, 0.3);
+
+                &:hover {
+                    color: $color-hover-texto; // Color al pasar el mouse
+                }
+            }
+
+            // SUBMENU // 
+            ul {
+                display: none; // submenú oculto
+                position: absolute; // Posicionado respecto al li
+                list-style: none;
+                background-color: $color-hover-fondo;
+                opacity: 0; // Empieza invisible
+                @include transition(opacity, 0.3s, ease);
+
+            }
+
+            // Muestra el submenú al hacer hover
+            &:hover>ul {
+                display: block;
+                opacity: 1;
+            }
+
+            // Elementos del submenú
+            ul li {
+                display: block;
+                width: 100%;
+
+                a {
+                    display: block;
+
+                    &:hover {
+                        color: $color-hover-texto;
+                    }
+                }
+            }
+        }
+    }
+}
