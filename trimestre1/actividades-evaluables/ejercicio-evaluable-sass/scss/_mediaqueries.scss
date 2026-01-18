@@ -1,7 +1,9 @@
+@use 'mixins';
+
 /* =========================
     RESPONSIVE (PANTALLAS PEQUEÑAS)
 ========================= */
-@include responsive(small) {
+@include mixins.responsive(small) {
 
     // Oculta el menú en móvil
     nav {
@@ -31,7 +33,7 @@
 /* =========================
     RESPONSIVE (PANTALLAS MEDIANAS)
 ========================= */
-@include responsive(medium) {
+@include mixins.responsive(medium) {
 
     // ← ¡AÑADE ESTO TAMBIÉN!
     main {

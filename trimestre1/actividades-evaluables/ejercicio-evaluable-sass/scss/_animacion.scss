@@ -1,14 +1,16 @@
+@use 'variables';
+
 /* =========================
     ANIMACIONES
 ========================= */
-@keyframes iluminar {
+@keyframes submenu {
     from {
-        background-color: $color-fondo;
-        color: $color-texto;
+        opacity: 0;
+        transform: translateY(-8px);
     }
 
     to {
-        background-color: $color-hover-fondo;
-        color: $color-texto-hover;
+        opacity: 1;
+        transform: translateY(0);
     }
 }

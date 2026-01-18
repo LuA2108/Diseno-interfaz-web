@@ -10,14 +10,114 @@
 /* =========================
     ANIMACIONES
 ========================= */
-@keyframes iluminar {
+@keyframes submenu {
   from {
-    background-color: rgb(12.3636363636, 61.8181818182, 123.6363636364);
-    color: #eee;
+    opacity: 0;
+    transform: translateY(-8px);
   }
   to {
-    background-color: rgb(21.6363636364, 108.1818181818, 216.3636363636);
-    color: white;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* =========================
+    NAV / MENÚ
+========================= */
+nav {
+  background-color: #15a;
+  width: 100%;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+}
+nav ul li {
+  position: relative;
+}
+nav ul li a {
+  color: #eee;
+  padding: 15px 30px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  transition: color 0.3s linear;
+  -webkit-transition: color 0.3s linear;
+  -moz-transition: color 0.3s linear;
+}
+nav ul li a:hover {
+  color: white;
+  background-color: rgb(21.6363636364, 108.1818181818, 216.3636363636);
+}
+nav ul li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 100%;
+  list-style: none;
+  background-color: #15a;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-8px);
+}
+nav ul li:hover > ul {
+  display: block;
+  visibility: visible;
+  pointer-events: auto;
+  animation: submenu 0.45s linear;
+  -webkit-animation: submenu 0.45s linear;
+  opacity: 1;
+  transform: translateY(0);
+}
+nav ul li ul li {
+  display: block;
+  width: 100%;
+}
+nav ul li ul li a {
+  display: block;
+  padding: 15px 30px;
+  color: #eee;
+  text-decoration: none;
+}
+nav ul li ul li a:hover {
+  color: white;
+}
+
+/* =========================
+    RESPONSIVE (PANTALLAS PEQUEÑAS)
+========================= */
+@media (max-width: 800px) {
+  nav {
+    display: none;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    gap: 0;
+  }
+  main article:first-child {
+    width: 100%;
+    max-width: 100%;
+  }
+  .login {
+    width: 100% !important;
+    max-width: 100%;
+  }
+}
+/* =========================
+    RESPONSIVE (PANTALLAS MEDIANAS)
+========================= */
+@media (max-width: 1024px) {
+  main {
+    gap: 20px;
+  }
+  nav ul {
+    gap: 25px;
+  }
+  .login {
+    width: 18rem;
   }
 }
 /* =========================
@@ -34,7 +134,7 @@
         HEADER: CABECERA
 ========================= */
 header {
-  background-color: rgb(203, 201, 201);
+  background-color: rgb(218, 213, 213);
   width: 100%;
   padding: 5px 20px;
 }
@@ -42,67 +142,6 @@ header h1 {
   font-size: 2em;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: rgb(54, 54, 54);
-}
-
-/* =========================
-    NAV / MENÚ
-========================= */
-nav {
-  background-color: #15a;
-  width: 100%;
-  margin-bottom: 10px;
-}
-nav ul {
-  list-style: none;
-  display: flex;
-  list-style: none;
-  justify-content: flex-start;
-  margin: 0;
-  padding: 0;
-}
-nav ul li {
-  position: relative;
-  transition: background-color 0.3s linear;
-  -webkit-transition: background-color 0.3s linear;
-  -moz-transition: background-color 0.3s linear;
-}
-nav ul li:hover {
-  background-color: rgb(21.6363636364, 108.1818181818, 216.3636363636);
-}
-nav ul li a {
-  color: #eee;
-  text-decoration: none;
-  padding: 15px 30px;
-  display: block;
-  text-align: center;
-  transition: color, 0.3;
-}
-nav ul li a:hover {
-  color: white;
-}
-nav ul li ul {
-  display: none;
-  position: absolute;
-  list-style: none;
-  background-color: rgb(21.6363636364, 108.1818181818, 216.3636363636);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  -webkit-transition: opacity 0.3s ease;
-  -moz-transition: opacity 0.3s ease;
-}
-nav ul li:hover > ul {
-  display: block;
-  opacity: 1;
-}
-nav ul li ul li {
-  display: block;
-  width: 100%;
-}
-nav ul li ul li a {
-  display: block;
-}
-nav ul li ul li a:hover {
-  color: white;
 }
 
 /* =========================
@@ -151,42 +190,6 @@ main article:last-child h1 {
   color: white;
 }
 
-/* =========================
-    RESPONSIVE (PANTALLAS PEQUEÑAS)
-========================= */
-@media (max-width: 800px) {
-  nav {
-    display: none;
-  }
-  main {
-    display: flex;
-    flex-direction: column;
-    padding: 25px;
-    gap: 0;
-  }
-  main article:first-child {
-    width: 100%;
-    max-width: 100%;
-  }
-  .login {
-    width: 100% !important;
-    max-width: 100%;
-  }
-}
-/* =========================
-    RESPONSIVE (PANTALLAS MEDIANAS)
-========================= */
-@media (max-width: 1024px) {
-  main {
-    gap: 20px;
-  }
-  nav ul {
-    gap: 25px;
-  }
-  .login {
-    width: 18rem;
-  }
-}
 /* =========================
     FOOTER
 ========================= */

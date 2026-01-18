@@ -1,58 +1,65 @@
+@use 'variables';
+@use 'mixins';
+@use 'animacion';
+
 /* =========================
     NAV / MENÚ
 ========================= */
 
 // Contenedor principal del nav
 nav {
-    background-color: $color-fondo;
+    background-color: variables.$color-fondo;
     width: 100%;
-    margin-bottom: 10px; // Separación inferior
 
     ul {
         list-style: none; // Elimina el estilo
         display: flex; // hace que los li se alineen horizontalmente
-        list-style: none;
         justify-content: flex-start; // Alineación a la izquierda
-        margin: 0;
-        padding: 0;
 
         li {
-            position: relative; // Necesario para el submenú absoluto
-            @include transition(background-color, 0.3s); // Transición suave
-
-            // Hover en el li (cambia fondo del contenedor)
-            &:hover {
-                background-color: $color-hover-fondo;
-            }
+            position: relative;
 
             a {
-                color: $color-texto;
-                text-decoration: none;
+                color: variables.$color-texto;
                 padding: 15px 30px;
+                text-decoration: none;
                 display: block;
                 text-align: center;
-                transition: (color, 0.3);
+                @include mixins.transition(color, 0.3s);
 
                 &:hover {
-                    color: $color-hover-texto; // Color al pasar el mouse
+                    color: variables.$color-hover-texto; // Color al pasar el mouse
+                    background-color: variables.$color-hover-fondo;
                 }
             }
 
             // SUBMENU // 
             ul {
-                display: none; // submenú oculto
                 position: absolute; // Posicionado respecto al li
+                top: 100%;
+                left: 0;
+                min-width: 100%;
                 list-style: none;
-                background-color: $color-hover-fondo;
-                opacity: 0; // Empieza invisible
-                @include transition(opacity, 0.3s, ease);
+                background-color: variables.$color-fondo;
 
+                // oculto (pero animable)
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transform: translateY(-8px);
             }
 
             // Muestra el submenú al hacer hover
             &:hover>ul {
                 display: block;
+                visibility: visible;
+                pointer-events: auto;
+                // dispara la animación al aparecer
+                @include mixins.animation(submenu, 0.45s);
+
+                // estado final coherente con el keyframe
                 opacity: 1;
+                transform: translateY(0);
             }
 
             // Elementos del submenú
@@ -62,9 +69,12 @@ nav {
 
                 a {
                     display: block;
+                    padding: 15px 30px;
+                    color: variables.$color-texto;
+                    text-decoration: none;
 
                     &:hover {
-                        color: $color-hover-texto;
+                        color: variables.$color-hover-texto;
                     }
                 }
             }

@@ -1,65 +1,6 @@
-/* =========================
-    VARIABLES
-    Se definen colores base reutilizables en todo el sitio.
-========================= */
-
-$color-texto: #eee; // Color principal del texto
-$color-hover-texto: lighten($color-texto, 10%); // Texto al pasar el mouse
-$color-fondo: #15a; // Color base del fondo (nav, footer, botones)
-$color-hover-fondo: lighten($color-fondo, 10%); // Fondo al hacer hover
-$color-titulo: darken($color-fondo, 10%); // Color para títulos
-
-/* =========================
-        MIXINS
-        Fragmentos reutilizables de código SCSS
-========================= */
-
-// Mixin para aplicar transiciones con prefijos
-@mixin transition($property, $duration, $timing: linear) {
-    transition: $property $duration $timing;
-    -webkit-transition: $property $duration $timing;
-    -moz-transition: $property $duration $timing;
-}
-
-// Mixin para animaciones con prefijos
-@mixin animation($name, $duration, $timing: linear) {
-    animation: $name $duration $timing;
-    -webkit-animation: $name $duration $timing;
-}
-
-// MIXIN para diseño responsive - tamaños
-@mixin responsive($size) {
-
-    // Tablets y pantallas medianas
-    @if $size ==medium {
-        @media (max-width: 1024px) {
-            @content;
-        }
-    }
-
-    // Móviles y pantallas pequeñas
-    @else if $size ==small {
-        @media (max-width: 800px) {
-            @content;
-        }
-    }
-}
-
-/* =========================
-    ANIMACIONES
-========================= */
-
-@keyframes iluminar {
-    from {
-        background-color: darken($color-fondo, 10%);
-        color: $color-texto;
-    }
-
-    to {
-        background-color: lighten($color-fondo, 10%);
-        color: lighten($color-texto, 10%);
-    }
-}
+@use 'variables';
+@use 'menu';
+@use 'mediaqueries';
 
 /* =========================
     RESET: Estilo general - universal
@@ -77,7 +18,7 @@ $color-titulo: darken($color-fondo, 10%); // Color para títulos
         HEADER: CABECERA
 ========================= */
 header {
-    background-color: rgb(203, 201, 201); // Fondo del header
+    background-color: rgb(218, 213, 213); // Fondo del header
     width: 100%; // Ocupa todo el ancho
     padding: 5px 20px; // Espaciado interno
 
@@ -86,80 +27,6 @@ header {
         font-size: 2em; // Tamaño del título
         font-family: Georgia, 'Times New Roman', Times, serif; // Fuente
         color: rgb(54, 54, 54); // Color del texto
-    }
-}
-
-/* =========================
-    NAV / MENÚ
-========================= */
-
-// Contenedor principal del nav
-nav {
-    background-color: $color-fondo;
-    width: 100%;
-    margin-bottom: 10px; // Separación inferior
-
-    ul {
-        list-style: none; // Elimina el estilo
-        display: flex; // hace que los li se alineen horizontalmente
-        list-style: none;
-        justify-content: flex-start; // Alineación a la izquierda
-        margin: 0;
-        padding: 0;
-
-        li {
-            position: relative; // Necesario para el submenú absoluto
-            @include transition(background-color, 0.3s); // Transición suave
-
-            // Hover en el li (cambia fondo del contenedor)
-            &:hover {
-                background-color: $color-hover-fondo;
-            }
-
-            a {
-                color: $color-texto;
-                text-decoration: none;
-                padding: 15px 30px;
-                display: block;
-                text-align: center;
-                transition: (color, 0.3);
-
-                &:hover {
-                    color: $color-hover-texto; // Color al pasar el mouse
-                }
-            }
-
-            // SUBMENU // 
-            ul {
-                display: none; // submenú oculto
-                position: absolute; // Posicionado respecto al li
-                list-style: none;
-                background-color: $color-hover-fondo;
-                opacity: 0; // Empieza invisible
-                @include transition(opacity, 0.3s, ease);
-
-            }
-
-            // Muestra el submenú al hacer hover
-            &:hover>ul {
-                display: block;
-                opacity: 1;
-            }
-
-            // Elementos del submenú
-            ul li {
-                display: block;
-                width: 100%;
-
-                a {
-                    display: block;
-
-                    &:hover {
-                        color: $color-hover-texto;
-                    }
-                }
-            }
-        }
     }
 }
 
@@ -182,7 +49,7 @@ main {
 
         h1 {
             padding: 5px 0px;
-            color: $color-titulo;
+            color: variables.$color-titulo;
 
         }
     }
@@ -191,7 +58,6 @@ main {
 /* =========================
     FORMULARIO
 ========================= */
-
 .login {
     width: 20rem; // Ancho fijo del formulario
     display: flex;
@@ -214,67 +80,18 @@ main {
 
     button {
         border: none;
-        background-color: $color-fondo;
+        background-color: variables.$color-fondo;
         color: white;
     }
 }
 
 
 /* =========================
-    RESPONSIVE (PANTALLAS PEQUEÑAS)
-========================= */
-@include responsive(small) {
-
-    // Oculta el menú en móvil
-    nav {
-        display: none;
-    }
-
-    // Ajusta el layout principal
-    main {
-        display: flex;
-        flex-direction: column;
-        padding: 25px;
-        gap: 0;
-
-        article:first-child {
-            width: 100%;
-            max-width: 100%;
-        }
-    }
-
-    // El formulario ocupa todo el ancho
-    .login {
-        width: 100% !important; // ocupa todo el ancho del article, de manera que lo fuerza
-        max-width: 100%;
-    }
-}
-
-/* =========================
-    RESPONSIVE (PANTALLAS MEDIANAS)
-========================= */
-@include responsive(medium) {
-
-    // ← ¡AÑADE ESTO TAMBIÉN!
-    main {
-        gap: 20px;
-    }
-
-    nav ul {
-        gap: 25px;
-    }
-
-    .login {
-        width: 18rem;
-    }
-}
-
-/* =========================
     FOOTER
 ========================= */
 footer {
-    background-color: $color-fondo; // Fondo del footer
-    color: $color-texto; // Color del texto
+    background-color: variables.$color-fondo; // Fondo del footer
+    color: variables.$color-texto; // Color del texto
     text-align: left; // Alineación del texto
     padding: 15px; // Espaciado interno
     width: 100%;
