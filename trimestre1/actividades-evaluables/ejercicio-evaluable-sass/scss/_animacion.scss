@@ -1,0 +1,14 @@
+/* =========================
+    ANIMACIONES
+========================= */
+@keyframes iluminar {
+    from {
+        background-color: $color-fondo;
+        color: $color-texto;
+    }
+
+    to {
+        background-color: $color-hover-fondo;
+        color: $color-texto-hover;
+    }
+}
