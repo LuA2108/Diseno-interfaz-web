@@ -1,0 +1,48 @@
+/* =========================
+    RESPONSIVE (PANTALLAS PEQUEÑAS)
+========================= */
+@include responsive(small) {
+
+    // Oculta el menú en móvil
+    nav {
+        display: none;
+    }
+
+    // Ajusta el layout principal
+    main {
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        gap: 0;
+
+        article:first-child {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+    // El formulario ocupa todo el ancho
+    .login {
+        width: 100% !important; // ocupa todo el ancho del article, de manera que lo fuerza
+        max-width: 100%;
+    }
+}
+
+/* =========================
+    RESPONSIVE (PANTALLAS MEDIANAS)
+========================= */
+@include responsive(medium) {
+
+    // ← ¡AÑADE ESTO TAMBIÉN!
+    main {
+        gap: 20px;
+    }
+
+    nav ul {
+        gap: 25px;
+    }
+
+    .login {
+        width: 18rem;
+    }
+}
