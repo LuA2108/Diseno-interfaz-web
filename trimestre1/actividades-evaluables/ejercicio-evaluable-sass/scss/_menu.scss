@@ -11,11 +11,12 @@ nav {
     background-color: variables.$color-fondo;
     width: 100%;
 
-    ul {
+    > ul {
         list-style: none; // Elimina el estilo
         display: flex; // hace que los li se alineen horizontalmente
         justify-content: flex-start; // Alineación a la izquierda
-
+    }
+    
         li {
             position: relative;
 
@@ -34,7 +35,8 @@ nav {
             }
 
             // SUBMENU // 
-            ul {
+            > ul {
+                display: block;
                 position: absolute; // Posicionado respecto al li
                 top: 100%;
                 left: 0;
@@ -45,15 +47,14 @@ nav {
                 // oculto (pero animable)
                 opacity: 0;
                 visibility: hidden;
-                pointer-events: none;
+                pointer-events: none; /* no interactúa mientras está oculto */
                 transform: translateY(-8px);
             }
 
             // Muestra el submenú al hacer hover
             &:hover>ul {
-                display: block;
                 visibility: visible;
-                pointer-events: auto;
+                pointer-events: auto; /* vuelve a ser clicable */
                 // dispara la animación al aparecer
                 @include mixins.animation(submenu, 0.45s);
 
@@ -80,4 +81,5 @@ nav {
             }
         }
     }
-}
+
+
