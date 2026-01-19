@@ -27,15 +27,15 @@ nav {
   background-color: #15a;
   width: 100%;
 }
-nav ul {
+nav > ul {
   list-style: none;
   display: flex;
   justify-content: flex-start;
 }
-nav ul li {
+nav li {
   position: relative;
 }
-nav ul li a {
+nav li a {
   color: #eee;
   padding: 15px 30px;
   text-decoration: none;
@@ -45,11 +45,12 @@ nav ul li a {
   -webkit-transition: color 0.3s linear;
   -moz-transition: color 0.3s linear;
 }
-nav ul li a:hover {
+nav li a:hover {
   color: white;
   background-color: rgb(21.6363636364, 108.1818181818, 216.3636363636);
 }
-nav ul li ul {
+nav li > ul {
+  display: block;
   position: absolute;
   top: 100%;
   left: 0;
@@ -58,29 +59,28 @@ nav ul li ul {
   background-color: #15a;
   opacity: 0;
   visibility: hidden;
-  pointer-events: none;
+  pointer-events: none; /* no interactúa mientras está oculto */
   transform: translateY(-8px);
 }
-nav ul li:hover > ul {
-  display: block;
+nav li:hover > ul {
   visibility: visible;
-  pointer-events: auto;
+  pointer-events: auto; /* vuelve a ser clicable */
   animation: submenu 0.45s linear;
   -webkit-animation: submenu 0.45s linear;
   opacity: 1;
   transform: translateY(0);
 }
-nav ul li ul li {
+nav li ul li {
   display: block;
   width: 100%;
 }
-nav ul li ul li a {
+nav li ul li a {
   display: block;
   padding: 15px 30px;
   color: #eee;
   text-decoration: none;
 }
-nav ul li ul li a:hover {
+nav li ul li a:hover {
   color: white;
 }
 
@@ -189,7 +189,7 @@ main article:last-child h1 {
   background-color: #15a;
   color: white;
 }
-
+  
 /* =========================
     FOOTER
 ========================= */
