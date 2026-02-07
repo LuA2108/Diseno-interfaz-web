@@ -1,0 +1,11 @@
+@import "variables";
+
+header {
+    background-color: $fondo-cabecera;
+    display: flex;
+    flex-direction: column;
+}
+
+.enlace-sesion ul> {
+    display: flex;
+}

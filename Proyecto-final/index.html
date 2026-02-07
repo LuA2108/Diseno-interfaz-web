@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="sass/main.css">
+
+    <!-- Enlace a fuente de google  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Denk+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <section class="container-sesion">
+            <nav class="enlace-sesion">
+                <ul>
+                    <li><a href="#">Registrarse</a></li>
+                    <li>-</li>
+                    <li><a href="#">Iniciar sesión</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="container-logo">
+            <a href="index.html"><img src="" alt="">Agencia Rumbo Libre</a>
+        </section>
+
+        <section class="container-menus">
+            <nav class="nav-1">
+                <ul>
+                    <li>
+                        <a href="#">Destinos</a>
+                        <ul>
+                            <li>
+                                <a href="#">Europa</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">España</a>
+                                        <a href="#">Francia</a>
+                                        <a href="#">Alemania</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Asia</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">Japon</a>
+                                        <a href="#">Indonesia</a>
+                                        <a href="#">China</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">America</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">Argentina</a>
+                                        <a href="#">USA</a>
+                                        <a href="#">Cánada</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="@">Oriente medio</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Actividades</a>
+                        <ul>
+                            <li><a href="#">Cruceros</a></li>
+                            <li><a href="#">Parques</a></li>
+                            <li>
+                                <a href="#">Turismo cultural</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">Museos</a>
+                                        <a href="#">Galerias</a>
+                                        <a href="#">Ciudades</a>
+                                        <a href="#">Gastronomias</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Naturaleza y aventura</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">Montañas</a>
+                                        <a href="#">Safari</a>
+                                        <a href="#">Deportes</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="nav-2">
+                <ul>
+                    <li><a href="#">¿Quienes somos?</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <section class="seccion-principal" id="principal">
+            <h1>¿Listo para tu próxima aventura?</h1>
+            <h2>Contáctanos </h2>
+
+            <p>Ingrese sus datos para contactarle</p>
+            <form action="">
+                <label for=""></label>
+                <input type="text">
+
+                <label for=""></label>
+                <input type="text">
+
+                <label>
+                    <input type="checkbox" name="aceptar" value="si">
+                    Acepto los términos y condiciones
+                </label>
+
+                <button><img src="imgs/iconos/mapa.png" alt="icono de mapa">Empieza tu aventura aquí</button>
+            </form>
+
+        </section>
+
+        <section class="section-destacados" id="destacados">
+
+            <h2>Destinos destacados</h2>
+
+            <section class="tabs-section">
+
+                <!-- Inputs ocultos para controlar el tab -->
+                <input type="radio" name="tab" id="tab-europa" checked>
+                <input type="radio" name="tab" id="tab-asia">
+                <input type="radio" name="tab" id="tab-america">
+                <input type="radio" name="tab" id="tab-oriente">
+                <section class="tabs-menu">
+                    <label for="tab-europa" class="tab-link">Europa</label>
+                    <label for="tab-asia" class="tab-link">Asia</label>
+                    <label for="tab-america" class="tab-link">America</label>
+                    <label for="tab-oriente" class="tab-link">Oriente Medio</label>
+                </section>
+
+                <section class="tabs-content">
+
+                    <section class="tab-content" id="section-europa">
+                        <section class="card">
+                            <img src="#" alt="">
+                            <section class="card-body">
+                                <h5>Europa</h5>
+                                <p>Oferta especial para viajar a Europa</p>
+                            </section>
+                        </section>
+                    </section>
+
+                    <section class="tab-content" id="section-asia">
+                        <section class="card">
+                            <img src="#" alt="">
+                            <section class="card-body">
+                                <h5>Asia</h5>
+                                <p>Oferta especial para viajar a Asia</p>
+                            </section>
+                        </section>
+                    </section>
+                    <section class="tab-content" id="section-america">
+                        <section class="card">
+                            <img src="#" alt="">
+                            <section class="card-body">
+                                <h5>Europa</h5>
+                                <p>Oferta especial para viajar a America</p>
+                            </section>
+                        </section>
+                    </section>
+                    <section class="tab-content" id="section-medio-oriente">
+                        <section class="card">
+                            <img src="#" alt="">
+                            <section class="card-body">
+                                <h5>Medio Oriente</h5>
+                                <p>Oferta especial para viajar a Oriente Medio</p>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+
+            </section>
+        </section>
+
+        <section class="cards-section" id="experiencias">
+            <h2>Paquetes y Experencias especiales</h2>
+
+            <section class="cards-container">
+
+                <section class="card">
+                    <h3>Título</h3>
+                    <section class="card-content">
+                        <p>Descripción brevxe de la tarjeta con imagen arriba.</p>
+                        <a href="#" class="btn-card">Leer más</a>
+                    </section>
+                </section>
+
+                <section class="card card-image-top">
+                    <img src="imgs/avion.jpg" alt="Imagen 1">
+                    <section class="card-content">
+                        <h3>Título 1</h3>
+                        <p>Descripción brevxe de la tarjeta con imagen arriba.</p>
+                        <a href="#" class="btn-card">Leer más</a>
+                    </section>
+                </section>
+
+                <section class="card card-image-top">
+                    <img src="imgs/avion.jpg" alt="Imagen 1">
+                    <section class="card-content">
+                        <h3>Título 2</h3>
+                        <p>Descripción breve de la tarjeta con imagen arriba.</p>
+                        <a href="#" class="btn-card">Leer más</a>
+                    </section>
+                </section>
+
+                <section class="card card-image-top">
+                    <img src="imgs/avion.jpg" alt="Imagen 1">
+                    <section class="card-content">
+                        <h3>Título 3</h3>
+                        <p>Descripción breve de la tarjeta con imagen arriba.</p>
+                        <a href="#" class="btn-card">Leer más</a>
+                    </section>
+                </section>
+            </section>
+        </section>
+
+        <section class="cards-section" id="historias">
+            <h2>Historias</h2>
+
+            <section class="item">
+                <img src="#" alt="" class="icono">
+                <h3>Viajazos de aventura</h3>
+                <p>Descripcion del comentario del usuario 1.</p>
+            </section>
+
+            <section class="item">
+                <img src="#" alt="" class="icono">
+                <h3>Transparencia total</h3>
+                <p>Descripcion del comentario del usuario 1.</p>
+            </section>
+
+            <section class="item">
+                <img src="#" alt="" class="icono">
+                <h3>Plazos para pagar tus viajes</h3>
+                <p>Descripcion del comentario del usuario 1.</p>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <section class="logo">
+                <img src="#" alt="">
+                <p>Agencia Rumbo Libre</p>
+            </section>
+            <hr>
+            <p>"Hacemos realidad tu proximo viaje"</p>
+        </section>
+        <section>
+            <h3>Inicio</h3>
+            <hr>
+            <section>
+                <ul>
+                    <li><a href="">Contacto</a></li>
+                    <li><a href="">Destinos</a></li>
+                    <li><a href="">Paquetes</a></li>
+                    <li><a href="">¿Porque viajar?</a></li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <h3>Destinos</h3>
+            <hr>
+            <section>
+                <ul>
+                    <li><a href="">Contacto</a></li>
+                    <li><a href="">Destinos</a></li>
+                    <li><a href="">Paquetes</a></li>
+                    <li><a href="">¿Porque viajar?</a></li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <h3>Actividades</h3>
+            <hr>
+            <section>
+                <ul>
+                    <li><a href="">Cruceros</a></li>
+                    <li><a href="">Parques</a></li>
+                    <li><a href="">Turismo</a></li>
+                    <li><a href="">Naturaleza y aventura</a></li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <h3>¿Quienes somos?</h3>
+            <hr>
+            <section>
+                <ul>
+                    <li>Telefono</li>
+                    <li>Email</li>
+                    <li>Tedes sociales</a></li>
+                    <li>Sede</a></li>
+                </ul>
+            </section>
+        </section>
+
+        <hr>
+        <p></p>
+    </footer>
+</body>
+
+</html>
