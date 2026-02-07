@@ -23,7 +23,7 @@
                 background: linear-gradient(to bottom, #fca800, hsl(15, 100%, 50%));
                 border-radius: 10px;
                 min-width: 150px;
-
+                z-index: 2;
                 li {
                     position: relative;
 
@@ -42,6 +42,7 @@
                         background: linear-gradient(to bottom, #fca800, hsl(15, 100%, 50%));
                         border-radius: 10px;
                         min-width: 150px;
+                        z-index: 2;
                     }
 
                     &:hover > ul {

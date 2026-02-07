@@ -10,3 +10,35 @@ body {
 }
 
 h1 { font-family: $font-titulos;}
+
+.seccion-principal {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+}
+
+.bg-borrosa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* hace que la imagen cubra todo el contenedor */
+    filter: blur(2px); /* desenfoca la imagen */
+    z-index: 0;         /* queda detrás del contenido */
+}
+
+.seccion-principal > *:not(.bg-borrosa)  {
+    position: relative; /* Mantiene el contenido encima del pseudo-elemento */
+    z-index: 1;
+}
+
+.formulario-principal {
+    display: flex;
+    flex-direction: column;
+}
