@@ -7,45 +7,53 @@
 
         li {
             position: relative;
-            
+
             a {
                 display: block;
-                padding: 8px 13px;
-                text-align: right; // texto alineado a la izquierda
+                padding: 10px 15px;
+                text-align: left; // texto alineado a la izquierda
             }
-            ul {
+
+            ul { // Primer submenú
                 display: none;
                 position: absolute;
-                top: 100%; 
+                top: 100%;  // debajo del li principal
                 left: 0;
+                padding: 0;
                 background: linear-gradient(to bottom, #fca800, hsl(15, 100%, 50%));
-                min-width: 100%;
+                border-radius: 10px;
+                min-width: 150px;
 
                 li {
                     position: relative;
-                    text-align: left;
+
                     a {
                         display: block;
                         padding: 10px 15px;
                         text-align: left; // texto alineado a la izquierda
                     }
 
-                    ul {
+                    ul { // Sub-submenú
                         display: none;
                         position: absolute;
-                        top: 0px;
-                        left: 100%;
-                        padding: 0px;
+                        top: 0;       // al mismo nivel vertical que el primer menú
+                        left: 100%;   // al lado del primer submenú
+                        padding: 0;
+                        background: linear-gradient(to bottom, #fca800, hsl(15, 100%, 50%));
+                        border-radius: 10px;
+                        min-width: 150px;
                     }
 
-                    &:hover >ul {
+                    &:hover > ul {
                         display: block;
                     }
                 }
             }
-            &:hover >ul {
-                        display: block;
+
+            &:hover > ul {
+                display: block;
             }
         }
     }
+
 }
