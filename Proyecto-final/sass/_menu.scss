@@ -1,22 +1,51 @@
 .container-menus {
     background: linear-gradient(to bottom, $fondo-cabecera-2, #fca800);
-    nav>ul {
+
+    nav > ul {
         display: flex;
         justify-content: space-around;
 
-        li ul {
-            display: none;
-        }
-
-        li:hover > ul {
+        li {
+            position: relative;
+            
+            a {
                 display: block;
+                padding: 8px 13px;
+                text-align: right; // texto alineado a la izquierda
             }
-        
-        li > ul > li > ul {
-            display: block;
+            ul {
+                display: none;
+                position: absolute;
+                top: 100%; 
+                left: 0;
+                background: linear-gradient(to bottom, #fca800, hsl(15, 100%, 50%));
+                min-width: 100%;
+
+                li {
+                    position: relative;
+                    text-align: left;
+                    a {
+                        display: block;
+                        padding: 10px 15px;
+                        text-align: left; // texto alineado a la izquierda
+                    }
+
+                    ul {
+                        display: none;
+                        position: absolute;
+                        top: 0px;
+                        left: 100%;
+                        padding: 0px;
+                    }
+
+                    &:hover >ul {
+                        display: block;
+                    }
+                }
+            }
+            &:hover >ul {
+                        display: block;
+            }
         }
-        
     }
-
 }
-

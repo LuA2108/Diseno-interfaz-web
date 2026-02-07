@@ -46,13 +46,42 @@ li {
   display: flex;
   justify-content: space-around;
 }
+.container-menus nav > ul li {
+  position: relative;
+}
+.container-menus nav > ul li a {
+  display: block;
+  padding: 8px 13px;
+  text-align: right;
+}
 .container-menus nav > ul li ul {
   display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: linear-gradient(to bottom, #fca800, hsl(15, 100%, 50%));
+  min-width: 100%;
 }
-.container-menus nav > ul li:hover > ul {
+.container-menus nav > ul li ul li {
+  position: relative;
+  text-align: left;
+}
+.container-menus nav > ul li ul li a {
+  display: block;
+  padding: 10px 15px;
+  text-align: left;
+}
+.container-menus nav > ul li ul li ul {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 100%;
+  padding: 0px;
+}
+.container-menus nav > ul li ul li:hover > ul {
   display: block;
 }
-.container-menus nav > ul li > ul > li > ul {
+.container-menus nav > ul li:hover > ul {
   display: block;
 }
 
