@@ -1,0 +1,8 @@
+@mixin transicion-color($tiempo, $tipo){
+    transition: color $tiempo $tipo;
+}
+
+@mixin transicion-font($tiempo, $tipo){
+    transition: font-size $tiempo $tipo;
+}
+

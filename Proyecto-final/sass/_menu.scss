@@ -1,1 +1,22 @@
+.container-menus {
+    background: linear-gradient(to bottom, $fondo-cabecera-2, #fca800);
+    nav>ul {
+        display: flex;
+        justify-content: space-around;
+
+        li ul {
+            display: none;
+        }
+
+        li:hover > ul {
+                display: block;
+            }
+        
+        li > ul > li > ul {
+            display: block;
+        }
+        
+    }
+
+}
 
