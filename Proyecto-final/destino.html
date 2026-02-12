@@ -1,14 +1,534 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
 
-    </body>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="sass/main.css">
+
+    <!-- Enlace a fuente de google  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Denk+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <section class="container-sesion">
+            <nav class="enlace-sesion">
+                <ul>
+                    <li><a href="#">Registrarse</a></li>
+                    <li>-</li>
+                    <li><a href="#">Iniciar sesión</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="container-logo">
+            <a href="index.html">
+                <img src="imgs/logo.png" alt="">
+                Agencia Rumbo Libre
+            </a>
+        </section>
+
+        <section class="container-menus">
+            <nav class="nav">
+                <ul>
+                    <li>
+                        <a href="#">Destinos</a>
+                        <ul>
+                            <li>
+                                <a href="#">Europa</a>
+                                <ul>
+                                    <li><a href="#">España</a></li>
+                                    <li><a href="#">Francia</a></li>
+                                    <li><a href="#">Alemania</a></li>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Asia</a>
+                        <ul>
+                            <li>
+                            <li><a href="#">Japon</a></li>
+                            <li><a href="#">Indonesia</a></li>
+                            <li><a href="#">China</a></li>
+                    </li>
+                </ul>
+                </li>
+                <li>
+                    <a href="#">America</a>
+                    <ul>
+                        <li><a href="#">Argentina</a></li>
+                        <li><a href="#">USA</a></li>
+                        <li><a href="#">Cánada</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="@">Oriente medio</a>
+                </li>
+                </ul>
+                </li>
+                <li>
+                    <a href="actividades.html">Actividades</a>
+                    <ul>
+                        <li><a href="#">Cruceros</a></li>
+                        <li><a href="#">Parques</a></li>
+                        <li>
+                            <a href="#">Turismo cultural</a>
+                            <ul>
+                                <li><a href="#">Museos</a></li>
+                                <li><a href="#">Galerias</a></li>
+                                <li><a href="#">Ciudades</a></li>
+                                <li><a href="#">Gastronomias</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Naturaleza y aventura</a>
+                            <ul>
+                                <li><a href="#">Montañas</a></li>
+                                <li><a href="#">Safari</a></li>
+                                <li><a href="#">Deportes</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">¿Quienes somos?</a>
+                </li>
+                </ul>
+            </nav>
+
+        </section>
+    </header>
+    <main class="pagina-destinos">
+        <!-- EUROPA -->
+        <article class="continente">
+            <h2 class="europa-continente">Europa</h2>
+
+            <!-- ESPAÑA -->
+            <section class="pais">
+                <h3 class="titulo-pais">España</h3>
+                <section class="cards-destinos">
+                    <section class="card">
+                        <img src="imgs/paises/españa.jpg" alt="Madrid">
+                        <section class="card-body">
+                            <h4>Madrid</h4>
+                            <p>La capital de España, llena de historia y cultura.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                    <section class="card">
+                        <img src="imgs/paises/españa.jpg" alt="Barcelona">
+                        <section class="card-body">
+                            <h4>Barcelona</h4>
+                            <p>Arquitectura modernista, playas y gastronomía.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                    <section class="card">
+                        <img src="imgs/paises/españa.jpg" alt="Sevilla">
+                        <section class="card-body">
+                            <h4>Sevilla</h4>
+                            <p>Tradición, flamenco y patios llenos de color.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                </section>
+            </section>
+
+            <!-- FRANCIA -->
+            <section class="pais">
+                <h3 class="titulo-pais">Francia</h3>
+                <section class="cards-destinos">
+                    <section class="card">
+                        <img src="imgs/paises/francia.jpg" alt="París">
+                        <section class="card-body">
+                            <h4>París</h4>
+                            <p>La ciudad del amor y la Torre Eiffel.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                    <section class="card">
+                        <img src="imgs/paises/francia.jpg" alt="Lyon">
+                        <section class="card-body">
+                            <h4>Lyon</h4>
+                            <p>Capital gastronómica y con historia milenaria.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                    <section class="card">
+                        <img src="imgs/paises/francia.jpg" alt="Niza">
+                        <section class="card-body">
+                            <h4>Niza</h4>
+                            <p>Riviera francesa, sol y mar Mediterráneo.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                </section>
+            </section>
+
+            <!-- ALEMANIA -->
+            <section class="pais">
+                <h3 class="titulo-pais">Alemania</h3>
+                <section class="cards-destinos">
+                    <section class="card">
+                        <img src="imgs/paises/alemania.jpg" alt="Berlín">
+                        <section class="card-body">
+                            <h4>Berlín</h4>
+                            <p>Historia, cultura urbana y vida nocturna.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                    <section class="card">
+                        <img src="imgs/paises/alemania.jpg" alt="Múnich">
+                        <section class="card-body">
+                            <h4>Múnich</h4>
+                            <p>Oktoberfest y arquitectura bávara.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                    <section class="card">
+                        <img src="imgs/paises/alemania.jpg" alt="Hamburgo">
+                        <section class="card-body">
+                            <h4>Hamburgo</h4>
+                            <p>Puerto histórico y vida cultural vibrante.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                </section>
+            </section>
+
+        </article>
+
+        <!-- ASIA -->
+        <article class="continente">
+            <h2 class="asia-continente">Asia</h2>
+
+            <!-- Japon -->
+            <section class="pais">
+                <h3 class="titulo-pais">Japón</h3>
+                <section class="cards-destinos">
+                    <section class="card">
+                        <img src="imgs/paises/japon.jpg" alt="Madrid">
+                        <section class="card-body">
+                            <h4>Tokyo</h4>
+                            <p>La capital de Japón, llena de historia y cultura.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                    <section class="card">
+                        <img src="imgs/paises/japon.jpg" alt="Barcelona">
+                        <section class="card-body">
+                            <h4>Osaka</h4>
+                            <p>Arquitectura modernista, playas y gastronomía.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                    <section class="card">
+                        <img src="imgs/paises/japon.jpg" alt="Sevilla">
+                        <section class="card-body">
+                            <h4>Hokaido</h4>
+                            <p>Tradición, flamenco y patios llenos de color.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                </section>
+            </section>
+
+            <!-- Indonesia -->
+            <section class="pais">
+                <h3 class="titulo-pais">Indonesia</h3>
+                <section class="cards-destinos">
+                    <section class="card">
+                        <img src="imgs/paises/indonesia.webp" alt="París">
+                        <section class="card-body">
+                            <h4>Yakarta</h4>
+                            <p>La ciudad del amor y la Torre Eiffel.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                    <section class="card">
+                        <img src="imgs/paises/indonesia.webp" alt="Lyon">
+                        <section class="card-body">
+                            <h4>Islas Bali</h4>
+                            <p>Capital gastronómica y con historia milenaria.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                    <section class="card">
+                        <img src="imgs/paises/indonesia.webp" alt="Niza">
+                        <section class="card-body">
+                            <h4>Borobudur, Isla Java</h4>
+                            <p>Riviera francesa, sol y mar Mediterráneo.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                </section>
+            </section>
+
+            <!-- China -->
+            <section class="pais">
+                <h3 class="titulo-pais">China</h3>
+                <section class="cards-destinos">
+                    <section class="card">
+                        <img src="imgs/paises/china.jpg" alt="Berlín">
+                        <section class="card-body">
+                            <h4>Gran Muralla China, Mutianyu</h4>
+                            <p>Historia, cultura urbana y vida nocturna.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                    <section class="card">
+                        <img src="imgs/paises/china.jpg" alt="Múnich">
+                        <section class="card-body">
+                            <h4>La ciudad prohibidad, Pekín</h4>
+                            <p>Oktoberfest y arquitectura bávara.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                    <section class="card">
+                        <img src="imgs/paises/china.jpg" alt="Hamburgo">
+                        <section class="card-body">
+                            <h4>Monte Tai, shangdong</h4>
+                            <p>Puerto histórico y vida cultural vibrante.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </article>
+
+        <!-- AMÉRICA -->
+        <article class="continente">
+            <h2 class="titulo-continente">América</h2>
+
+            <!-- ARGENTINA -->
+            <section class="pais">
+                <h3 class="titulo-pais">Argentina</h3>
+                <section class="cards-destinos">
+                    <section class="card">
+                        <img src="imgs/paises/argentina.webp" alt="Buenos Aires">
+                        <section class="card-body">
+                            <h4>Buenos Aires</h4>
+                            <p>La capital vibrante de Argentina, con tango y cultura.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                    <section class="card">
+                        <img src="imgs/paises/argentina.webp" alt="Mendoza">
+                        <section class="card-body">
+                            <h4>Mendoza</h4>
+                            <p>Valles y bodegas de renombre mundial para amantes del vino.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                </section>
+            </section>
+
+            <!-- CANADÁ -->
+            <section class="pais">
+                <h3 class="titulo-pais">Canadá</h3>
+                <section class="cards-destinos">
+                    <section class="card">
+                        <img src="imgs/paises/canada.jpg" alt="Toronto">
+                        <section class="card-body">
+                            <h4>Toronto</h4>
+                            <p>Ciudad moderna, rascacielos y multiculturalidad.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                    <section class="card">
+                        <img src="imgs/paises/canada.jpg" alt="Vancouver">
+                        <section class="card-body">
+                            <h4>Vancouver</h4>
+                            <p>Playas, montañas y naturaleza impresionante.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                </section>
+            </section>
+
+            <!-- PERÚ -->
+            <section class="pais">
+                <h3 class="titulo-pais">Perú</h3>
+                <section class="cards-destinos">
+                    <section class="card">
+                        <img src="imgs/paises/peru.avif" alt="Lima">
+                        <section class="card-body">
+                            <h4>Lima</h4>
+                            <p>Capital gastronómica con historia y cultura colonial.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                    <section class="card">
+                        <img src="imgs/paises/peru.avif" alt="Cusco">
+                        <section class="card-body">
+                            <h4>Cusco</h4>
+                            <p>Punto de partida para Machu Picchu y la ruta inca.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </article>
+
+        <!-- ORIENTE MEDIO -->
+        <article class="continente">
+            <h2 class="titulo-continente">Oriente Medio</h2>
+
+            <!-- EGIPTO -->
+            <section class="pais">
+                <h3 class="titulo-pais">Egipto</h3>
+                <section class="cards-destinos">
+                    <section class="card">
+                        <img src="imgs/paises/egipto.jpg" alt="El Cairo">
+                        <section class="card-body">
+                            <h4>El Cairo</h4>
+                            <p>Descubre las pirámides, museos y la historia milenaria de Egipto.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                    <section class="card">
+                        <img src="imgs/paises/egipto.jpg" alt="Luxor">
+                        <section class="card-body">
+                            <h4>Luxor</h4>
+                            <p>Templos y tumbas del Antiguo Egipto junto al Nilo.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                </section>
+            </section>
+
+            <!-- DUBAI -->
+            <section class="pais">
+                <h3 class="titulo-pais">Dubai</h3>
+                <section class="cards-destinos">
+                    <section class="card">
+                        <img src="imgs/paises/dubai.jpg" alt="Burj Khalifa">
+                        <section class="card-body">
+                            <h4>Burj Khalifa</h4>
+                            <p>Vive la experiencia de la torre más alta del mundo.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                    <section class="card">
+                        <img src="imgs/paises/dubai.jpg" alt="Desierto de Dubai">
+                        <section class="card-body">
+                            <h4>Desierto de Dubai</h4>
+                            <p>Safaris en el desierto y aventuras al aire libre.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                </section>
+            </section>
+
+            <!-- TURQUÍA -->
+            <section class="pais">
+                <h3 class="titulo-pais">Turquía</h3>
+                <section class="cards-destinos">
+                    <section class="card">
+                        <img src="imgs/paises/Turquia.jpg" alt="Estambul">
+                        <section class="card-body">
+                            <h4>Estambul</h4>
+                            <p>Mezquitas, bazares y el encanto del Bósforo.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                    <section class="card">
+                        <img src="imgs/paises/Turquia.jpg" alt="Capadocia">
+                        <section class="card-body">
+                            <h4>Capadocia</h4>
+                            <p>Paseos en globo y paisajes volcánicos únicos.</p>
+                            <a href="#" class="button">Ver oferta</a>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </article>
+
+
+    </main>
+
+
+    <footer>
+        <section class="container-sections">
+            <section class="section1">
+                <section class="section-footer">
+                    <section class="logo">
+                        <img src="imgs/logo.png" alt="">
+                        <p class="text-logo1">Agencia Rumbo Libre</p>
+                    </section>
+                    <hr>
+                    <p class="text-logo2">"Hacemos realidad tu proximo viaje"</p>
+                </section>
+            </section>
+
+            <section class="section2">
+                <section class="section-footer">
+                    <h3>Inicio</h3>
+                    <hr>
+                    <section>
+                        <ul>
+                            <li><a href="index.html#contacto">Contacto</a></li>
+                            <li><a href="index.html#destacados">Destinos</a></li>
+                            <li><a href="index.html#experiencias">Paquetes</a></li>
+                            <li><a href="index.html#historias">¿Porque viajar?</a></li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section class="section-footer">
+                    <h3>Destinos</h3>
+                    <hr>
+                    <section>
+                        <ul>
+                            <li><a href="">Contacto</a></li>
+                            <li><a href="">Destinos</a></li>
+                            <li><a href="">Paquetes</a></li>
+                            <li><a href="">¿Porque viajar?</a></li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section class="section-footer">
+                    <h3>Actividades</h3>
+                    <hr>
+                    <section>
+                        <ul>
+                            <li><a href="">Cruceros</a></li>
+                            <li><a href="">Parques</a></li>
+                            <li><a href="">Turismo</a></li>
+                            <li><a href="">Naturaleza y aventura</a></li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section class="section-footer">
+                    <h3>¿Quienes somos?</h3>
+                    <hr>
+                    <section>
+                        <ul>
+                            <li>Telefono</li>
+                            <li>Email</li>
+                            <li>Redes sociales</a></li>
+                            <li>Sede</a></li>
+                        </ul>
+                    </section>
+                </section>
+            </section>
+
+        </section>
+        <hr>
+        <p>&copy;2026 Agencia de viaje ✈️ - Lucero Anay Cahuana</p>
+    </footer>
+
+</html>
+</body>
+
 </html>

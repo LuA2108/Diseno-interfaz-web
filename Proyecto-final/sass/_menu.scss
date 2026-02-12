@@ -1,7 +1,8 @@
 .container-menus {
-    background: linear-gradient(to bottom, $fondo-cabecera-2, #fca800);
+    background: transparent;
+    width: 100%;
 
-    nav > ul {
+    nav>ul {
         display: flex;
         justify-content: space-around;
 
@@ -14,16 +15,18 @@
                 text-align: left; // texto alineado a la izquierda
             }
 
-            ul { // Primer submenú
+            ul {
+                // Primer submenú
                 display: none;
                 position: absolute;
-                top: 100%;  // debajo del li principal
+                top: 100%; // debajo del li principal
                 left: 0;
                 padding: 0;
                 background: linear-gradient(to bottom, #fca800, hsl(15, 100%, 50%));
                 border-radius: 10px;
                 min-width: 150px;
                 z-index: 2;
+
                 li {
                     position: relative;
 
@@ -33,11 +36,12 @@
                         text-align: left; // texto alineado a la izquierda
                     }
 
-                    ul { // Sub-submenú
+                    ul {
+                        // Sub-submenú
                         display: none;
                         position: absolute;
-                        top: 0;       // al mismo nivel vertical que el primer menú
-                        left: 100%;   // al lado del primer submenú
+                        top: 0; // al mismo nivel vertical que el primer menú
+                        left: 100%; // al lado del primer submenú
                         padding: 0;
                         background: linear-gradient(to bottom, #fca800, hsl(15, 100%, 50%));
                         border-radius: 10px;
@@ -45,16 +49,69 @@
                         z-index: 2;
                     }
 
-                    &:hover > ul {
+                    &:hover>ul {
                         display: block;
                     }
                 }
             }
 
-            &:hover > ul {
+            &:hover>ul {
                 display: block;
             }
         }
     }
 
+}
+
+// ESTILO A LA SECCION DE DESTACADOS =============================
+.tabs-menu {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.tabs-section {
+    background-color:  $fondo-contenedor-cards;
+    margin: 40px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 12px 15px 25px rgb(29, 29, 29);
+}
+
+/* Ocultar los radio buttons */
+.tabs-section input[type="radio"] {
+    display: none;
+}
+
+.tab-link {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    @include transicion-background(0.8s, linear);
+    border-radius: 10px;
+    color: white;
+}
+
+.tab-link:hover {
+    background: #b6bdff;
+}
+
+/* Contenido oculto por defecto */
+.tab-content {
+    display: none;
+}
+
+#tab-europa:checked ~ .tabs-content #section-europa,
+#tab-asia:checked ~ .tabs-content #section-asia,
+#tab-america:checked ~ .tabs-content #section-america,
+#tab-oriente:checked ~ .tabs-content #section-medio-oriente {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; 
+    padding: 30px;
+}
+
+#historias {
+    margin: 0px;
 }

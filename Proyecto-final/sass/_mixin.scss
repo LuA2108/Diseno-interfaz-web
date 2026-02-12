@@ -6,3 +6,6 @@
     transition: font-size $tiempo $tipo;
 }
 
+@mixin transicion-background($tiempo, $tipo){
+    transition: background $tiempo $tipo;
+}

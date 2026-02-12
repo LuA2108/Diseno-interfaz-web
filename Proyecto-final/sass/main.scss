@@ -1,15 +1,33 @@
+// IMPORTACION DE ESTILOS SCSS ==========================
 @import "variables";
 @import "mixin";
 @import "cabecera";
 @import "menu";
+@import "card";
+@import "footer";
+@import "keyframes";
 
+// =======================================
+// ESTILO CUERPO =========================
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
-h1 { font-family: $font-titulos;}
+// ======================================================
+// ESTILO CUERPO PRINCIPAL ==============================
+main {
+    background: rgb(255, 244, 235);
+}
+
+// ESTILO A SECCIÓN DE CLASE TITULOS ==================
+.titulos {
+    font-family: $font-titulos;
+    color: rgb(250, 248, 248);
+    text-shadow: 2px 2px 2px black;
+    text-align: center;
+}
 
 .seccion-principal {
     position: relative;
@@ -17,9 +35,12 @@ h1 { font-family: $font-titulos;}
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    color: white;
+    justify-content: left;
     overflow: hidden;
+    padding: 40px 0px;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
 }
 
 .bg-borrosa {
@@ -28,17 +49,105 @@ h1 { font-family: $font-titulos;}
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;  /* hace que la imagen cubra todo el contenedor */
-    filter: blur(2px); /* desenfoca la imagen */
-    z-index: 0;         /* queda detrás del contenido */
+    object-fit: cover;
+    /* hace que la imagen cubra todo el contenedor */
+    filter: blur(2px);
+    /* desenfoca la imagen */
+    z-index: 0;
+    /* queda detrás del contenido */
 }
 
-.seccion-principal > *:not(.bg-borrosa)  {
-    position: relative; /* Mantiene el contenido encima del pseudo-elemento */
+.seccion-principal>*:not(.bg-borrosa) {
+    position: relative;
+    /* Mantiene el contenido encima del pseudo-elemento */
     z-index: 1;
 }
 
 .formulario-principal {
     display: flex;
     flex-direction: column;
+    gap: 15px;
+
+    input {
+        border-radius: 5px;
+        border: 2px solid #ccc;
+        padding: 10px 15px;
+        transition: border-color 0.5s linear box-shadow 0.3s ease;
+        outline: none;
+    }
+
+    input:focus {
+        border-color: #F39C12;
+        box-shadow: 0 0 5px #F39C12;
+    }
+
+    button {
+        background-color: $color-boton;
+        border: none;
+        border-radius: 10px;
+        color: rgb(212, 212, 212);
+        padding: 5px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include transicion-color(0.8s, linear);
+    }
+
+    button:hover { color: #ffffff;}
 }
+
+.fon {
+    background-color: rgba(138, 159, 166, 0.601);
+    padding: 50px;
+    border-radius: 15px;
+}
+
+.section-destacados{
+    text-align: center;
+}
+
+
+.continente {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+
+// ================================================================
+// ESTILO GENERAL A TODOS LOS ELEMENTOS DEL ARCHIVO HTML ==========
+// ================================================================
+
+// ESTILO GENERAL AL CURSOR DEL BOTON  ============================
+button { cursor: pointer;}
+
+// ESTILO GENERAL A SEPARADOR =====================================
+hr { border: 1px solid white; }
+
+// ESTILO GENERAL A TODOS LOS ENLACE ==============================
+a {
+    text-decoration: none;
+    color: $color-enlace;
+    @include transicion-color(0.6s, linear);
+
+    &:hover {
+        color: #ffffff;
+    }
+}
+
+// ESTILO GENERAL PARA TODOS LOS H2 =========================================
+h2 { 
+    text-align: center; 
+    font-family: $font-principal; 
+    font-weight: 900; 
+    text-shadow: 1px 1px 0px rgb(189, 189, 189); 
+    color: $color-boton;
+    font-size: 38px;
+}
+
+
+
+

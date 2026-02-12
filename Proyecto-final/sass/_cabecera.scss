@@ -1,12 +1,20 @@
-// Estilo de posicionamiento del header =======
+// ESTILO DEFINIDO PARA LA CABECERA ==================================================================================
+
+// ================================================================
+// Estilo de posicionamiento del header y color de fondo  =========
 header {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to bottom, $fondo-cabecera-1, $fondo-cabecera-2);
+    background: linear-gradient(to right, 
+    $gradiente-1 20%,
+    $gradiente-2 50%,
+    $gradiente-1 78%
+    );              // Gradiente
 }
-// ============================================
 
-.enlace-sesion > ul {
+// ================================================================
+// ESTILO A LA SECICON DE SESION (Registro y sesion) ==============
+.enlace-sesion>ul {
     display: flex;
     justify-content: end;
     margin: 5px;
@@ -14,30 +22,22 @@ header {
     gap: 8px;
 }
 
-.container-logo > a {
+// ================================================================
+// ESTILO AL CONTENEDOR DEL LOGO (Img y enlace) ===========
+.container-logo>a {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: $font-principal;
-    color: $color-logo !important;
-    img {
-        width: 100px;
-    }
+    color: $color-logo;
+    font-size: 25px;
+
+    img {width: 100px;}
 }
 
-a {
-    text-decoration: none;
-    color: $color-enlace;
-    @include transicion-color(0.6s, linear);
-    @include transicion-font(0.8s, linear);
-        &:hover {
-            color: #ffffff;
-            font-size: 19px;
-        }
-}
+
 
 li {
     list-style-type: none;
     color: $color-enlace;
 }
-
