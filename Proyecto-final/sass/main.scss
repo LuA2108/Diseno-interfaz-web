@@ -12,7 +12,7 @@
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 // ======================================================
@@ -95,7 +95,18 @@ main {
         @include transicion-color(0.8s, linear);
     }
 
-    button:hover { color: #ffffff;}
+    button:hover {
+        color: #ffffff;
+    }
+}
+
+#miCarrusel-caracteristicas {
+    padding: 40px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
 }
 
 .fon {
@@ -104,7 +115,7 @@ main {
     border-radius: 15px;
 }
 
-.section-destacados{
+.section-destacados {
     text-align: center;
 }
 
@@ -122,10 +133,14 @@ main {
 // ================================================================
 
 // ESTILO GENERAL AL CURSOR DEL BOTON  ============================
-button { cursor: pointer;}
+button {
+    cursor: pointer;
+}
 
 // ESTILO GENERAL A SEPARADOR =====================================
-hr { border: 1px solid white; }
+hr {
+    border: 1px solid white;
+}
 
 // ESTILO GENERAL A TODOS LOS ENLACE ==============================
 a {
@@ -138,16 +153,18 @@ a {
     }
 }
 
+// ESTILO GENERAL PARA TODOS LOS H1 =========================================
+h1 {
+    text-align: center;
+    font-family: $font-principal;
+}
+
 // ESTILO GENERAL PARA TODOS LOS H2 =========================================
-h2 { 
-    text-align: center; 
-    font-family: $font-principal; 
-    font-weight: 900; 
-    text-shadow: 1px 1px 0px rgb(189, 189, 189); 
+h2 {
+    text-align: center;
+    font-family: $font-principal;
+    font-weight: 700;
+    text-shadow: 1px 1px 0px rgb(189, 189, 189);
     color: $color-boton;
     font-size: 38px;
 }
-
-
-
-
