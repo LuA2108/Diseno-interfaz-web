@@ -40,6 +40,8 @@
         <section class="container-menus">
             <nav class="nav">
                 <ul>
+
+                    <!-- DESTINOS -->
                     <li>
                         <a href="destino.html">Destinos</a>
                         <ul>
@@ -47,71 +49,81 @@
                                 <a href="#">Europa</a>
                                 <ul>
                                     <li><a href="#">España</a></li>
-                                    <li><a href="#">Francia</a></li>
-                                    <li><a href="#">Alemania</a></li>
+                                    <li><a href="#">Londres</a></li>
+                                    <li><a href="#">Grecia</a></li>
+                                    <li><a href="#">Italia</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#">Asia</a>
+                                <ul>
+                                    <li><a href="#">Japón</a></li>
+                                    <li><a href="#">Chila</a></li>
+                                    <li><a href="#">Filipinas</a></li>
+                                    <li><a href="#">Tailandia</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#">America</a>
+                                <ul>
+                                    <li><a href="#">Cánada</a></li>
+                                    <li><a href="#">Argentina</a></li>
+                                    <li><a href="#">Perú</a></li>
+                                    <li><a href="#">Puerto Rico</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#">Oriente medio</a>
+                                <ul>
+                                    <li><a href="#">Egipto</a></li>
+                                    <li><a href="#">Arabia Saudí</a></li>
+                                    <li><a href="#">Turquía</a></li>
+                                    <li><a href="#">Emiratos Arabes</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </li>
+
+                    <!-- ACTIVIDADES -->
                     <li>
-                        <a href="#">Asia</a>
+                        <a href="actividades.html">Actividades</a>
                         <ul>
+                            <li><a href="#">Cruceros</a></li>
+                            <li><a href="#">Parques</a></li>
+
                             <li>
-                            <li><a href="#">Japon</a></li>
-                            <li><a href="#">Indonesia</a></li>
-                            <li><a href="#">China</a></li>
+                                <a href="#">Turismo cultural</a>
+                                <ul>
+                                    <li><a href="#">Museos</a></li>
+                                    <li><a href="#">Galerías</a></li>
+                                    <li><a href="#">Ciudades</a></li>
+                                    <li><a href="#">Gastronomías</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#">Naturaleza y aventura</a>
+                                <ul>
+                                    <li><a href="#">Montañas</a></li>
+                                    <li><a href="#">Safari</a></li>
+                                    <li><a href="#">Deportes</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
-                </ul>
-                </li>
-                <li>
-                    <a href="#">America</a>
-                    <ul>
-                        <li><a href="#">Argentina</a></li>
-                        <li><a href="#">Cánada</a></li>
-                        <li><a href="#">Perú</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="@">Oriente medio</a>
-                    <ul>
-                        <li><a href="#">Egipto</a></li>
-                        <li><a href="#">Dubai</a></li>
-                        <li><a href="#">Turquía</a></li>
-                    </ul>
-                </li>
-                </ul>
-                </li>
-                <li>
-                    <a href="actividades.html">Actividades</a>
-                    <ul>
-                        <li><a href="#">Cruceros</a></li>
-                        <li><a href="#">Parques</a></li>
-                        <li>
-                            <a href="#">Turismo cultural</a>
-                            <ul>
-                                <li><a href="#">Museos</a></li>
-                                <li><a href="#">Galerias</a></li>
-                                <li><a href="#">Ciudades</a></li>
-                                <li><a href="#">Gastronomias</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Naturaleza y aventura</a>
-                            <ul>
-                                <li><a href="#">Montañas</a></li>
-                                <li><a href="#">Safari</a></li>
-                                <li><a href="#">Deportes</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">¿Quienes somos?</a>
-                </li>
+
+                    <!-- QUIENES SOMOS -->
+                    <li>
+                        <a href="#">¿Quiénes somos?</a>
+                    </li>
 
                 </ul>
             </nav>
+        </section>
 
-        </section>  
     </header>
     <main>
         <section class="seccion-principal" id="principal">
@@ -144,192 +156,331 @@
 
             <h2>Destinos Destacados</h2>
 
+            <!-- Contenedor de tabs -->
             <section class="tabs-section">
 
-                <!-- Inputs ocultos para controlar el tab -->
+                <!-- Inputs de control de tab -->
                 <input type="radio" name="tab" id="tab-europa" checked>
                 <input type="radio" name="tab" id="tab-asia">
                 <input type="radio" name="tab" id="tab-america">
                 <input type="radio" name="tab" id="tab-oriente">
 
-                <section class="tabs-menu">
+                <!-- Menú de tabs -->
+                <nav class="tabs-menu">
                     <label for="tab-europa" class="tab-link">Europa</label>
                     <label for="tab-asia" class="tab-link">Asia</label>
                     <label for="tab-america" class="tab-link">America</label>
                     <label for="tab-oriente" class="tab-link">Oriente Medio</label>
-                </section>
+                </nav>
+
                 <hr>
+
+                <!-- Contenido de tabs -->
                 <section class="tabs-content">
 
-                    <section class="tab-content" id="section-europa">
-                        <section class="card">
-                            <img src="./imgs/paises/españa.jpg" alt="">
+                    <article class="tab-content" id="section-europa">
+                        <article class="card">
+                            <img src="./imgs/paises/españa.jpg" alt="España">
                             <section class="card-body">
                                 <h4>España</h4>
-                                <p>Oferta especial para viajar a Europa</p>
+                                <p>Disfruta de la historia y la gastronomía de España.</p>
                                 <a href="#" class="button">Ver más</a>
                             </section>
-                        </section>
-                        <section class="card">
-                            <img src="./imgs/continentes/europa.jpg" alt="">
+                        </article>
+                        <article class="card">
+                            <img src="./imgs/continentes/europa.jpg" alt="Londres">
                             <section class="card-body">
                                 <h4>Londres</h4>
-                                <p>Oferta especial para viajar a Europa</p>
+                                <p>Explora monumentos icónicos y la vibrante vida cultural.</p>
                                 <a href="#" class="button">Ver más</a>
                             </section>
-                        </section>
-                        <section class="card">
-                            <img src="./imgs/playa.png" alt="">
+                        </article>
+                        <article class="card">
+                            <img src="./imgs/playa.png" alt="Grecia">
                             <section class="card-body">
                                 <h4>Grecia</h4>
-                                <p>Oferta especial para viajar a Europa</p>
+                                <p>Relájate en playas paradisíacas y recorre antiguas ruinas.</p>
                                 <a href="#" class="button">Ver más</a>
                             </section>
-                        </section>
-                    </section>
+                        </article>
+                        <article class="card">
+                            <img src="./imgs/playa.png" alt="Grecia">
+                            <section class="card-body">
+                                <h4>Italia</h4>
+                                <p>Sabores, arte y ciudades que te enamorarán.</p>
+                                <a href="#" class="button">Ver más</a>
+                            </section>
+                        </article>
+                    </article>
 
-                    <section class="tab-content" id="section-asia">
-                        <section class="card">
-                            <img src="./imgs/continentes/asia.jpg" alt="">
+                    <article class="tab-content" id="section-asia">
+                        <article class="card">
+                            <img src="./imgs/continentes/asia.jpg" alt="Japon">
                             <section class="card-body">
                                 <h4>Japon</h4>
-                                <p>Oferta especial para viajar a Asia</p>
+                                <p>Sumérgete en templos, tecnología y tradiciones milenarias.</p>
                                 <a href="#" class="button">Ver más</a>
                             </section>
-                        </section>
-                        <section class="card">
-                            <img src="./imgs/continentes/asia.jpg" alt="">
+                        </article>
+                        <article class="card">
+                            <img src="./imgs/continentes/asia.jpg" alt="China">
                             <section class="card-body">
                                 <h4>China</h4>
-                                <p>Oferta especial para viajar a Asia</p>
+                                <p>Viaja por la Gran Muralla y ciudades históricas fascinantes.</p>
                                 <a href="#" class="button">Ver más</a>
                             </section>
-                        </section>
-                        <section class="card">
-                            <img src="./imgs/continentes/asia.jpg" alt="">
+                        </article>
+                        <article class="card">
+                            <img src="./imgs/continentes/asia.jpg" alt="Filipinas">
                             <section class="card-body">
                                 <h4>Filipinas</h4>
-                                <p>Oferta especial para viajar a Asia</p>
+                                <p>Playas de arena blanca y aventuras tropicales únicas.</p>
                                 <a href="#" class="button">Ver más</a>
                             </section>
-                        </section>
-                    </section>
-
-                    <section class="tab-content" id="section-america">
-                        <section class="card">
-                            <img src="./imgs/continentes/america.jpg" alt="">
+                        </article>
+                        <article class="card">
+                            <img src="./imgs/continentes/asia.jpg" alt="Filipinas">
                             <section class="card-body">
-                                <h4>United States</h4>
-                                <p>Oferta especial para viajar a America</p>
+                                <h4>Tailandia</h4>
+                                <p>Templos, mercados flotantes y playas exóticas que sorprenden.</p>
                                 <a href="#" class="button">Ver más</a>
                             </section>
-                        </section>
-                        <section class="card">
-                            <img src="./imgs/continentes/america.jpg" alt="">
+                        </article>
+                    </article>
+
+                    <article class="tab-content" id="section-america">
+                        <article class="card">
+                            <img src="./imgs/continentes/america.jpg" alt="United States">
+                            <section class="card-body">
+                                <h4>Cánadas</h4>
+                                <p>Naturaleza impresionante y ciudades cosmopolitas para explorar.</p>
+                                <a href="#" class="button">Ver más</a>
+                            </section>
+                        </article>
+                        <article class="card">
+                            <img src="./imgs/continentes/america.jpg" alt="Argentina">
                             <section class="card-body">
                                 <h4>Argentina</h4>
-                                <p>Oferta especial para viajar a America</p>
+                                <p>Paisajes infinitos y cultura apasionada en cada rincón.</p>
                                 <a href="#" class="button">Ver más</a>
                             </section>
-                        </section>
-                        <section class="card">
-                            <img src="./imgs/continentes/america.jpg" alt="">
+                        </article>
+                        <article class="card">
+                            <img src="./imgs/continentes/america.jpg" alt="Uruguay">
                             <section class="card-body">
-                                <h4>Uruguay</h4>
-                                <p>Oferta especial para viajar a America</p>
+                                <h4>Perú</h4>
+                                <p>Descubre Machu Picchu y la magia de la Amazonía.</p>
                                 <a href="#" class="button">Ver más</a>
                             </section>
-                        </section>
-                    </section>
+                        </article>
+                        <article class="card">
+                            <img src="./imgs/continentes/america.jpg" alt="Uruguay">
+                            <section class="card-body">
+                                <h4>Puerto Rico</h4>
+                                <p>Playas caribeñas y ritmos tropicales que enamoran.</p>
+                                <a href="#" class="button">Ver más</a>
+                            </section>
+                        </article>
+                    </article>
 
-                    <section class="tab-content" id="section-medio-oriente">
-                        <section class="card">
-                            <img src="./imgs/continentes/oriente.jpg" alt="">
+                    <article class="tab-content" id="section-medio-oriente">
+                        <article class="card">
+                            <img src="./imgs/continentes/oriente.jpg" alt="Egipto">
                             <section class="card-body">
                                 <h4>Egipto</h4>
-                                <p>Oferta especial para viajar a Oriente Medio</p>
+                                <p>Pirámides, historia milenaria y aventuras únicas.</p>
                                 <a href="#" class="button">Ver más</a>
                             </section>
-                        </section>
-                        <section class="card">
-                            <img src="./imgs/continentes/oriente.jpg" alt="">
+                        </article>
+                        <article class="card">
+                            <img src="./imgs/continentes/oriente.jpg" alt="Dubai">
                             <section class="card-body">
-                                <h4>Dubai</h4>
-                                <p>Oferta especial para viajar a Oriente Medio</p>
+                                <h4>Arabia Saudí</h4>
+                                <p>Descubre cultura y paisajes desérticos impresionantes.</p>
                                 <a href="#" class="button">Ver más</a>
                             </section>
-                        </section>
-                        <section class="card">
-                            <img src="./imgs/continentes/oriente.jpg" alt="">
+                        </article>
+                        <article class="card">
+                            <img src="./imgs/continentes/oriente.jpg" alt="Turquía">
                             <section class="card-body">
                                 <h4>Turquía</h4>
-                                <p>Oferta especial para viajar a Oriente Medio</p>
+                                <p>Bazares, mezquitas y paisajes inolvidables.</p>
                                 <a href="#" class="button">Ver más</a>
                             </section>
-                        </section>
-                    </section>
+                        </article>
+                        <article class="card">
+                            <img src="./imgs/continentes/oriente.jpg" alt="Turquía">
+                            <section class="card-body">
+                                <h4>Emiratos Arabe</h4>
+                                <p>Modernidad, lujo y experiencias únicas que no olvidarás.</p>
+                                <a href="#" class="button">Ver más</a>
+                            </section>
+                        </article>
+                    </article>
                 </section>
             </section>
         </section>
 
+
         <section class="cards-section" id="container-experiencias">
-            <h2>Paquetes y Experencias especiales</h2>
+            <section class="section-header">
+                <h2>Paquetes y Experiencias Especiales</h2>
+            </section>
 
             <section class="cards-container" id="experiencias">
 
-                <section class="card" id="info-card">
-                    <section class="card-content" id="info">
-                        <img src="imgs/iconos/chincheta.png" alt="chincheta" class="chincheta">
-                        <h3>¡Ventajas exclusivas!</h3>
-                        <ul>
-                            <li class="punto">Traslados al hotel incluidos</li>
-                            <li class="punto">Maletas incluidas</li>
-                            <li class="punto">Facilidades de pago</li>
-                            <li class="punto">Tasas aéreas incluidas</li>
-                        </ul>
+                <!-- Tarjeta de ventajas -->
+                <article class="card-beneficios">
+                    <section class="card-header">
+                        <h3>¡Ventajas Exclusivas!</h3>
                     </section>
-                </section>
 
-                <section class="card card-image-top">
-                    <img src="imgs/avion.jpg" alt="Imagen 1">
-                    <section class="card-content">
-                        <h3>Título 1</h3>
-                        <p>Descripción brevxe de la tarjeta con imagen arriba.</p>
-                        <section>
-                            <p>Desde <span class="precio-oferta">1105€</span></p>
-                            <p class="precio">950€</p>
-                        </section>
-                        <a href="#" class="button">Leer más</a>
-                    </section>
-                </section>
+                    <ul class="beneficios-list">
+                        <li>✔️ Traslados al hotel incluidos</li>
+                        <li>✔️ Maletas incluidas</li>
+                        <li>✔️ Facilidades de pago</li>
+                        <li>✔️ Tasas aéreas incluidas</li>
+                    </ul>
+                </article>
 
-                <section class="card card-image-top">
-                    <img src="imgs/avion.jpg" alt="Imagen 1">
-                    <section class="card-content">
-                        <h3>Título 2</h3>
-                        <p>Descripción breve de la tarjeta con imagen arriba.</p>
-                        <section>
-                            <p>Desde <span class="precio-oferta">1105€</span></p>
-                            <p class="precio">950€</p>
-                        </section>
-                        <a href="#" class="button">Leer más</a>
-                    </section>
-                </section>
 
-                <section class="card card-image-top">
-                    <img src="imgs/avion.jpg" alt="Imagen 1">
-                    <section class="card-content">
-                        <h3>Título 3</h3>
-                        <p>Descripción breve de la tarjeta con imagen arriba.</p>
-                        <section>
-                            <p>Desde <span class="precio-oferta">1105€</span></p>
-                            <p class="precio">950€</p>
-                        </section>
-                        <a href="#" class="button">Leer más</a>
+                <!-- Tarjetas horizontales -->
+                <article class="card card-horizontal">
+
+                    <img src="imgs/avion.jpg" alt="Roma Clásica">
+
+                    <section class="card-info">
+                        <h3>Roma Clásica</h3>
+                        <p>
+                            Explora el Coliseo, el Vaticano y disfruta la auténtica gastronomía italiana.
+                        </p>
                     </section>
-                </section>
+
+                    <section class="card-fechas">
+                        <div>
+                            <span>Inicio</span>
+                            <strong>12 Jun 2026</strong>
+                        </div>
+                        <div>
+                            <span>Fin</span>
+                            <strong>19 Jun 2026</strong>
+                        </div>
+                    </section>
+
+                    <section class="card-precio">
+                        <span class="precio-oferta">1105€</span>
+                        <span class="precio">950€</span>
+                    </section>
+
+                    <footer class="card-action">
+                        <button class="button">Reservar</button>
+                    </footer>
+
+                </article>
+
+
+                <article class="card card-horizontal">
+
+                    <img src="imgs/avion.jpg" alt="París Romántico">
+
+                    <section class="card-info">
+                        <h3>París Romántico</h3>
+                        <p>
+                            Torre Eiffel, museos y paseo por el Sena con alojamiento premium.
+                        </p>
+                    </section>
+
+                    <section class="card-fechas">
+                        <div>
+                            <span>Inicio</span>
+                            <strong>05 Jul 2026</strong>
+                        </div>
+                        <div>
+                            <span>Fin</span>
+                            <strong>12 Jul 2026</strong>
+                        </div>
+                    </section>
+
+                    <section class="card-precio">
+                        <span class="precio-oferta">1300€</span>
+                        <span class="precio">1090€</span>
+                    </section>
+
+                    <footer class="card-action">
+                        <button class="button">Reservar</button>
+                    </footer>
+
+                </article>
+
+                <article class="card card-horizontal">
+
+                    <img src="imgs/avion.jpg" alt="Londres Imperial">
+
+                    <section class="card-info">
+                        <h3>Londres Imperial</h3>
+                        <p>
+                            Explora el Palacio de Buckingham, el London Eye y museos icónicos.
+                        </p>
+                    </section>
+
+                    <section class="card-fechas">
+                        <div>
+                            <span>Inicio</span>
+                            <strong>10 Ago 2026</strong>
+                        </div>
+                        <div>
+                            <span>Fin</span>
+                            <strong>17 Ago 2026</strong>
+                        </div>
+                    </section>
+
+                    <section class="card-precio">
+                        <span class="precio-oferta">1200€</span>
+                        <span class="precio">1050€</span>
+                    </section>
+
+                    <footer class="card-action">
+                        <button class="button">Reservar</button>
+                    </footer>
+
+                </article>
+
+                <article class="card card-horizontal">
+
+                    <img src="imgs/avion.jpg" alt="Ámsterdam y sus Canales">
+
+                    <section class="card-info">
+                        <h3>Ámsterdam y sus Canales</h3>
+                        <p>
+                            Paseo en barco por los canales, casas flotantes y museos de arte.
+                        </p>
+                    </section>
+
+                    <section class="card-fechas">
+                        <div>
+                            <span>Inicio</span>
+                            <strong>20 Sep 2026</strong>
+                        </div>
+                        <div>
+                            <span>Fin</span>
+                            <strong>27 Sep 2026</strong>
+                        </div>
+                    </section>
+
+                    <section class="card-precio">
+                        <span class="precio-oferta">1150€</span>
+                        <span class="precio">990€</span>
+                    </section>
+
+                    <footer class="card-action">
+                        <button class="button">Reservar</button>
+                    </footer>
+
+                </article>
+
             </section>
         </section>
+
 
 
         <div id="miCarrusel-caracteristicas" class="carousel slide" data-bs-ride="false">

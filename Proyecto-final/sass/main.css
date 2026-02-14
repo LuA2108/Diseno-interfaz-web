@@ -27,25 +27,31 @@ header {
   width: 100px;
 }
 
+.container-logo {
+  padding-bottom: 10px;
+}
+
 li {
   list-style-type: none;
   color: #bebebe;
 }
 
 .container-menus {
-  background: transparent;
   width: 100%;
+  padding: 12px;
 }
 .container-menus nav > ul {
   display: flex;
-  justify-content: center;
-  gap: 40px;
+  justify-content: space-evenly;
+  align-items: center;
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 .container-menus nav > ul li {
   position: relative;
+  /* Submenu del submenu (segundo nivel): a la derecha */
 }
 .container-menus nav > ul li a {
   display: block;
@@ -58,50 +64,40 @@ li {
   top: 100%;
   left: 0;
   padding: 0;
+  margin: 0;
+  list-style: none;
   background: linear-gradient(to bottom, #fca800, hsl(15, 100%, 50%));
   border-radius: 10px;
   min-width: 150px;
   z-index: 2;
 }
-.container-menus nav > ul li ul li {
-  position: relative;
-}
-.container-menus nav > ul li ul li a {
-  display: block;
-  padding: 10px 15px;
-  text-align: left;
-}
-.container-menus nav > ul li ul li ul {
+.container-menus nav > ul li > ul > li > ul {
   display: none;
   position: absolute;
-  top: 0;
-  left: 100%;
+  top: 0; /* misma altura que el li padre del submenu */
+  left: 100%; /* a la derecha del li del submenu */
   padding: 0;
+  margin: 0;
+  list-style: none;
   background: linear-gradient(to bottom, #fca800, hsl(15, 100%, 50%));
   border-radius: 10px;
   min-width: 150px;
   z-index: 2;
-}
-.container-menus nav > ul li ul li:hover > ul {
-  display: block;
 }
 .container-menus nav > ul li:hover > ul {
   display: block;
+}
+
+.container-menus a {
+  font-size: 18px;
 }
 
 .tabs-menu {
   display: flex;
   gap: 15px;
   margin-bottom: 20px;
-  justify-content: center;
-}
-
-.tabs-section {
-  background-color: #15106b;
-  margin: 40px;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 12px 15px 25px rgb(29, 29, 29);
+  justify-content: space-between;
+  width: 100%;
 }
 
 /* Ocultar los radio buttons */
@@ -110,16 +106,25 @@ li {
 }
 
 .tab-link {
-  padding: 10px 20px;
+  flex: 1;
+  text-align: center;
+  padding: 12px 0;
   cursor: pointer;
-  font-weight: bold;
-  transition: background 0.8s linear;
-  border-radius: 10px;
-  color: white;
+  border-radius: 4px;
+  color: rgb(199, 199, 199);
+  background-color: #270066;
+  transition: 0.3s;
+  transition: font-size 0.9s linear, font-weight 0.9s linear;
+  transition: color 0.9s linear;
+  transition: background 0.9s linear;
+  border-radius: 4px;
 }
 
 .tab-link:hover {
-  background: #b6bdff;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  background-color: #4e00cc;
 }
 
 /* Contenido oculto por defecto */
@@ -132,106 +137,107 @@ li {
 #tab-america:checked ~ .tabs-content #section-america,
 #tab-oriente:checked ~ .tabs-content #section-medio-oriente {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
-  padding: 30px;
 }
 
-#historias {
-  margin: 0px;
+/* Cuando el radio está seleccionado, aplicamos estilo */
+#tab-europa:checked ~ .tabs-menu label[for=tab-europa],
+#tab-asia:checked ~ .tabs-menu label[for=tab-asia],
+#tab-america:checked ~ .tabs-menu label[for=tab-america],
+#tab-oriente:checked ~ .tabs-menu label[for=tab-oriente] {
+  background-color: rgb(68.25, 0, 178.5);
+  color: #fff;
+  font-weight: 600;
 }
 
 /* Card básica */
 .card {
-  border-radius: 10px;
-  overflow: hidden;
-  width: 300px;
-  box-shadow: 5px 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   background-color: #f2f1f1;
 }
 .card .button {
   background-color: #270066;
   color: #ffffff;
-  border-radius: 10px;
-  padding: 5px 18px;
+  border-radius: 5px;
+  padding: 5px 25px;
   border: none;
 }
 
 .card img {
   width: 100%;
   height: 150px;
-  /* altura fija */
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
-.card-body {
-  padding: 15px;
-}
-
-.cards-section {
-  display: flex;
-  flex-direction: column;
-}
-
-.cards,
-.cards-container {
-  display: flex;
-  justify-content: space-around;
-}
-
-.cards {
-  gap: 20px;
-  padding: 40px;
-}
-
-.item {
-  padding: 20px;
+.section-header {
   text-align: center;
-  border-radius: 20px;
+  /* centra el título */
 }
-.item h3 {
+
+/* ================================= */
+/* TITULOS Y CONTENEDOR CARD-HEADER */
+/* ================================= */
+.card-header {
+  text-align: center;
+}
+
+.section-header {
+  text-align: center;
+  /* centra el título */
+  padding: 15px 0;
+}
+.section-header h2 {
+  font-size: 28px;
+  /* tamaño principal */
+  font-weight: 700;
+  /* negrita */
   color: #16002f;
-  font-size: 24px;
+  /* tu color principal */
+  margin: 0;
+  letter-spacing: 0.5px;
+  /* mejora la legibilidad */
 }
 
-.card-content {
-  padding: 10px;
-}
-.card-content h3 {
+.card-header h3 {
+  font-size: 22px;
+  /* tamaño destacado */
+  font-weight: 700;
+  color: #16002f;
+  /* color principal */
+  margin-bottom: 15px;
   text-align: center;
+  letter-spacing: 0.5px;
 }
 
-#info {
-  flex: 1;
-}
-#info ul {
+/* =============================== */
+/* LISTA DE VENTAJAS EXCLUSIVAS */
+/* =============================== */
+.beneficios-list {
   display: flex;
   flex-direction: column;
-  justify-content: left;
   gap: 10px;
-  font-size: larger;
+  padding: 10px;
+  margin: 0;
+  list-style: none;
 }
-#info ul li {
-  text-align: left;
-}
-
-#info-card {
+.beneficios-list li {
+  background-color: #e0f7e9;
+  /* fondo suave */
+  color: #007700;
+  /* texto verde */
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  gap: 6px;
+  width: 100%;
   text-align: center;
-  background: linear-gradient(to bottom, #046e8f, #183446);
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-#info-card h3 {
-  font-size: 28px !important;
-  color: #f2f4f3;
-  padding: 10;
-}
-#info-card ul li {
-  color: #f2f4f3;
 }
 
+/* =============================== */
+/* SPEUDOCLASE A TARJETAS - ANIMACION
+/* =============================== */
 .card:hover {
   animation: crecerTarjeta 1.25s ease forwards;
 }
@@ -241,31 +247,108 @@ li {
   max-height: 24px;
 }
 
-.punto {
-  list-style-type: decimal !important;
+/* =============================== */
+/* TARJETA HORIZONTAL */
+/* =============================== */
+.card-horizontal {
+  display: flex;
+  flex-direction: row;
+  /* fila horizontal */
+  align-items: center;
+  justify-content: space-between;
+  /* separa los bloques */
+  gap: 20px;
+  width: 100%;
+  background-color: #f2f1f1;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+/* =============================== */
+/* IMAGEN */
+/* =============================== */
+.card-horizontal img {
+  width: 180px;
+  height: 120px;
+  border-radius: 4px;
+}
+
+/* =============================== */
+/* BLOQUE INFO */
+/* =============================== */
+.card-info {
+  flex: 2;
+}
+
+.card-info h3 {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.card-info p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* =============================== */
+/* FECHAS */
+/* =============================== */
+.card-fechas {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-fechas span {
+  font-size: 12px;
+  color: #888;
+}
+
+.card-fechas strong {
+  font-size: 14px;
+}
+
+/* =============================== */
+/* PRECIO */
+/* =============================== */
+.card-precio {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
 }
 
 .precio-oferta {
   text-decoration: line-through;
-  color: rgb(105, 0, 0);
+  color: #a00;
+  font-size: 14px;
 }
 
 .precio {
+  font-size: 22px;
+  font-weight: bold;
   color: rgb(0, 177, 0);
-  font-size: 20px;
 }
 
-#experiencias {
-  background-color: #15106b;
-  padding: 30px;
-  margin: 40px;
-  border-radius: 20px;
-  box-shadow: 12px 15px 25px rgb(29, 29, 29);
-}
-
-.cards-destinos {
+/* =============================== */
+/* BOTÓN */
+/* =============================== */
+.card-action {
   display: flex;
-  justify-content: center;
+  align-items: center;
+}
+
+.card-action .button {
+  white-space: nowrap;
 }
 
 footer {
@@ -356,7 +439,7 @@ body {
 }
 
 main {
-  background: rgb(255, 244, 235);
+  background-color: #ffffff;
 }
 
 .titulos {
@@ -450,6 +533,10 @@ main {
 
 .section-destacados {
   text-align: center;
+  padding: 20px;
+}
+.section-destacados h2 {
+  padding-bottom: 20px;
 }
 
 .continente {
@@ -482,9 +569,12 @@ h1 {
 
 h2 {
   text-align: center;
-  font-family: "Nunito", sans-serif;
-  font-weight: 700;
+  font-family: "Poppins", sans-serif;
   text-shadow: 1px 1px 0px rgb(189, 189, 189);
   color: #270066;
-  font-size: 38px;
+  font-size: 32px; /* tamaño principal */
+  font-weight: 700; /* negrita */
+  color: #16002f; /*color principal */
+  margin: 0;
+  letter-spacing: 0.5px; /* mejora la legibilidad */
 }/*# sourceMappingURL=main.css.map */

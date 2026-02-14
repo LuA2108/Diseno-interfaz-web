@@ -3,7 +3,7 @@
 }
 
 @mixin transicion-font($tiempo, $tipo){
-    transition: font-size $tiempo $tipo;
+    transition: font-size $tiempo $tipo, font-weight $tiempo $tipo;
 }
 
 @mixin transicion-background($tiempo, $tipo){

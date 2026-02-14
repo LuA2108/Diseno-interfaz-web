@@ -18,7 +18,7 @@ body {
 // ======================================================
 // ESTILO CUERPO PRINCIPAL ==============================
 main {
-    background: rgb(255, 244, 235);
+    background-color: #ffffff;
 }
 
 // ESTILO A SECCIÓN DE CLASE TITULOS ==================
@@ -117,16 +117,18 @@ main {
 
 .section-destacados {
     text-align: center;
-}
+    padding: 20px;
 
+    h2 {
+        padding-bottom: 20px;
+    }
+}
 
 .continente {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
-
-
 
 // ================================================================
 // ESTILO GENERAL A TODOS LOS ELEMENTOS DEL ARCHIVO HTML ==========
@@ -162,9 +164,12 @@ h1 {
 // ESTILO GENERAL PARA TODOS LOS H2 =========================================
 h2 {
     text-align: center;
-    font-family: $font-principal;
-    font-weight: 700;
+    font-family: $font-titulos;
     text-shadow: 1px 1px 0px rgb(189, 189, 189);
     color: $color-boton;
-    font-size: 38px;
+    font-size: 32px; /* tamaño principal */
+    font-weight: 700; /* negrita */
+    color: #16002f; /*color principal */
+    margin: 0;
+    letter-spacing: 0.5px; /* mejora la legibilidad */
 }

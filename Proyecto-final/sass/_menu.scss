@@ -1,14 +1,16 @@
+// MENU Y SUBMENU DE LA CABECERA
 .container-menus {
-    background: transparent;
     width: 100%;
+    padding: 12px;
 
     nav>ul {
         display: flex;
-        justify-content: center; // 👈 CENTRADO REAL
-        gap: 40px; // espacio entre items
+        justify-content: space-evenly;
+        align-items: center;
         list-style: none;
         padding: 0;
         margin: 0;
+        width: 100%;
 
         li {
             position: relative;
@@ -16,71 +18,57 @@
             a {
                 display: block;
                 padding: 10px 15px;
-                text-align: left; // texto alineado a la izquierda
+                text-align: left;
             }
 
             ul {
-                // Primer submenú
                 display: none;
                 position: absolute;
-                top: 100%; // debajo del li principal
+                top: 100%;
                 left: 0;
                 padding: 0;
+                margin: 0;
+                list-style: none;
                 background: linear-gradient(to bottom, #fca800, hsl(15, 100%, 50%));
                 border-radius: 10px;
                 min-width: 150px;
                 z-index: 2;
-
-                li {
-                    position: relative;
-
-                    a {
-                        display: block;
-                        padding: 10px 15px;
-                        text-align: left; // texto alineado a la izquierda
-                    }
-
-                    ul {
-                        // Sub-submenú
-                        display: none;
-                        position: absolute;
-                        top: 0; // al mismo nivel vertical que el primer menú
-                        left: 100%; // al lado del primer submenú
-                        padding: 0;
-                        background: linear-gradient(to bottom, #fca800, hsl(15, 100%, 50%));
-                        border-radius: 10px;
-                        min-width: 150px;
-                        z-index: 2;
-                    }
-
-                    &:hover>ul {
-                        display: block;
-                    }
-                }
             }
 
+            /* Submenu del submenu (segundo nivel): a la derecha */
+            > ul > li > ul {
+                display: none;
+                position: absolute;
+                top: 0;      /* misma altura que el li padre del submenu */
+                left: 100%;  /* a la derecha del li del submenu */
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                background: linear-gradient(to bottom, #fca800, hsl(15, 100%, 50%));
+                border-radius: 10px;
+                min-width: 150px;
+                z-index: 2;
+            }
+            
             &:hover>ul {
                 display: block;
             }
         }
     }
-
 }
 
-// ESTILO A LA SECCION DE DESTACADOS =============================
+.container-menus a {
+    font-size: 18px;
+}
+
+// MENU DE LOS PAISES ====================================
 .tabs-menu {
     display: flex;
     gap: 15px;
     margin-bottom: 20px;
-    justify-content: center;
-}
+    justify-content: space-between;
+    width: 100%;
 
-.tabs-section {
-    background-color: $fondo-contenedor-cards;
-    margin: 40px;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 12px 15px 25px rgb(29, 29, 29);
 }
 
 /* Ocultar los radio buttons */
@@ -89,16 +77,25 @@
 }
 
 .tab-link {
-    padding: 10px 20px;
+    flex: 1; // hace que cada tab ocupe el mismo ancho
+    text-align: center; // centra el texto dentro del tab
+    padding: 12px 0; // vertical padding, horizontal automático por flex
     cursor: pointer;
-    font-weight: bold;
-    @include transicion-background(0.8s, linear);
-    border-radius: 10px;
-    color: white;
+    border-radius: 4px;
+    color: rgb(199, 199, 199);
+    background-color: $color-boton;
+    transition: 0.3s;
+    @include transicion-font(0.9s, linear);
+    @include transicion-color(0.9s, linear);
+    @include transicion-background(0.9s, linear);
+    border-radius: 4px;
 }
 
 .tab-link:hover {
-    background: #b6bdff;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffff;
+    background-color: lighten($color-boton, 20%);
 }
 
 /* Contenido oculto por defecto */
@@ -111,11 +108,16 @@
 #tab-america:checked~.tabs-content #section-america,
 #tab-oriente:checked~.tabs-content #section-medio-oriente {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
-    padding: 30px;
 }
 
-#historias {
-    margin: 0px;
+/* Cuando el radio está seleccionado, aplicamos estilo */
+#tab-europa:checked~.tabs-menu label[for="tab-europa"],
+#tab-asia:checked~.tabs-menu label[for="tab-asia"],
+#tab-america:checked~.tabs-menu label[for="tab-america"],
+#tab-oriente:checked~.tabs-menu label[for="tab-oriente"] {
+    background-color: lighten($color-boton, 15%);
+    color: #fff;
+    font-weight: 600;
 }
