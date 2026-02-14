@@ -4,7 +4,11 @@
 
     nav>ul {
         display: flex;
-        justify-content: space-around;
+        justify-content: center; // 👈 CENTRADO REAL
+        gap: 40px; // espacio entre items
+        list-style: none;
+        padding: 0;
+        margin: 0;
 
         li {
             position: relative;
@@ -72,7 +76,7 @@
 }
 
 .tabs-section {
-    background-color:  $fondo-contenedor-cards;
+    background-color: $fondo-contenedor-cards;
     margin: 40px;
     padding: 20px;
     border-radius: 20px;
@@ -102,13 +106,13 @@
     display: none;
 }
 
-#tab-europa:checked ~ .tabs-content #section-europa,
-#tab-asia:checked ~ .tabs-content #section-asia,
-#tab-america:checked ~ .tabs-content #section-america,
-#tab-oriente:checked ~ .tabs-content #section-medio-oriente {
+#tab-europa:checked~.tabs-content #section-europa,
+#tab-asia:checked~.tabs-content #section-asia,
+#tab-america:checked~.tabs-content #section-america,
+#tab-oriente:checked~.tabs-content #section-medio-oriente {
     display: flex;
     justify-content: space-around;
-    align-items: flex-start; 
+    align-items: flex-start;
     padding: 30px;
 }
 
