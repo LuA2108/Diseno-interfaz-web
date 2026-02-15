@@ -1,6 +1,5 @@
 /* ============================ FOOTER ============================ */
 footer {
-
     /* Fondo con gradiente horizontal personalizado */
     background: linear-gradient(to right,
             $gradiente-1 20%, // Primer color hasta el 20%
@@ -10,12 +9,10 @@ footer {
     display: flex;
     flex-direction: column; // Organiza el contenido principal en columna
 
-
     /* Contenedor general de las secciones del footer */
     .container-sections {
         display: flex; // Distribuye section1 y section2 en fila (horizontal)
     }
-
 
     /* Sección izquierda (logo + frase) */
     .section1 {
