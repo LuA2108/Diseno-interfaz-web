@@ -414,10 +414,18 @@ li {
   border-bottom: 1px solid #16002f;
 }
 
+/* ============================ FOOTER ============================ */
 footer {
+  /* Fondo con gradiente horizontal personalizado */
   background: linear-gradient(to right, #411774 20%, #7282c8 50%, #411774 78%);
   display: flex;
   flex-direction: column;
+  /* Contenedor general de las secciones del footer */
+  /* Sección izquierda (logo + frase) */
+  /* Sección derecha (columnas de enlaces) */
+  /* Estructura interna de cada columna del footer */
+  /* Logo del footer */
+  /* Línea divisoria */
 }
 footer .container-sections {
   display: flex;
@@ -435,6 +443,8 @@ footer .section2 {
 footer .section-footer {
   display: flex;
   flex-direction: column;
+  /* Títulos (Inicio, Destinos, etc.) */
+  /* Contenedor de la lista */
 }
 footer .section-footer h3 {
   text-align: center;
@@ -463,6 +473,8 @@ footer hr {
   width: 90%;
 }
 
+/* ============================ EFECTO HOVER EN ENLACES ============================ */
+/* Permite animar el enlace */
 footer li a {
   display: inline-block;
 }
@@ -470,16 +482,19 @@ footer li a:hover {
   animation: moverDerecha 0.75s ease;
 }
 
+/* ============================ COPYRIGHT ============================ */
 .copyright {
   text-align: center;
   color: white;
 }
 
+/* ============================ TEXTOS DEL LOGO ============================ */
 .text-logo1,
 .text-logo2 {
   color: #cd7f00;
 }
 
+/* Frase inferior del logo */
 .text-logo2 {
   font-size: 20px;
   padding: 40px;

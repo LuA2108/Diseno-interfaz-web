@@ -1,90 +1,112 @@
-
+/* ============================ FOOTER ============================ */
 footer {
-    background: linear-gradient(to right,
-            $gradiente-1 20%,
-            $gradiente-2 50%,
-            $gradiente-1 78%);
-    display: flex;
-    flex-direction: column;
 
+    /* Fondo con gradiente horizontal personalizado */
+    background: linear-gradient(to right,
+            $gradiente-1 20%, // Primer color hasta el 20%
+            $gradiente-2 50%, // Segundo color al centro
+            $gradiente-1 78%); // Vuelve al primer color
+
+    display: flex;
+    flex-direction: column; // Organiza el contenido principal en columna
+
+
+    /* Contenedor general de las secciones del footer */
     .container-sections {
-        display: flex;
+        display: flex; // Distribuye section1 y section2 en fila (horizontal)
     }
 
+
+    /* Sección izquierda (logo + frase) */
     .section1 {
         display: flex;
-        width: 15%;
-        
+        width: 15%; // Ocupa el 15% del ancho total
     }
 
+
+    /* Sección derecha (columnas de enlaces) */
     .section2 {
-        flex: 1;
+        flex: 1; // Ocupa el espacio restante disponible
         display: flex;
-        justify-content: space-around;
-        margin: 40px;
-        
+        justify-content: space-around; // Espacio uniforme entre columnas
+        margin: 40px; // Separación externa
     }
 
+
+    /* Estructura interna de cada columna del footer */
     .section-footer {
         display: flex;
-        flex-direction: column;
-        
+        flex-direction: column; // Título arriba, contenido abajo
+
+        /* Títulos (Inicio, Destinos, etc.) */
         h3 {
-            text-align: center;
-            color: aliceblue;
-            font-size: 18px;
-            padding: 10px;
-            
+            text-align: center; // Centra el texto
+            color: aliceblue; // Color claro
+            font-size: 18px; // Tamaño del título
+            padding: 10px; // Espaciado interno
         }
 
+        /* Contenedor de la lista */
         section {
             display: flex;
-            ul {
-                padding-top: 10px;
-                display: flex;
-                flex-direction: column;
-                gap: 5px;
-            }
 
+            ul {
+                padding-top: 10px; // Espacio superior
+                display: flex;
+                flex-direction: column; // Lista vertical
+                gap: 5px; // Espacio entre elementos <li>
+            }
         }
     }
 
+
+    /* Logo del footer */
     .logo {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; // Imagen arriba, texto abajo
+        align-items: center; // Centrado horizontal
 
         img {
-            width: 10em;
+            width: 10em; // Tamaño del logo
         }
     }
 
+
+    /* Línea divisoria */
     hr {
-        width: 90%;
+        width: 90%; // No ocupa todo el ancho
     }
 }
 
-// TRANSICION PARA DESPLAZAR EL ENLACE A LA DERECHA LEVEMENTE =========
-// ====================================================================
+/* ============================ EFECTO HOVER EN ENLACES ============================ */
+
+/* Permite animar el enlace */
 footer li a {
     display: inline-block;
 
     &:hover {
         animation: moverDerecha 0.75s ease;
+        // Aplica animación personalizada al pasar el mouse
     }
 }
 
+/* ============================ COPYRIGHT ============================ */
+
 .copyright {
-    text-align: center;
-    color: white;
+    text-align: center; // Texto centrado
+    color: white; // Color blanco
 }
+
+
+/* ============================ TEXTOS DEL LOGO ============================ */
 
 .text-logo1,
 .text-logo2 {
-    color: $color-logo
+    color: $color-logo; // Color personalizado definido en variable
 }
 
+/* Frase inferior del logo */
 .text-logo2 {
-    font-size: 20px;
-    padding: 40px;
+    font-size: 20px; // Tamaño mayor
+    padding: 40px; // Espaciado alrededor
 }
