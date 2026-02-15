@@ -7,7 +7,7 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="sass/main.css">
+    <link rel="stylesheet" href="sass/paginas/reserva.css">
 
     <!-- Enlace a fuente de google  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -124,8 +124,198 @@
     <body>
 
         <!-- Contenido FOrmulario -->
-        <main class="container-formulario">
+        <main>
+            <section class="titulo-principal">
+                <h1>Reserva un viaje</h1>
+            </section>
 
+            <article class="container-formulario">
+
+                <form action="#" method="post">
+
+                    <!-- DATOS DEL CLIENTE -->
+                    <fieldset class="container-datos">
+                        <legend class="titulo-form">Datos del Cliente</legend>
+
+                        <section class="form-group">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" required autocomplete="name" placeholder="Nombre...">
+                        </section>
+
+                        <section class="form-group">
+                            <label for="dni">DNI / Pasaporte</label>
+                            <input type="text" id="dni" name="dni" required placeholder="DNI">
+                        </section>
+
+                        <section class="form-group">
+                            <label for="fechaNacimiento">Fecha de nacimiento</label>
+                            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required placeholder="dd/mm/yyyy">
+                        </section>
+
+                        <section class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" required placeholder="Teléfono">
+                        </section>
+
+                        <section class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" required autocomplete="email" placeholder="Email">
+                        </section>
+                    </fieldset>
+
+                    <!-- DETALLES DEL VIAJE -->
+                    <fieldset class="container-datos">
+                        <legend class="titulo-form">Destino y Fechas</legend>
+
+                        <section class="form-group">
+                            <label for="destino">Destino</label>
+                            <select id="destino" name="destino" required>
+                                <optgroup label="Europa">
+                                    <option value="espana">España</option>
+                                    <option value="londres">Londres</option>
+                                    <option value="grecia">Grecia</option>
+                                    <option value="italia">Italia</option>
+                                </optgroup>
+                                <optgroup label="Asia">
+                                    <option value="japon">Japón</option>
+                                    <option value="china">China</option>
+                                    <option value="filipinas">Filipinas</option>
+                                    <option value="tailandia">Tailandia</option>
+                                </optgroup>
+                                <optgroup label="América">
+                                    <option value="canada">Canadá</option>
+                                    <option value="argentina">Argentina</option>
+                                    <option value="peru">Perú</option>
+                                    <option value="puerto_rico">Puerto Rico</option>
+                                </optgroup>
+                                <optgroup label="Oriente Medio">
+                                    <option value="egipto">Egipto</option>
+                                    <option value="arabia">Arabia Saudí</option>
+                                    <option value="turquia">Turquía</option>
+                                    <option value="emiratos">Emiratos Árabes</option>
+                                </optgroup>
+                            </select>
+                        </section>
+
+                        <section class="form-group">
+                            <label for="salida">Fecha de salida</label>
+                            <input type="date" id="salida" name="salida" required>
+                        </section>
+
+                        <section class="form-group">
+                            <label for="regreso">Fecha de regreso</label>
+                            <input type="date" id="regreso" name="regreso" required>
+                        </section>
+
+                        <section class="form-group">
+                            <label for="adultos">Número de adultos</label>
+                            <input type="number" id="adultos" name="adultos" min="1" required placeholder="00">
+                        </section>
+
+                        <section class="form-group">
+                            <label for="ninos">Número de niños</label>
+                            <input type="number" id="ninos" name="ninos" min="0" placeholder="00">
+                        </section>
+                    </fieldset>
+
+                    <!-- TRANSPORTE -->
+                    <fieldset class="container-datos">
+                        <legend class="titulo-form">Transporte</legend>
+                        <section class="form-group radio-group">
+                            <label for="transporte">Elige un metodo de transporte para el viaje.</label>
+
+                            <label><input type="radio" name="transporte" value="avion" required>Avión</label>
+                            <label><input type="radio" name="transporte" value="tren">Tren</label>
+                            <label><input type="radio" name="transporte" value="bus">Autobús</label>
+                            <label><input type="radio" name="transporte" value="coche">Coche de alquiler</label>
+                        </section>
+                    </fieldset>
+
+                    <!-- ALOJAMIENTO -->
+                    <fieldset class="container-datos">
+                        <legend class="titulo-form">Alojamiento</legend>
+
+                        <section class="form-group">
+                            <label for="tipoAlojamiento">Tipo de alojamiento</label>
+                            <select id="tipoAlojamiento" name="tipoAlojamiento">
+                                <option value="hotel">Hotel</option>
+                                <option value="resort">Resort</option>
+                                <option value="apartamento">Apartamento</option>
+                                <option value="villa">Villa</option>
+                            </select>
+                        </section>
+
+                        <section class="form-group">
+                            <label for="categoria">Categoría</label>
+                            <select id="categoria" name="categoria">
+                                <option value="3">3 estrellas</option>
+                                <option value="4">4 estrellas</option>
+                                <option value="5">5 estrellas</option>
+                            </select>
+                        </section>
+
+                        <section class="form-group">
+                            <label for="regimen">Régimen</label>
+                            <select id="regimen" name="regimen">
+                                <option value="solo">Solo alojamiento</option>
+                                <option value="desayuno">Desayuno incluido</option>
+                                <option value="media">Media pensión</option>
+                                <option value="completa">Pensión completa</option>
+                                <option value="todo">Todo incluido</option>
+                            </select>
+                        </section>
+                    </fieldset>
+
+                    <!-- SERVICIOS -->
+                    <fieldset class="container-datos">
+                        <legend class="titulo-form">Servicios Adicionales</legend>
+
+                        <section class="form-group checkbox-group">
+                            <label><input type="checkbox" name="servicios[]" value="seguro"> Seguro de viaje</label>
+                            <label><input type="checkbox" name="servicios[]" value="traslado"> Traslados
+                                aeropuerto-hotel</label>
+                            <label><input type="checkbox" name="servicios[]" value="excursiones"> Excursiones</label>
+                        </section>
+                    </fieldset>
+
+                    <!-- PAQUETE Y PRECIO -->
+                    <fieldset class="container-datos">
+                        <legend class="titulo-form">Paquete y Precio</legend>
+
+                        <section class="form-group">
+                            <label for="paquete">Tipo de paquete</label>
+                            <select id="paquete" name="paquete">
+                                <option value="basico">Básico - Económico</option>
+                                <option value="estandar">Estándar - Incluye transporte y alojamiento</option>
+                                <option value="premium">Premium - Todo incluido con actividades</option>
+                            </select>
+                        </section>
+
+                        <section class="form-group">
+                            <label for="precio">Precio aproximado (€)</label>
+                            <input type="number" id="precio" name="precio" min="0" step="10" placeholder="00-100&euro;">
+                        </section>
+                    </fieldset>
+
+                    <!-- OBSERVACIONES -->
+                    <fieldset class="container-datos">
+                        <legend class="titulo-form">Observaciones</legend>
+                        <section class="form-group">
+                            <label for="observacion">Indique aquí cualquier solicitud especial a tener en
+                                cuenta.</label>
+                            <textarea name="observaciones" rows="5" placeholder="Escribe aquí cualquier solicitud especial..." ></textarea>
+                        </section>
+                    </fieldset>
+
+                    <div class="botones-form">
+                        <button type="reset" class="button">Limpiar</button>
+                        <button type="submit" class="button">Enviar Reserva</button>
+                    </div>
+
+                </form>
+
+
+            </article>
 
         </main>
 
@@ -203,8 +393,5 @@
 
         </footer>
     </body>
-
-</html>
-</body>
 
 </html>

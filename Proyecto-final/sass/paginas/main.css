@@ -12,7 +12,16 @@ header {
   margin: 5px;
   font-size: 16px;
   font-weight: 30px;
+  padding: 10px 8px;
   gap: 8px;
+}
+.enlace-sesion > ul li > a {
+  display: flex;
+  align-items: center;
+  /* Alinea verticalmente */
+  gap: 8px;
+  /* Espacio entre icono y texto */
+  text-decoration: none;
 }
 
 .container-logo > a {
@@ -515,6 +524,44 @@ body {
   margin: 0%;
 }
 
+button {
+  cursor: pointer;
+}
+
+hr {
+  border: 1px solid white;
+}
+
+a {
+  text-decoration: none;
+  color: #bebebe;
+  transition: color 0.6s linear;
+}
+a:hover {
+  color: #ffffff;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 1px 1px 0px rgb(189, 189, 189);
+  color: #270066;
+  font-size: 32px;
+  /* tamaño principal */
+  font-weight: 700;
+  /* negrita */
+  color: #16002f;
+  /*color principal */
+  margin: 0;
+  letter-spacing: 0.5px;
+  /* mejora la legibilidad */
+}
+
 main {
   background-color: #ffffff;
 }
@@ -669,42 +716,4 @@ main {
 .titulo-continente span:hover {
   color: #5502b5;
   text-shadow: 3px 3px 3px #16002f;
-}
-
-button {
-  cursor: pointer;
-}
-
-hr {
-  border: 1px solid white;
-}
-
-a {
-  text-decoration: none;
-  color: #bebebe;
-  transition: color 0.6s linear;
-}
-a:hover {
-  color: #ffffff;
-}
-
-h1 {
-  text-align: center;
-  font-family: "Nunito", sans-serif;
-}
-
-h2 {
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  text-shadow: 1px 1px 0px rgb(189, 189, 189);
-  color: #270066;
-  font-size: 32px;
-  /* tamaño principal */
-  font-weight: 700;
-  /* negrita */
-  color: #16002f;
-  /*color principal */
-  margin: 0;
-  letter-spacing: 0.5px;
-  /* mejora la legibilidad */
 }/*# sourceMappingURL=main.css.map */

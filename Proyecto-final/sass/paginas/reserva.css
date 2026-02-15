@@ -12,7 +12,16 @@ header {
   margin: 5px;
   font-size: 16px;
   font-weight: 30px;
+  padding: 10px 8px;
   gap: 8px;
+}
+.enlace-sesion > ul li > a {
+  display: flex;
+  align-items: center;
+  /* Alinea verticalmente */
+  gap: 8px;
+  /* Espacio entre icono y texto */
+  text-decoration: none;
 }
 
 .container-logo > a {
@@ -503,5 +512,190 @@ footer li a:hover {
   100% {
     transform: translateX(-100%);
     /* termina fuera a la izquierda */
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0%;
+}
+
+button {
+  cursor: pointer;
+}
+
+hr {
+  border: 1px solid white;
+}
+
+a {
+  text-decoration: none;
+  color: #bebebe;
+  transition: color 0.6s linear;
+}
+a:hover {
+  color: #ffffff;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 1px 1px 0px rgb(189, 189, 189);
+  color: #270066;
+  font-size: 32px;
+  /* tamaño principal */
+  font-weight: 700;
+  /* negrita */
+  color: #16002f;
+  /*color principal */
+  margin: 0;
+  letter-spacing: 0.5px;
+  /* mejora la legibilidad */
+}
+
+main {
+  background-image: url("../../imgs/fondo-registro.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 40px;
+}
+
+.container-formulario {
+  background-color: rgba(240, 248, 255, 0.223);
+  border-radius: 10px;
+  margin: 0px 400px;
+}
+
+.container-datos {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 50px;
+  margin: 20px;
+  align-items: center;
+  gap: 10px;
+}
+
+.titulo-form {
+  font-size: 25px;
+  font-family: "Nunito", sans-serif;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 300px;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+input {
+  border-radius: 5px;
+  border: none;
+  width: 300px;
+  padding: 5px 10px;
+}
+
+select {
+  padding: 5px 5px;
+  border-radius: 5px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+  /* espacio entre cada opción */
+  flex-wrap: wrap;
+  /* se ajusta si no cabe en una línea */
+  width: 320px;
+  /* mismo ancho que los inputs */
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  /* centra verticalmente el radio con el texto */
+  gap: 5px;
+  /* espacio entre el botón y el texto */
+  font-weight: normal;
+}
+
+.radio-group input[type=radio] {
+  width: auto;
+  /* mantiene tamaño normal del botón */
+  height: auto;
+  cursor: pointer;
+}
+
+.checkbox-group {
+  display: flex;
+  /* alinea los labels en fila */
+  gap: 20px;
+  /* espacio entre cada opción */
+  flex-wrap: wrap;
+  /* se ajusta si no caben en una línea */
+  width: 320px;
+  /* igual que otros bloques del formulario */
+}
+
+.checkbox-group label {
+  display: flex;
+  /* para alinear checkbox y texto */
+  align-items: center;
+  /* centra verticalmente */
+  gap: 5px;
+  /* espacio entre checkbox y texto */
+  cursor: pointer;
+  /* muestra que es clickable */
+}
+
+.checkbox-group input[type=checkbox] {
+  width: auto;
+  height: auto;
+}
+
+textarea {
+  width: 100%;
+  /* ocupa todo el ancho del bloque */
+  max-width: 500px;
+  /* opcional: límite máximo */
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.botones-form {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 10px 0px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 992px) {
+  main {
+    padding: 20px;
+  }
+  .container-formulario {
+    margin: 0 10px;
+  }
+  .container-datos {
+    padding: 15px 20px;
   }
 }/*# sourceMappingURL=reserva.css.map */

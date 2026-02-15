@@ -5,11 +5,10 @@
 header {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to right, 
-    $gradiente-1 20%,
-    $gradiente-2 50%,
-    $gradiente-1 78%
-    );              // Gradiente
+    background: linear-gradient(to right,
+            $gradiente-1 20%,
+            $gradiente-2 50%,
+            $gradiente-1 78%); // Gradiente
 }
 
 // ================================================================
@@ -20,8 +19,18 @@ header {
     margin: 5px;
     font-size: 16px;
     font-weight: 30px;
+    padding: 10px 8px;
     gap: 8px;
-    
+
+
+    li>a {
+        display: flex;
+        align-items: center;
+        /* Alinea verticalmente */
+        gap: 8px;
+        /* Espacio entre icono y texto */
+        text-decoration: none;
+    }
 }
 
 // ================================================================
@@ -34,9 +43,14 @@ header {
     color: $color-logo;
     font-size: 25px;
 
-    img {width: 100px;}
+    img {
+        width: 100px;
+    }
 }
-.container-logo {padding-bottom: 10px;}
+
+.container-logo {
+    padding-bottom: 10px;
+}
 
 
 
