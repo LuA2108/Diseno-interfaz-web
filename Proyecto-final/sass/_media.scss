@@ -1,0 +1,30 @@
+
+/* Media query para pantallas menores o iguales a 1100px ============================== */
+@media (max-width: 900px) {
+    .tab-content {
+        flex-wrap: wrap;   // wrap solo a partir de este tamaño
+        gap: 10px;
+    }
+
+    .card-horizontal {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card {
+        width: 380px ;       // tamaño fijo
+        height: auto;      // altura fija
+        object-fit: cover;
+    }
+
+    footer {
+        
+    }
+}
+
+
+// PAGINA RESERVA - FORMULARIO ======================================
+
+// Ajustes para pantallas medianas (tablets)
+// Ajustes para pantallas pequeñas (móviles)

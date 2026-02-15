@@ -21,7 +21,7 @@ main {
     background-color: rgba(240, 248, 255, 0.223);
     border-radius: 10px;
     margin: 0px 400px;
-
+    display: flex;
 }
 
 .container-datos {
@@ -136,18 +136,3 @@ textarea {
     flex-wrap: wrap;
 }
 
-// Ajustes para pantallas medianas (tablets)
-// Ajustes para pantallas pequeñas (móviles)
-@media (max-width: 992px) {
-    main {
-        padding: 20px;
-    }
-
-    .container-formulario {
-        margin: 0 10px;
-    }
-
-    .container-datos {
-        padding: 15px 20px;
-    }
-}

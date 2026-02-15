@@ -108,9 +108,11 @@
 #tab-america:checked~.tabs-content #section-america,
 #tab-oriente:checked~.tabs-content #section-medio-oriente {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+
 }
+
 
 /* Cuando el radio está seleccionado, aplicamos estilo */
 #tab-europa:checked~.tabs-menu label[for="tab-europa"],
@@ -121,3 +123,4 @@
     color: #fff;
     font-weight: 600;
 }
+
