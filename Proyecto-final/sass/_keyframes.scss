@@ -18,11 +18,25 @@
 // ============================================================================================
 // ANIMACION para mover ligeramente los elementos hacia la derecha ============================
 @keyframes moverDerecha {
-    from {
-        transform: translateX(0px);
+    0% {
+        transform: translateX(0%);
     }
-    to {
-        transform: translateX(10px);
+
+    100% {
+        transform: translateX(50%);
     }
 }
 
+// ============================================================================================
+// ANIMACION para mover los elementos hacia la derecha desde izq ============================
+@keyframes mover {
+    0% {
+        transform: translateX(100%);
+        /* empieza fuera a la derecha */
+    }
+
+    100% {
+        transform: translateX(-100%);
+        /* termina fuera a la izquierda */
+    }
+}

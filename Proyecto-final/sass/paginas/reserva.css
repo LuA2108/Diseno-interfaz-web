@@ -157,12 +157,17 @@ li {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   background-color: #f2f1f1;
 }
-.card .button {
+
+.button {
   background-color: #270066;
   color: #ffffff;
   border-radius: 5px;
   padding: 5px 25px;
   border: none;
+  transition: background 0.5s linear;
+}
+.button:hover {
+  background-color: rgb(81.6808510638, 0, 174.5);
 }
 
 .card img {
@@ -339,16 +344,66 @@ li {
   color: rgb(0, 177, 0);
 }
 
-/* =============================== */
-/* BOTÓN */
-/* =============================== */
-.card-action {
+.continente {
   display: flex;
-  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  justify-self: center;
+  padding: 20px 0;
 }
 
-.card-action .button {
-  white-space: nowrap;
+.paises {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.pais {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.pais img {
+  width: 350px;
+  height: 150px;
+  border-radius: 5px;
+}
+
+/* Imagen al hacer hover */
+.pais img:hover {
+  animation: crecerTarjeta 0.3s forwards;
+  /* ejecuta tu keyframes */
+  cursor: pointer;
+  /* opcional */
+}
+
+.lista-ciudades li {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(0, 22, 123);
+}
+
+.contenido {
+  padding: 10px 5px;
+  background-color: #e1e1e1;
+  border-radius: 5px;
+}
+.contenido .button {
+  display: block;
+  text-align: center;
+  margin: 10px 0px;
+}
+
+.titulo-pais {
+  padding-bottom: 10px;
+}
+
+.titulo-continente {
+  padding: 10px 0px;
+  margin: 20px 0px;
+  border-top: 1px solid #16002f;
+  border-bottom: 1px solid #16002f;
 }
 
 footer {
@@ -376,9 +431,17 @@ footer .section-footer {
 footer .section-footer h3 {
   text-align: center;
   color: aliceblue;
+  font-size: 18px;
+  padding: 10px;
 }
 footer .section-footer section {
   display: flex;
+}
+footer .section-footer section ul {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 footer .logo {
   display: flex;
@@ -425,156 +488,20 @@ footer li a:hover {
   }
 }
 @keyframes moverDerecha {
-  from {
-    transform: translateX(0px);
+  0% {
+    transform: translateX(0%);
   }
-  to {
-    transform: translateX(10px);
+  100% {
+    transform: translateX(50%);
   }
 }
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-main {
-  background-color: #ffffff;
-}
-
-.titulos {
-  font-family: "Poppins", sans-serif;
-  color: rgb(250, 248, 248);
-  text-shadow: 2px 2px 2px black;
-  text-align: center;
-}
-
-.seccion-principal {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: left;
-  overflow: hidden;
-  padding: 40px 0px;
-  text-align: left;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-}
-
-.bg-borrosa {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  /* hace que la imagen cubra todo el contenedor */
-  filter: blur(2px);
-  /* desenfoca la imagen */
-  z-index: 0;
-  /* queda detrás del contenido */
-}
-
-.seccion-principal > *:not(.bg-borrosa) {
-  position: relative;
-  /* Mantiene el contenido encima del pseudo-elemento */
-  z-index: 1;
-}
-
-.formulario-principal {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.formulario-principal input {
-  border-radius: 5px;
-  border: 2px solid #ccc;
-  padding: 10px 15px;
-  transition: border-color 0.5s linear box-shadow 0.3s ease;
-  outline: none;
-}
-.formulario-principal input:focus {
-  border-color: #F39C12;
-  box-shadow: 0 0 5px #F39C12;
-}
-.formulario-principal button {
-  background-color: #270066;
-  border: none;
-  border-radius: 10px;
-  color: rgb(212, 212, 212);
-  padding: 5px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.8s linear;
-}
-.formulario-principal button:hover {
-  color: #ffffff;
-}
-
-#miCarrusel-caracteristicas {
-  padding: 40px;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1);
-}
-
-.fon {
-  background-color: rgba(138, 159, 166, 0.601);
-  padding: 50px;
-  border-radius: 15px;
-}
-
-.section-destacados {
-  text-align: center;
-  padding: 20px;
-}
-.section-destacados h2 {
-  padding-bottom: 20px;
-}
-
-.continente {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-button {
-  cursor: pointer;
-}
-
-hr {
-  border: 1px solid white;
-}
-
-a {
-  text-decoration: none;
-  color: #bebebe;
-  transition: color 0.6s linear;
-}
-a:hover {
-  color: #ffffff;
-}
-
-h1 {
-  text-align: center;
-  font-family: "Nunito", sans-serif;
-}
-
-h2 {
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  text-shadow: 1px 1px 0px rgb(189, 189, 189);
-  color: #270066;
-  font-size: 32px; /* tamaño principal */
-  font-weight: 700; /* negrita */
-  color: #16002f; /*color principal */
-  margin: 0;
-  letter-spacing: 0.5px; /* mejora la legibilidad */
-}/*# sourceMappingURL=main.css.map */
+@keyframes mover {
+  0% {
+    transform: translateX(100%);
+    /* empieza fuera a la derecha */
+  }
+  100% {
+    transform: translateX(-100%);
+    /* termina fuera a la izquierda */
+  }
+}/*# sourceMappingURL=reserva.css.map */

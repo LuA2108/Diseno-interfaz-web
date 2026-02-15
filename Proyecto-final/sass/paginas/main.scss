@@ -1,18 +1,22 @@
 // IMPORTACION DE ESTILOS SCSS ==========================
-@import "variables";
-@import "mixin";
-@import "cabecera";
-@import "menu";
-@import "card";
-@import "footer";
-@import "keyframes";
+@import "../variables";
+@import "../mixin";
+@import "../cabecera";
+@import "../menu";
+@import "../card";
+@import "../footer";
+@import "../keyframes";
 
 // =======================================
 // ESTILO CUERPO =========================
-body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    margin: 0%;
 }
 
 // ======================================================
@@ -126,8 +130,61 @@ main {
 
 .continente {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+}
+
+// PAGINA DESTINO MAIN =============
+.pagina-destinos h1 {
+    font-size: 40px;
+    padding: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 200;
+    color: #16002f;
+    border-bottom: 2px solid #16002f;
+    margin: 20px 20px;
+    border-top: 2px solid #16002f;
+}
+
+// ESTILO A LINEA DE IMAGENES EN LA PAGINA DESTINO ===========
+.container-linea-img {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 20px 0;
+}
+
+.container-linea-img h1 {
     text-align: center;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    padding: 20px 0;
+}
+
+.icono-bandera {
+    width: 35px;
+    height: auto;
+    margin: 0 10px;
+    padding: 0;
+    background-color: transparent;
+}
+
+.linea-imgs {
+    display: flex;
+    gap: 20px;
+    /* ancho según contenido total */
+    animation: mover 16s linear infinite;
+    width: max-content;
+}
+
+// Titulo continetes ============
+
+.titulo-continente span {
+    transition: color 0.8s linear, text-shadow 0.4s linear;
+
+    &:hover {
+        color: #5502b5;
+        text-shadow: 3px 3px 3px #16002f;
+    }
 }
 
 // ================================================================
@@ -167,9 +224,13 @@ h2 {
     font-family: $font-titulos;
     text-shadow: 1px 1px 0px rgb(189, 189, 189);
     color: $color-boton;
-    font-size: 32px; /* tamaño principal */
-    font-weight: 700; /* negrita */
-    color: #16002f; /*color principal */
+    font-size: 32px;
+    /* tamaño principal */
+    font-weight: 700;
+    /* negrita */
+    color: #16002f;
+    /*color principal */
     margin: 0;
-    letter-spacing: 0.5px; /* mejora la legibilidad */
+    letter-spacing: 0.5px;
+    /* mejora la legibilidad */
 }
