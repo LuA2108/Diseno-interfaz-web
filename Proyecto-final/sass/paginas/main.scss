@@ -50,7 +50,7 @@ main {
     z-index: 0; // Se coloca al fondo
 }
 
-.seccion-principal>*:not(.bg-borrosa) {
+.seccion-principal >*:not(.bg-borrosa) {
     position: relative; // Posición relativa
     z-index: 1; // Asegura que el contenido esté sobre la imagen borrosa
 }
@@ -123,10 +123,8 @@ main {
 
 // PAGINA DESTINO MAIN =============
 .pagina-destinos h1 {
-    font-size: 40px; // Tamaño grande
     padding: 15px; // Relleno
-    font-family: Georgia, 'Times New Roman', Times, serif; // Fuente serif clásica
-    font-weight: 200; // Fuente fina
+    font-family: $font-titulos; // Fuente poppins
     color: #16002f; // Color oscuro
     border-bottom: 2px solid #16002f; // Línea inferior
     margin: 20px 20px; // Márgenes externos
