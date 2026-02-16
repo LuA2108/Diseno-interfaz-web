@@ -81,8 +81,8 @@ li {
 .container-menus nav > ul li > ul > li > ul {
   display: none;
   position: absolute;
-  top: 0; /* misma altura que el li padre del submenu */
-  left: 100%; /* a la derecha del li del submenu */
+  top: 0; /* Misma altura que el ítem padre */
+  left: 100%; /* A la derecha del ítem padre */
   padding: 0;
   margin: 0;
   list-style: none;
@@ -148,7 +148,7 @@ li {
   align-items: center;
 }
 
-/* Cuando el radio está seleccionado, aplicamos estilo */
+/* Cuando el radio está seleccionado, aplicamos estilo a la etiqueta (label) correspondiente */
 #tab-europa:checked ~ .tabs-menu label[for=tab-europa],
 #tab-asia:checked ~ .tabs-menu label[for=tab-asia],
 #tab-america:checked ~ .tabs-menu label[for=tab-america],
