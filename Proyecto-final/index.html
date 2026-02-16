@@ -19,37 +19,50 @@
 </head>
 
 <body>
+    <!-- ENCABEZADO PRINCIPAL -->
     <header>
+
+        <!-- BARRA SUPERIOR DE SESIÓN -->
         <section class="container-sesion">
             <nav class="enlace-sesion">
                 <ul>
                     <li>
+                        <!-- Enlace de sesión con icono -->
                         <a href="#"> <img src="imgs/iconos/sesion.png" alt=""> Sesión</a>
                     </li>
                 </ul>
             </nav>
         </section>
 
+        <!-- SECCIÓN DEL LOGO Y NOMBRE -->
         <section class="container-logo">
             <a href="index.html">
-                <img src="imgs/logo.png" alt="">
-                Agencia Rumbo Libre
+                <img src="imgs/logo.png" alt=""> <!-- Imagen del logo -->
+                Agencia Rumbo Libre <!-- Nombre de la agencia -->
             </a>
         </section>
 
+        <!-- MENÚ DE NAVEGACIÓN PRINCIPAL -->
         <section class="container-menus">
             <nav class="nav">
                 <ul>
-                    <!-- Inicio -->
+
+                    <!-- OPCIÓN 1: INICIO -->
                     <li>
                         <a href="index.html">Inicio</a>
                     </li>
-                    <!-- DESTINOS -->
+
+                    <!-- OPCIÓN 2: DESTINOS (CON MENÚ DESPLEGABLE) -->
                     <li>
                         <a href="destino.html">Destinos</a>
+
+                        <!-- SUBMENÚ NIVEL 1: CONTINENTES -->
                         <ul>
+
+                            <!-- EUROPA -->
                             <li>
                                 <a href="destino.html#europa">Europa</a>
+                                <!-- SUBMENÚ NIVEL 2: PAÍSES DE EUROPA -->
                                 <ul>
                                     <li><a href="destino.html#espana">España</a></li>
                                     <li><a href="destino.html#inglaterra">Inglaterra</a></li>
@@ -58,8 +71,10 @@
                                 </ul>
                             </li>
 
+                            <!-- ASIA -->
                             <li>
                                 <a href="destino.html#asia">Asia</a>
+                                <!-- SUBMENÚ NIVEL 2: PAÍSES DE ASIA -->
                                 <ul>
                                     <li><a href="destino.html#japon">Japón</a></li>
                                     <li><a href="destino.html#china">China</a></li>
@@ -68,8 +83,10 @@
                                 </ul>
                             </li>
 
+                            <!-- AMÉRICA -->
                             <li>
                                 <a href="destino.html#america">America</a>
+                                <!-- SUBMENÚ NIVEL 2: PAÍSES DE AMÉRICA -->
                                 <ul>
                                     <li><a href="destino.html#canada">Cánada</a></li>
                                     <li><a href="destino.html#argentina">Argentina</a></li>
@@ -78,8 +95,10 @@
                                 </ul>
                             </li>
 
+                            <!-- ORIENTE MEDIO -->
                             <li>
                                 <a href="destino.html#orientemedio">Oriente medio</a>
+                                <!-- SUBMENÚ NIVEL 2: PAÍSES DE ORIENTE MEDIO -->
                                 <ul>
                                     <li><a href="destino.html#egipto">Egipto</a></li>
                                     <li><a href="destino.html#arabiasaudi">Arabia Saudí</a></li>
@@ -89,6 +108,8 @@
                             </li>
                         </ul>
                     </li>
+
+                    <!-- OPCIÓN 3: RESERVAR -->
                     <li>
                         <a href="reserva.html">Reservar</a>
                     </li>
@@ -97,28 +118,44 @@
         </section>
     </header>
     <main>
+        <!-- SECCIÓN PRINCIPAL (HERO) -->
         <section class="seccion-principal" id="principal">
-            <img src="imgs/playa.png" class="bg-borrosa" alt="Fondo borroso">
 
+            <!-- IMAGEN DE FONDO -->
+            <img src="imgs/playa.png" class="bg-borrosa" alt="Fondo borroso"> <!-- Imagen con efecto borroso -->
+
+            <!-- CONTENEDOR DEL FORMULARIO DE CONTACTO -->
             <section class="fon" id="contacto">
+
+                <!-- ENCABEZADOS -->
                 <section class="titulos">
-                    <h1>¿Listo para tu próxima aventura?<br>Contáctanos</h1>
-                    <h2> </h2>
+                    <h1>¿Listo para tu próxima aventura?<br>Contáctanos</h1> <!-- Título principal -->
+                    <h2> </h2> <!-- Subtítulo (vacío) -->
                 </section>
 
+                <!-- FORMULARIO DE CONTACTO -->
                 <form action="#" method="post" class="formulario-principal">
-                    <label for="">Correo electrónico:</label>
-                    <input type="email" placeholder="Email...">
 
+                    <!-- CAMPO DE CORREO -->
+                    <label for="">Correo electrónico:</label>
+                    <input type="email" placeholder="Email..."> <!-- Input tipo email -->
+
+                    <!-- CAMPO DE TELÉFONO -->
                     <label for="">Telefono:</label>
                     <input type="text" inputmode="numeric" pattern="[0-9]*" placeholder="Telefono...">
+                    <!-- Input numérico -->
 
+                    <!-- CHECKBOX DE TÉRMINOS -->
                     <label>
-                        <input type="checkbox" name="aceptar" value="si">
+                        <input type="checkbox" name="aceptar" value="si"> <!-- Casilla de verificación -->
                         Acepto los términos y condiciones
                     </label>
 
-                    <button><img src="imgs/iconos/mapa.svg" alt="icono de mapa">Empieza tu aventura aquí</button>
+                    <!-- BOTÓN DE ENVÍO -->
+                    <button>
+                        <img src="imgs/iconos/mapa.svg" alt="icono de mapa"> <!-- Icono dentro del botón -->
+                        Empieza tu aventura aquí
+                    </button>
                 </form>
             </section>
         </section>
@@ -146,145 +183,191 @@
 
                 <hr>
 
-                <!-- Contenido de tabs -->
+                <!-- CONTENEDOR GENERAL DEL CONTENIDO DE LAS PESTAÑAS -->
                 <section class="tabs-content">
 
+                    <!-- ========================================== -->
+                    <!-- SECCIÓN 1: CONTENIDO EUROPA -->
+                    <!-- ========================================== -->
                     <article class="tab-content" id="section-europa">
+
+                        <!-- TARJETA 1: ESPAÑA -->
                         <article class="card">
-                            <img src="./imgs/paises/españa.jpg" alt="España">
+                            <img src="./imgs/paises/españa.jpg" alt="España"> <!-- Imagen -->
                             <section class="card-body">
-                                <h4>España</h4>
-                                <p>Disfruta de la historia y la gastronomía de España.</p>
-                                <a href="#" class="button">Ver más</a>
+                                <h4>España</h4> <!-- Título -->
+                                <p>Disfruta de la historia y la gastronomía de España.</p> <!-- Descripción -->
+                                <a href="#" class="button">Ver más</a> <!-- Botón -->
                             </section>
                         </article>
+
+                        <!-- TARJETA 2: INGLATERRA -->
                         <article class="card">
-                            <img src="./imgs/continentes/europa.jpg" alt="Londres">
+                            <img src="./imgs/continentes/europa.jpg" alt="Londres"> <!-- Imagen -->
                             <section class="card-body">
-                                <h4>Inglaterra</h4>
-                                <p>Explora monumentos icónicos y la vibrante vida cultural.</p>
-                                <a href="#" class="button">Ver más</a>
+                                <h4>Inglaterra</h4> <!-- Título -->
+                                <p>Explora monumentos icónicos y la vibrante vida cultural.</p> <!-- Descripción -->
+                                <a href="#" class="button">Ver más</a> <!-- Botón -->
                             </section>
                         </article>
+
+                        <!-- TARJETA 3: FRANCIA -->
                         <article class="card">
-                            <img src="./imgs/playa.png" alt="Grecia">
+                            <img src="./imgs/playa.png" alt="Grecia"> <!-- Imagen -->
                             <section class="card-body">
-                                <h4>Francia</h4>
-                                <p>Relájate en playas paradisíacas y descanca bajo el sol.</p>
-                                <a href="#" class="button">Ver más</a>
+                                <h4>Francia</h4> <!-- Título -->
+                                <p>Relájate en playas paradisíacas y descanca bajo el sol.</p> <!-- Descripción -->
+                                <a href="#" class="button">Ver más</a> <!-- Botón -->
                             </section>
                         </article>
+
+                        <!-- TARJETA 4: ITALIA -->
                         <article class="card">
-                            <img src="./imgs/playa.png" alt="Grecia">
+                            <img src="./imgs/playa.png" alt="Grecia"> <!-- Imagen -->
                             <section class="card-body">
-                                <h4>Italia</h4>
-                                <p>Sabores, arte y ciudades que te enamorarán.</p>
-                                <a href="#" class="button">Ver más</a>
+                                <h4>Italia</h4> <!-- Título -->
+                                <p>Sabores, arte y ciudades que te enamorarán.</p> <!-- Descripción -->
+                                <a href="#" class="button">Ver más</a> <!-- Botón -->
                             </section>
                         </article>
                     </article>
 
+                    <!-- ========================================== -->
+                    <!-- SECCIÓN 2: CONTENIDO ASIA -->
+                    <!-- ========================================== -->
                     <article class="tab-content" id="section-asia">
+
+                        <!-- TARJETA 1: JAPÓN -->
                         <article class="card">
-                            <img src="./imgs/continentes/asia.jpg" alt="Japon">
+                            <img src="./imgs/continentes/asia.jpg" alt="Japon"> <!-- Imagen -->
                             <section class="card-body">
-                                <h4>Japon</h4>
-                                <p>Sumérgete en templos, tecnología y tradiciones milenarias.</p>
-                                <a href="#" class="button">Ver más</a>
+                                <h4>Japon</h4> <!-- Título -->
+                                <p>Sumérgete en templos, tecnología y tradiciones milenarias.</p> <!-- Descripción -->
+                                <a href="#" class="button">Ver más</a> <!-- Botón -->
                             </section>
                         </article>
+
+                        <!-- TARJETA 2: CHINA -->
                         <article class="card">
-                            <img src="./imgs/continentes/asia.jpg" alt="China">
+                            <img src="./imgs/continentes/asia.jpg" alt="China"> <!-- Imagen -->
                             <section class="card-body">
-                                <h4>China</h4>
-                                <p>Viaja por la Gran Muralla y ciudades históricas fascinantes.</p>
-                                <a href="#" class="button">Ver más</a>
+                                <h4>China</h4> <!-- Título -->
+                                <p>Viaja por la Gran Muralla y ciudades históricas fascinantes.</p> <!-- Descripción -->
+                                <a href="#" class="button">Ver más</a> <!-- Botón -->
                             </section>
                         </article>
+
+                        <!-- TARJETA 3: FILIPINAS -->
                         <article class="card">
-                            <img src="./imgs/continentes/asia.jpg" alt="Filipinas">
+                            <img src="./imgs/continentes/asia.jpg" alt="Filipinas"> <!-- Imagen -->
                             <section class="card-body">
-                                <h4>Filipinas</h4>
-                                <p>Playas de arena blanca y aventuras tropicales únicas.</p>
-                                <a href="#" class="button">Ver más</a>
+                                <h4>Filipinas</h4> <!-- Título -->
+                                <p>Playas de arena blanca y aventuras tropicales únicas.</p> <!-- Descripción -->
+                                <a href="#" class="button">Ver más</a> <!-- Botón -->
                             </section>
                         </article>
+
+                        <!-- TARJETA 4: TAILANDIA -->
                         <article class="card">
-                            <img src="./imgs/continentes/asia.jpg" alt="Filipinas">
+                            <img src="./imgs/continentes/asia.jpg" alt="Filipinas"> <!-- Imagen -->
                             <section class="card-body">
-                                <h4>Tailandia</h4>
+                                <h4>Tailandia</h4> <!-- Título -->
                                 <p>Templos, mercados flotantes y playas exóticas que sorprenden.</p>
-                                <a href="#" class="button">Ver más</a>
+                                <!-- Descripción -->
+                                <a href="#" class="button">Ver más</a> <!-- Botón -->
                             </section>
                         </article>
                     </article>
 
+                    <!-- ========================================== -->
+                    <!-- SECCIÓN 3: CONTENIDO AMÉRICA -->
+                    <!-- ========================================== -->
                     <article class="tab-content" id="section-america">
+
+                        <!-- TARJETA 1: CANADÁ -->
                         <article class="card">
-                            <img src="./imgs/continentes/america.jpg" alt="United States">
+                            <img src="./imgs/continentes/america.jpg" alt="United States"> <!-- Imagen -->
                             <section class="card-body">
-                                <h4>Cánadas</h4>
+                                <h4>Cánadas</h4> <!-- Título -->
                                 <p>Naturaleza impresionante y ciudades cosmopolitas para explorar.</p>
-                                <a href="#" class="button">Ver más</a>
+                                <!-- Descripción -->
+                                <a href="#" class="button">Ver más</a> <!-- Botón -->
                             </section>
                         </article>
+
+                        <!-- TARJETA 2: ARGENTINA -->
                         <article class="card">
-                            <img src="./imgs/continentes/america.jpg" alt="Argentina">
+                            <img src="./imgs/continentes/america.jpg" alt="Argentina"> <!-- Imagen -->
                             <section class="card-body">
-                                <h4>Argentina</h4>
-                                <p>Paisajes infinitos y cultura apasionada en cada rincón.</p>
-                                <a href="#" class="button">Ver más</a>
+                                <h4>Argentina</h4> <!-- Título -->
+                                <p>Paisajes infinitos y cultura apasionada en cada rincón.</p> <!-- Descripción -->
+                                <a href="#" class="button">Ver más</a> <!-- Botón -->
                             </section>
                         </article>
+
+                        <!-- TARJETA 3: PERÚ -->
                         <article class="card">
-                            <img src="./imgs/continentes/america.jpg" alt="Uruguay">
+                            <img src="./imgs/continentes/america.jpg" alt="Uruguay"> <!-- Imagen -->
                             <section class="card-body">
-                                <h4>Perú</h4>
-                                <p>Descubre Machu Picchu y la magia de la Amazonía.</p>
-                                <a href="#" class="button">Ver más</a>
+                                <h4>Perú</h4> <!-- Título -->
+                                <p>Descubre Machu Picchu y la magia de la Amazonía.</p> <!-- Descripción -->
+                                <a href="#" class="button">Ver más</a> <!-- Botón -->
                             </section>
                         </article>
+
+                        <!-- TARJETA 4: PUERTO RICO -->
                         <article class="card">
-                            <img src="./imgs/continentes/america.jpg" alt="Uruguay">
+                            <img src="./imgs/continentes/america.jpg" alt="Uruguay"> <!-- Imagen -->
                             <section class="card-body">
-                                <h4>Puerto Rico</h4>
-                                <p>Playas caribeñas y ritmos tropicales que enamoran.</p>
-                                <a href="#" class="button">Ver más</a>
+                                <h4>Puerto Rico</h4> <!-- Título -->
+                                <p>Playas caribeñas y ritmos tropicales que enamoran.</p> <!-- Descripción -->
+                                <a href="#" class="button">Ver más</a> <!-- Botón -->
                             </section>
                         </article>
                     </article>
 
+                    <!-- ========================================== -->
+                    <!-- SECCIÓN 4: CONTENIDO MEDIO ORIENTE -->
+                    <!-- ========================================== -->
                     <article class="tab-content" id="section-medio-oriente">
+
+                        <!-- TARJETA 1: EGIPTO -->
                         <article class="card">
-                            <img src="./imgs/continentes/oriente.jpg" alt="Egipto">
+                            <img src="./imgs/continentes/oriente.jpg" alt="Egipto"> <!-- Imagen -->
                             <section class="card-body">
-                                <h4>Egipto</h4>
-                                <p>Pirámides, historia milenaria y aventuras únicas.</p>
-                                <a href="#" class="button">Ver más</a>
+                                <h4>Egipto</h4> <!-- Título -->
+                                <p>Pirámides, historia milenaria y aventuras únicas.</p> <!-- Descripción -->
+                                <a href="#" class="button">Ver más</a> <!-- Botón -->
                             </section>
                         </article>
+
+                        <!-- TARJETA 2: ARABIA SAUDÍ -->
                         <article class="card">
-                            <img src="./imgs/continentes/oriente.jpg" alt="Dubai">
+                            <img src="./imgs/continentes/oriente.jpg" alt="Dubai"> <!-- Imagen -->
                             <section class="card-body">
-                                <h4>Arabia Saudí</h4>
-                                <p>Descubre cultura y paisajes desérticos impresionantes.</p>
-                                <a href="#" class="button">Ver más</a>
+                                <h4>Arabia Saudí</h4> <!-- Título -->
+                                <p>Descubre cultura y paisajes desérticos impresionantes.</p> <!-- Descripción -->
+                                <a href="#" class="button">Ver más</a> <!-- Botón -->
                             </section>
                         </article>
+
+                        <!-- TARJETA 3: TURQUÍA -->
                         <article class="card">
-                            <img src="./imgs/continentes/oriente.jpg" alt="Turquía">
+                            <img src="./imgs/continentes/oriente.jpg" alt="Turquía"> <!-- Imagen -->
                             <section class="card-body">
-                                <h4>Turquía</h4>
-                                <p>Bazares, mezquitas y paisajes inolvidables.</p>
-                                <a href="#" class="button">Ver más</a>
+                                <h4>Turquía</h4> <!-- Título -->
+                                <p>Bazares, mezquitas y paisajes inolvidables.</p> <!-- Descripción -->
+                                <a href="#" class="button">Ver más</a> <!-- Botón -->
                             </section>
                         </article>
+
+                        <!-- TARJETA 4: EMIRATOS ÁRABES -->
                         <article class="card">
-                            <img src="./imgs/continentes/oriente.jpg" alt="Turquía">
+                            <img src="./imgs/continentes/oriente.jpg" alt="Turquía"> <!-- Imagen -->
                             <section class="card-body">
-                                <h4>Emiratos Arabe</h4>
-                                <p>Modernidad, lujo y experiencias únicas que no olvidarás.</p>
-                                <a href="#" class="button">Ver más</a>
+                                <h4>Emiratos Arabe</h4> <!-- Título -->
+                                <p>Modernidad, lujo y experiencias únicas que no olvidarás.</p> <!-- Descripción -->
+                                <a href="#" class="button">Ver más</a> <!-- Botón -->
                             </section>
                         </article>
                     </article>
@@ -293,19 +376,24 @@
         </section>
 
 
+        <!-- SECCIÓN PRINCIPAL DE PAQUETES -->
         <section class="cards-section" id="paquetes">
+
+            <!-- ENCABEZADO DE LA SECCIÓN -->
             <section class="section-header">
-                <h2>Paquetes y Experiencias Especiales</h2>
+                <h2>Paquetes y Experiencias Especiales</h2> <!-- Título principal -->
             </section>
 
+            <!-- CONTENEDOR DE TODAS LAS TARJETAS -->
             <section class="cards-container">
 
-                <!-- Tarjeta de ventajas -->
+                <!-- TARJETA 1: LISTA DE BENEFICIOS EXCLUSIVOS -->
                 <article class="card-beneficios">
                     <section class="card-header">
-                        <h3>¡Ventajas Exclusivas!</h3>
+                        <h3>¡Ventajas Exclusivas!</h3> <!-- Título de la tarjeta -->
                     </section>
 
+                    <!-- Lista de ventajas -->
                     <ul class="beneficios-list">
                         <li>✔️ Traslados al hotel incluidos</li>
                         <li>✔️ Maletas incluidas</li>
@@ -315,136 +403,151 @@
                 </article>
 
 
-                <!-- Tarjetas horizontales -->
+                <!-- TARJETA 2: PAQUETE ROMA (Diseño Horizontal) -->
                 <article class="card card-horizontal">
 
-                    <img src="imgs/avion.jpg" alt="Roma Clásica">
+                    <img src="imgs/avion.jpg" alt="Roma Clásica"> <!-- Imagen del destino -->
 
+                    <!-- INFORMACIÓN DEL PAQUETE -->
                     <section class="card-info">
-                        <h3>Roma Clásica</h3>
+                        <h3>Roma Clásica</h3> <!-- Título del paquete -->
                         <p>
                             Explora el Coliseo, el Vaticano y disfruta la auténtica gastronomía italiana.
-                        </p>
+                        </p> <!-- Descripción -->
                     </section>
 
+                    <!-- FECHAS DEL VIAJE -->
                     <section class="card-fechas">
                         <div>
                             <span>Inicio</span>
-                            <strong>12 Jun 2026</strong>
+                            <strong>12 Jun 2026</strong> <!-- Fecha de inicio -->
                         </div>
                         <div>
                             <span>Fin</span>
-                            <strong>19 Jun 2026</strong>
+                            <strong>19 Jun 2026</strong> <!-- Fecha de fin -->
                         </div>
                     </section>
 
+                    <!-- PRECIOS Y OFERTA -->
                     <section class="card-precio">
-                        <span class="precio-oferta">1105€</span>
-                        <span class="precio">950€</span>
+                        <span class="precio-oferta">1105€</span> <!-- Precio anterior (tachado) -->
+                        <span class="precio">950€</span> <!-- Precio actual -->
                     </section>
 
-                    <button class="button">Reservar</button>
+                    <button class="button">Reservar</button> <!-- Botón de acción -->
 
                 </article>
 
 
+                <!-- TARJETA 3: PAQUETE PARÍS -->
                 <article class="card card-horizontal">
 
-                    <img src="imgs/avion.jpg" alt="París Romántico">
+                    <img src="imgs/avion.jpg" alt="París Romántico"> <!-- Imagen del destino -->
 
+                    <!-- INFORMACIÓN DEL PAQUETE -->
                     <section class="card-info">
-                        <h3>París Romántico</h3>
+                        <h3>París Romántico</h3> <!-- Título del paquete -->
                         <p>
                             Torre Eiffel, museos y paseo por el Sena con alojamiento premium.
-                        </p>
+                        </p> <!-- Descripción -->
                     </section>
 
+                    <!-- FECHAS DEL VIAJE -->
                     <section class="card-fechas">
                         <div>
                             <span>Inicio</span>
-                            <strong>05 Jul 2026</strong>
+                            <strong>05 Jul 2026</strong> <!-- Fecha de inicio -->
                         </div>
                         <div>
                             <span>Fin</span>
-                            <strong>12 Jul 2026</strong>
+                            <strong>12 Jul 2026</strong> <!-- Fecha de fin -->
                         </div>
                     </section>
 
+                    <!-- PRECIOS Y OFERTA -->
                     <section class="card-precio">
-                        <span class="precio-oferta">1300€</span>
-                        <span class="precio">1090€</span>
+                        <span class="precio-oferta">1300€</span> <!-- Precio anterior -->
+                        <span class="precio">1090€</span> <!-- Precio actual -->
                     </section>
 
-                    <button class="button">Reservar</button>
+                    <button class="button">Reservar</button> <!-- Botón de acción -->
 
                 </article>
 
+                <!-- TARJETA 4: PAQUETE LONDRES -->
                 <article class="card card-horizontal">
 
-                    <img src="imgs/avion.jpg" alt="Londres Imperial">
+                    <img src="imgs/avion.jpg" alt="Londres Imperial"> <!-- Imagen del destino -->
 
+                    <!-- INFORMACIÓN DEL PAQUETE -->
                     <section class="card-info">
-                        <h3>Londres Imperial</h3>
+                        <h3>Londres Imperial</h3> <!-- Título del paquete -->
                         <p>
                             Explora el Palacio de Buckingham, el London Eye y museos icónicos.
-                        </p>
+                        </p> <!-- Descripción -->
                     </section>
 
+                    <!-- FECHAS DEL VIAJE -->
                     <section class="card-fechas">
                         <div>
                             <span>Inicio</span>
-                            <strong>10 Ago 2026</strong>
+                            <strong>10 Ago 2026</strong> <!-- Fecha de inicio -->
                         </div>
                         <div>
                             <span>Fin</span>
-                            <strong>17 Ago 2026</strong>
+                            <strong>17 Ago 2026</strong> <!-- Fecha de fin -->
                         </div>
                     </section>
 
+                    <!-- PRECIOS Y OFERTA -->
                     <section class="card-precio">
-                        <span class="precio-oferta">1200€</span>
-                        <span class="precio">1050€</span>
+                        <span class="precio-oferta">1200€</span> <!-- Precio anterior -->
+                        <span class="precio">1050€</span> <!-- Precio actual -->
                     </section>
 
-                    <button class="button">Reservar</button>
+                    <button class="button">Reservar</button> <!-- Botón de acción -->
 
                 </article>
 
+                <!-- TARJETA 5: PAQUETE ÁMSTERDAM -->
                 <article class="card card-horizontal">
 
-                    <img src="imgs/avion.jpg" alt="Ámsterdam y sus Canales">
+                    <img src="imgs/avion.jpg" alt="Ámsterdam y sus Canales"> <!-- Imagen del destino -->
 
+                    <!-- INFORMACIÓN DEL PAQUETE -->
                     <section class="card-info">
-                        <h3>Ámsterdam y sus Canales</h3>
+                        <h3>Ámsterdam y sus Canales</h3> <!-- Título del paquete -->
                         <p>
                             Paseo en barco por los canales, casas flotantes y museos de arte.
-                        </p>
+                        </p> <!-- Descripción -->
                     </section>
 
+                    <!-- FECHAS DEL VIAJE -->
                     <section class="card-fechas">
                         <div>
                             <span>Inicio</span>
-                            <strong>20 Sep 2026</strong>
+                            <strong>20 Sep 2026</strong> <!-- Fecha de inicio -->
                         </div>
                         <div>
                             <span>Fin</span>
-                            <strong>27 Sep 2026</strong>
+                            <strong>27 Sep 2026</strong> <!-- Fecha de fin -->
                         </div>
                     </section>
 
+                    <!-- PRECIOS Y OFERTA -->
                     <section class="card-precio">
-                        <span class="precio-oferta">1150€</span>
-                        <span class="precio">990€</span>
+                        <span class="precio-oferta">1150€</span> <!-- Precio anterior -->
+                        <span class="precio">990€</span> <!-- Precio actual -->
                     </section>
 
-                        <button class="button">Reservar</button>
+                    <button class="button">Reservar</button> <!-- Botón de acción -->
 
                 </article>
 
             </section>
         </section>
 
-        <div id="miCarrusel-caracteristicas" class="carousel slide" data-bs-ride="false" >
+        <div id="miCarrusel-caracteristicas" class="carousel slide" data-bs-ride="false">
             <h2>¿Porque viajar con <b>"Rumbo Libre"</b>?</h2>
             <br>
             <div class="carousel-inner">
@@ -502,22 +605,30 @@
 
 
     </main>
+    <!-- INICIO DEL PIE DE PÁGINA -->
     <footer>
+        <!-- CONTENEDOR PRINCIPAL DE SECCIONES -->
         <section class="container-sections">
+
+            <!-- COLUMNA IZQUIERDA: LOGO Y ESLOGAN -->
             <section class="section1">
                 <section class="section-footer">
+                    <!-- Bloque de identidad -->
                     <section class="logo">
-                        <img src="imgs/logo.png" alt="">
-                        <p class="text-logo1">Agencia Rumbo Libre</p>
+                        <img src="imgs/logo.png" alt=""> <!-- Imagen del logo -->
+                        <p class="text-logo1">Agencia Rumbo Libre</p> <!-- Nombre de la agencia -->
                     </section>
-                    <hr>
-                    <p class="text-logo2">"Hacemos realidad tu proximo viaje"</p>
+                    <hr> <!-- Línea separadora -->
+                    <p class="text-logo2">"Hacemos realidad tu proximo viaje"</p> <!-- Eslogan -->
                 </section>
             </section>
 
+            <!-- COLUMNA DERECHA: ENLACES DE NAVEGACIÓN -->
             <section class="section2">
+
+                <!-- SECCIÓN 1: ENLACES RÁPIDOS (Anclas) -->
                 <section class="section-footer">
-                    <h3>Inicio</h3>
+                    <h3>Inicio</h3> <!-- Título de sección -->
                     <hr>
                     <section>
                         <ul>
@@ -529,6 +640,7 @@
                     </section>
                 </section>
 
+                <!-- SECCIÓN 2: ENLACES A PÁGINA DE DESTINOS -->
                 <section class="section-footer">
                     <h3>Destinos</h3>
                     <hr>
@@ -542,6 +654,7 @@
                     </section>
                 </section>
 
+                <!-- SECCIÓN 3: INFORMACIÓN DE CONTACTO -->
                 <section class="section-footer">
                     <h3>¿Quienes somos?</h3>
                     <hr>
@@ -549,16 +662,21 @@
                         <ul>
                             <li>Telefono</li>
                             <li>Email</li>
+                            <!-- Nota: Aquí sobran etiquetas de cierre </a> -->
                             <li>Redes sociales</a></li>
                             <li>Sede</a></li>
                         </ul>
                     </section>
                 </section>
             </section>
-
         </section>
-        <hr>
+
+        <hr> <!-- Separador final -->
+
+        <!-- DERECHOS DE AUTOR -->
         <p class="copyright">&copy;2026 Agencia de viaje ✈️ - Lucero Anay Cahuana</p>
+
+        <!-- SCRIPT DE BOOTSTRAP -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     </footer>

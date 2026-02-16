@@ -18,39 +18,49 @@
 </head>
 
 <body>
+    <!-- ENCABEZADO PRINCIPAL -->
     <header>
+
+        <!-- BARRA SUPERIOR DE SESIÓN -->
         <section class="container-sesion">
             <nav class="enlace-sesion">
                 <ul>
-                    <li><a href="#">Registrarse</a></li>
-                    <li>-</li>
-                    <li><a href="#">Iniciar sesión</a></li>
+                    <li><a href="#">Registrarse</a></li> <!-- Enlace registro -->
+                    <li>-</li> <!-- Separador -->
+                    <li><a href="#">Iniciar sesión</a></li> <!-- Enlace login -->
                 </ul>
             </nav>
         </section>
 
+        <!-- SECCIÓN DEL LOGO Y NOMBRE -->
         <section class="container-logo">
             <a href="index.html">
-                <img src="imgs/logo.png" alt="">
-                Agencia Rumbo Libre
+                <img src="imgs/logo.png" alt=""> <!-- Imagen del logo -->
+                Agencia Rumbo Libre <!-- Nombre de la agencia -->
             </a>
         </section>
 
+        <!-- MENÚ DE NAVEGACIÓN PRINCIPAL -->
         <section class="container-menus">
             <nav class="nav">
                 <ul>
 
-                    <!-- INICIO -->
+                    <!-- OPCIÓN 1: INICIO -->
                     <li>
                         <a href="index.html">Inicio</a>
                     </li>
 
-                    <!-- DESTINOS -->
+                    <!-- OPCIÓN 2: DESTINOS (CON MENÚ DESPLEGABLE) -->
                     <li>
                         <a href="destino.html">Destinos</a>
+
+                        <!-- SUBMENÚ NIVEL 1: CONTINENTES -->
                         <ul>
+
+                            <!-- EUROPA -->
                             <li>
                                 <a href="#europa">Europa</a>
+                                <!-- SUBMENÚ NIVEL 2: PAÍSES DE EUROPA -->
                                 <ul>
                                     <li><a href="#espana">España</a></li>
                                     <li><a href="#inglaterra">Inglaterra</a></li>
@@ -59,8 +69,10 @@
                                 </ul>
                             </li>
 
+                            <!-- ASIA -->
                             <li>
                                 <a href="#asia">Asia</a>
+                                <!-- SUBMENÚ NIVEL 2: PAÍSES DE ASIA -->
                                 <ul>
                                     <li><a href="#japon">Japón</a></li>
                                     <li><a href="#china">China</a></li>
@@ -69,8 +81,10 @@
                                 </ul>
                             </li>
 
+                            <!-- AMÉRICA -->
                             <li>
                                 <a href="#america">America</a>
+                                <!-- SUBMENÚ NIVEL 2: PAÍSES DE AMÉRICA -->
                                 <ul>
                                     <li><a href="#canada">Cánada</a></li>
                                     <li><a href="#argentina">Argentina</a></li>
@@ -79,8 +93,10 @@
                                 </ul>
                             </li>
 
+                            <!-- ORIENTE MEDIO -->
                             <li>
                                 <a href="#orientemedio">Oriente medio</a>
+                                <!-- SUBMENÚ NIVEL 2: PAÍSES DE ORIENTE MEDIO -->
                                 <ul>
                                     <li><a href="#egipto">Egipto</a></li>
                                     <li><a href="#arabiasaudita">Arabia Saudí</a></li>
@@ -90,6 +106,8 @@
                             </li>
                         </ul>
                     </li>
+
+                    <!-- OPCIÓN 3: RESERVAR -->
                     <li>
                         <a href="reserva.html">Reservar</a>
                     </li>
@@ -132,15 +150,18 @@
             </section>
         </article>
 
-        <!-- Contenedor general de continentes -->
+        <!-- CONTENEDOR GENERAL DE TODOS LOS CONTINENTES -->
         <article class="continentes-container">
 
-            <!-- EUROPA -->
+            <!-- ========================================== -->
+            <!-- SECCIÓN CONTINENTE: EUROPA -->
+            <!-- ========================================== -->
             <article class="continente" id="europa">
-                <!-- Título animado por letras individuales -->
+
+                <!-- TÍTULO ANIMADO DEL CONTINENTE -->
                 <section class="container-titulo-continente">
                     <h2 class="titulo-continente">
-                        <!-- Cada span permite animar letras individualmente -->
+                        <!-- Cada etiqueta span permite animar las letras individualmente -->
                         <span>E</span><span>x</span><span>p</span><span>l</span><span>o</span><span>r</span><span>a</span>
                         <span> </span>
                         <span>l</span><span>o</span><span>s</span>
@@ -153,15 +174,17 @@
                     </h2>
                 </section>
 
-                <!-- Lista de países -->
+                <!-- CONTENEDOR DE TARJETAS DE PAÍSES (EUROPA) -->
                 <section class="paises">
 
-                    <!-- ESPAÑA -->
+                    <!-- PAÍS 1: ESPAÑA -->
                     <section class="pais" id="espana">
                         <section class="card-pais">
-                            <img src="imgs/paises/españa.jpg" alt="España">
+                            <img src="imgs/paises/españa.jpg" alt="España"> <!-- Imagen del país -->
                             <section class="contenido">
-                                <h3 class="titulo-pais">España</h3>
+                                <h3 class="titulo-pais">España</h3> <!-- Nombre del país -->
+
+                                <!-- Lista de ciudades y precios -->
                                 <ul class="lista-ciudades">
                                     <li>
                                         <strong>Madrid</strong>
@@ -176,19 +199,19 @@
                                         <p>114&euro;</p>
                                     </li>
                                 </ul>
-                                <a href="#" class="button">Descubre España</a>
+                                <a href="#" class="button">Descubre España</a> <!-- Botón de acción -->
                             </section>
                         </section>
                     </section>
 
-                    <!-- INGLATERRA -->
+                    <!-- PAÍS 2: INGLATERRA -->
                     <section class="pais" id="inglaterra">
                         <section class="card-pais">
-                            <img src="imgs/continentes/europa.jpg" alt="Inglaterra">
+                            <img src="imgs/continentes/europa.jpg" alt="Inglaterra"> <!-- Imagen del país -->
                             <section class="contenido">
-                                <h3 class="titulo-pais">Inglaterra</h3>
-                                
-                                <!-- Lista de ciudades con precios -->
+                                <h3 class="titulo-pais">Inglaterra</h3> <!-- Nombre del país -->
+
+                                <!-- Lista de ciudades y precios -->
                                 <ul class="lista-ciudades">
                                     <li><strong>Londres</strong>
                                         <p class="precio">450&euro;</p>
@@ -200,18 +223,19 @@
                                         <p class="precio">314&euro;</p>
                                     </li>
                                 </ul>
-                                <!-- Botón de acción -->
-                                <a href="#" class="button">Descubre Inglaterra</a>
+                                <a href="#" class="button">Descubre Inglaterra</a> <!-- Botón de acción -->
                             </section>
                         </section>
                     </section>
 
-                    <!-- FRANCIA -->
+                    <!-- PAÍS 3: FRANCIA -->
                     <section class="pais" id="francia">
                         <section class="card-pais">
-                            <img src="imgs/paises/francia.jpg" alt="Francia">
+                            <img src="imgs/paises/francia.jpg" alt="Francia"> <!-- Imagen del país -->
                             <section class="contenido">
-                                <h3 class="titulo-pais">Francia</h3>
+                                <h3 class="titulo-pais">Francia</h3> <!-- Nombre del país -->
+
+                                <!-- Lista de ciudades y precios -->
                                 <ul class="lista-ciudades">
                                     <li><strong>Paris</strong>
                                         <p class="precio">270&euro;</p>
@@ -223,17 +247,19 @@
                                         <p class="precio">114&euro;</p>
                                     </li>
                                 </ul>
-                                <a href="#" class="button">Descubre Francia</a>
+                                <a href="#" class="button">Descubre Francia</a> <!-- Botón de acción -->
                             </section>
                         </section>
                     </section>
 
-                    <!-- ALEMANIA -->
+                    <!-- PAÍS 4: ALEMANIA -->
                     <section class="pais" id="alemania">
                         <section class="card-pais">
-                            <img src="imgs/paises/alemania.jpg" alt="Alemania">
+                            <img src="imgs/paises/alemania.jpg" alt="Alemania"> <!-- Imagen del país -->
                             <section class="contenido">
-                                <h3 class="titulo-pais">Alemania</h3>
+                                <h3 class="titulo-pais">Alemania</h3> <!-- Nombre del país -->
+
+                                <!-- Lista de ciudades y precios -->
                                 <ul class="lista-ciudades">
                                     <li><strong>Berlín</strong>
                                         <p class="precio">270&euro;</p>
@@ -245,7 +271,7 @@
                                         <p class="precio">114&euro;</p>
                                     </li>
                                 </ul>
-                                <a href="#" class="button">Descubre Alemania</a>
+                                <a href="#" class="button">Descubre Alemania</a> <!-- Botón de acción -->
                             </section>
                         </section>
                     </section>
@@ -254,11 +280,15 @@
             </article>
 
 
-            <!-- ASIA -->
-            <!-- Misma estructura: título + países + cards -->
+            <!-- ========================================== -->
+            <!-- SECCIÓN CONTINENTE: ASIA -->
+            <!-- ========================================== -->
             <article class="continente" id="asia">
+
+                <!-- TÍTULO ANIMADO DEL CONTINENTE -->
                 <section class="container-titulo-continente">
                     <h2 class="titulo-continente">
+                        <!-- Spans para animación letra por letra -->
                         <span>E</span><span>x</span><span>p</span><span>l</span><span>o</span><span>r</span><span>a</span>
                         <span> </span>
                         <span>l</span><span>o</span><span>s</span>
@@ -271,14 +301,17 @@
                     </h2>
                 </section>
 
-
+                <!-- CONTENEDOR DE TARJETAS DE PAÍSES (ASIA) -->
                 <section class="paises">
-                    <!-- JAPÓN -->
+
+                    <!-- PAÍS 1: JAPÓN -->
                     <section class="pais" id="japon">
                         <section class="card-pais">
-                            <img src="imgs/paises/japon.jpg" alt="Japón">
+                            <img src="imgs/paises/japon.jpg" alt="Japón"> <!-- Imagen del país -->
                             <section class="contenido">
-                                <h3 class="titulo-pais">Japón</h3>
+                                <h3 class="titulo-pais">Japón</h3> <!-- Nombre del país -->
+
+                                <!-- Lista de ciudades y precios -->
                                 <ul class="lista-ciudades">
                                     <li><strong>Tokyo</strong>
                                         <p class="precio">270&euro;</p>
@@ -290,17 +323,19 @@
                                         <p class="precio">114&euro;</p>
                                     </li>
                                 </ul>
-                                <a href="#" class="button">Descubre Japón</a>
+                                <a href="#" class="button">Descubre Japón</a> <!-- Botón de acción -->
                             </section>
                         </section>
                     </section>
 
-                    <!-- CHINA -->
+                    <!-- PAÍS 2: CHINA -->
                     <section class="pais" id="china">
                         <section class="card-pais">
-                            <img src="imgs/paises/china.jpg" alt="China">
+                            <img src="imgs/paises/china.jpg" alt="China"> <!-- Imagen del país -->
                             <section class="contenido">
-                                <h3 class="titulo-pais">China</h3>
+                                <h3 class="titulo-pais">China</h3> <!-- Nombre del país -->
+
+                                <!-- Lista de ciudades y precios -->
                                 <ul class="lista-ciudades">
                                     <li><strong>Gran Muralla China, Mutianyu</strong>
                                         <p class="precio">270&euro;</p>
@@ -312,17 +347,19 @@
                                         <p class="precio">114&euro;</p>
                                     </li>
                                 </ul>
-                                <a href="#" class="button">Descubre China</a>
+                                <a href="#" class="button">Descubre China</a> <!-- Botón de acción -->
                             </section>
                         </section>
                     </section>
 
-                    <!-- FILIPINAS -->
+                    <!-- PAÍS 3: FILIPINAS -->
                     <section class="pais" id="filipinas">
                         <section class="card-pais">
-                            <img src="imgs/paises/filipinas.webp" alt="Filipinas">
+                            <img src="imgs/paises/filipinas.webp" alt="Filipinas"> <!-- Imagen del país -->
                             <section class="contenido">
-                                <h3 class="titulo-pais">Filipinas</h3>
+                                <h3 class="titulo-pais">Filipinas</h3> <!-- Nombre del país -->
+
+                                <!-- Lista de ciudades y precios -->
                                 <ul class="lista-ciudades">
                                     <li><strong>Manila</strong>
                                         <p class="precio">220&euro;</p>
@@ -334,17 +371,19 @@
                                         <p class="precio">200&euro;</p>
                                     </li>
                                 </ul>
-                                <a href="#" class="button">Descubre Filipinas</a>
+                                <a href="#" class="button">Descubre Filipinas</a> <!-- Botón de acción -->
                             </section>
                         </section>
                     </section>
 
-                    <!-- TAILANDIA -->
+                    <!-- PAÍS 4: TAILANDIA -->
                     <section class="pais" id="tailandia">
                         <section class="card-pais">
-                            <img src="imgs/continentes/asia.jpg" alt="Tailandia">
+                            <img src="imgs/continentes/asia.jpg" alt="Tailandia"> <!-- Imagen del país -->
                             <section class="contenido">
-                                <h3 class="titulo-pais">Tailandia</h3>
+                                <h3 class="titulo-pais">Tailandia</h3> <!-- Nombre del país -->
+
+                                <!-- Lista de ciudades y precios -->
                                 <ul class="lista-ciudades">
                                     <li><strong>Bangkok</strong>
                                         <p class="precio">250&euro;</p>
@@ -356,7 +395,7 @@
                                         <p class="precio">210&euro;</p>
                                     </li>
                                 </ul>
-                                <a href="#" class="button">Descubre Tailandia</a>
+                                <a href="#" class="button">Descubre Tailandia</a> <!-- Botón de acción -->
                             </section>
                         </section>
                     </section>
@@ -364,11 +403,15 @@
 
             </article>
 
-            <!-- AMÉRICA -->
-            <!-- Misma estructura -->
+            <!-- ========================================== -->
+            <!-- SECCIÓN CONTINENTE: AMÉRICA -->
+            <!-- ========================================== -->
             <article class="continente" id="america">
+
+                <!-- TÍTULO ANIMADO DEL CONTINENTE -->
                 <section class="container-titulo-continente">
                     <h2 class="titulo-continente">
+                        <!-- Spans para animación letra por letra -->
                         <span>E</span><span>x</span><span>p</span><span>l</span><span>o</span><span>r</span><span>a</span>
                         <span> </span>
                         <span>l</span><span>o</span><span>s</span>
@@ -381,15 +424,17 @@
                     </h2>
                 </section>
 
-
+                <!-- CONTENEDOR DE TARJETAS DE PAÍSES (AMÉRICA) -->
                 <section class="paises">
 
-                    <!-- CANADÁ -->
+                    <!-- PAÍS 1: CANADÁ -->
                     <section class="pais" id="canada">
                         <section class="card-pais">
-                            <img src="imgs/paises/canada.jpg" alt="Canadá">
+                            <img src="imgs/paises/canada.jpg" alt="Canadá"> <!-- Imagen del país -->
                             <section class="contenido">
-                                <h3 class="titulo-pais">Canadá</h3>
+                                <h3 class="titulo-pais">Canadá</h3> <!-- Nombre del país -->
+
+                                <!-- Lista de ciudades y precios -->
                                 <ul class="lista-ciudades">
                                     <li><strong>Toronto</strong>
                                         <p class="precio">300&euro;</p>
@@ -401,17 +446,19 @@
                                         <p class="precio">260&euro;</p>
                                     </li>
                                 </ul>
-                                <a href="#" class="button">Descubre Canadá</a>
+                                <a href="#" class="button">Descubre Canadá</a> <!-- Botón de acción -->
                             </section>
                         </section>
                     </section>
 
-                    <!-- ARGENTINA -->
+                    <!-- PAÍS 2: ARGENTINA -->
                     <section class="pais" id="argentina">
                         <section class="card-pais">
-                            <img src="imgs/paises/argentina.webp" alt="Argentina">
+                            <img src="imgs/paises/argentina.webp" alt="Argentina"> <!-- Imagen del país -->
                             <section class="contenido">
-                                <h3 class="titulo-pais">Argentina</h3>
+                                <h3 class="titulo-pais">Argentina</h3> <!-- Nombre del país -->
+
+                                <!-- Lista de ciudades y precios -->
                                 <ul class="lista-ciudades">
                                     <li><strong>Buenos Aires</strong>
                                         <p class="precio">240&euro;</p>
@@ -423,17 +470,19 @@
                                         <p class="precio">200&euro;</p>
                                     </li>
                                 </ul>
-                                <a href="#" class="button">Descubre Argentina</a>
+                                <a href="#" class="button">Descubre Argentina</a> <!-- Botón de acción -->
                             </section>
                         </section>
                     </section>
 
-                    <!-- PERÚ -->
+                    <!-- PAÍS 3: PERÚ -->
                     <section class="pais" id="peru">
                         <section class="card-pais">
-                            <img src="imgs/paises/peru.avif" alt="Perú">
+                            <img src="imgs/paises/peru.avif" alt="Perú"> <!-- Imagen del país -->
                             <section class="contenido">
-                                <h3 class="titulo-pais">Perú</h3>
+                                <h3 class="titulo-pais">Perú</h3> <!-- Nombre del país -->
+
+                                <!-- Lista de ciudades y precios -->
                                 <ul class="lista-ciudades">
                                     <li><strong>Lima</strong>
                                         <p class="precio">210&euro;</p>
@@ -445,17 +494,19 @@
                                         <p class="precio">250&euro;</p>
                                     </li>
                                 </ul>
-                                <a href="#" class="button">Descubre Perú</a>
+                                <a href="#" class="button">Descubre Perú</a> <!-- Botón de acción -->
                             </section>
                         </section>
                     </section>
 
-                    <!-- PUERTO RICO -->
+                    <!-- PAÍS 4: PUERTO RICO -->
                     <section class="pais" id="puertorico">
                         <section class="card-pais">
-                            <img src="imgs/continentes/america.jpg" alt="Puerto Rico">
+                            <img src="imgs/continentes/america.jpg" alt="Puerto Rico"> <!-- Imagen del país -->
                             <section class="contenido">
-                                <h3 class="titulo-pais">Puerto Rico</h3>
+                                <h3 class="titulo-pais">Puerto Rico</h3> <!-- Nombre del país -->
+
+                                <!-- Lista de ciudades y precios -->
                                 <ul class="lista-ciudades">
                                     <li><strong>San Juan</strong>
                                         <p class="precio">200&euro;</p>
@@ -467,7 +518,7 @@
                                         <p class="precio">170&euro;</p>
                                     </li>
                                 </ul>
-                                <a href="#" class="button">Descubre Puerto Rico</a>
+                                <a href="#" class="button">Descubre Puerto Rico</a> <!-- Botón de acción -->
                             </section>
                         </section>
                     </section>
@@ -475,11 +526,15 @@
                 </section>
             </article>
 
-            <!-- ORIENTE MEDIO -->
-            <!-- Misma estructura -->
+            <!-- ========================================== -->
+            <!-- SECCIÓN CONTINENTE: ORIENTE MEDIO -->
+            <!-- ========================================== -->
             <article class="continente" id="orientemedio">
+
+                <!-- TÍTULO ANIMADO DEL CONTINENTE -->
                 <section class="container-titulo-continente">
                     <h2 class="titulo-continente">
+                        <!-- Spans para animación letra por letra -->
                         <span>E</span><span>x</span><span>p</span><span>l</span><span>o</span><span>r</span><span>a</span>
                         <span> </span>
                         <span>l</span><span>o</span><span>s</span>
@@ -494,15 +549,17 @@
                     </h2>
                 </section>
 
-
+                <!-- CONTENEDOR DE TARJETAS DE PAÍSES (ORIENTE MEDIO) -->
                 <section class="paises">
 
-                    <!-- EGIPTO -->
+                    <!-- PAÍS 1: EGIPTO -->
                     <section class="pais" id="egipto">
                         <section class="card-pais">
-                            <img src="imgs/paises/egipto.jpg" alt="Egipto">
+                            <img src="imgs/paises/egipto.jpg" alt="Egipto"> <!-- Imagen del país -->
                             <section class="contenido">
-                                <h3 class="titulo-pais">Egipto</h3>
+                                <h3 class="titulo-pais">Egipto</h3> <!-- Nombre del país -->
+
+                                <!-- Lista de ciudades y precios -->
                                 <ul class="lista-ciudades">
                                     <li><strong>El Cairo</strong>
                                         <p class="precio">180&euro;</p>
@@ -514,17 +571,19 @@
                                         <p class="precio">150&euro;</p>
                                     </li>
                                 </ul>
-                                <a href="#" class="button">Descubre Egipto</a>
+                                <a href="#" class="button">Descubre Egipto</a> <!-- Botón de acción -->
                             </section>
                         </section>
                     </section>
 
-                    <!-- ARABIA SAUDÍ -->
+                    <!-- PAÍS 2: ARABIA SAUDÍ -->
                     <section class="pais" id="arabiasaudi">
                         <section class="card-pais">
-                            <img src="imgs/continentes/oriente.jpg" alt="Arabia Saudí">
+                            <img src="imgs/continentes/oriente.jpg" alt="Arabia Saudí"> <!-- Imagen del país -->
                             <section class="contenido">
-                                <h3 class="titulo-pais">Arabia Saudí</h3>
+                                <h3 class="titulo-pais">Arabia Saudí</h3> <!-- Nombre del país -->
+
+                                <!-- Lista de ciudades y precios -->
                                 <ul class="lista-ciudades">
                                     <li><strong>Riad</strong>
                                         <p class="precio">220&euro;</p>
@@ -536,17 +595,19 @@
                                         <p class="precio">210&euro;</p>
                                     </li>
                                 </ul>
-                                <a href="#" class="button">Descubre Arabia Saudí</a>
+                                <a href="#" class="button">Descubre Arabia Saudí</a> <!-- Botón de acción -->
                             </section>
                         </section>
                     </section>
 
-                    <!-- TURQUÍA -->
+                    <!-- PAÍS 3: TURQUÍA -->
                     <section class="pais" id="turquia">
                         <section class="card-pais">
-                            <img src="imgs/paises/turquia.jpg" alt="Turquía">
+                            <img src="imgs/paises/turquia.jpg" alt="Turquía"> <!-- Imagen del país -->
                             <section class="contenido">
-                                <h3 class="titulo-pais">Turquía</h3>
+                                <h3 class="titulo-pais">Turquía</h3> <!-- Nombre del país -->
+
+                                <!-- Lista de ciudades y precios -->
                                 <ul class="lista-ciudades">
                                     <li><strong>Estambul</strong>
                                         <p class="precio">200&euro;</p>
@@ -558,17 +619,19 @@
                                         <p class="precio">190&euro;</p>
                                     </li>
                                 </ul>
-                                <a href="#" class="button">Descubre Turquía</a>
+                                <a href="#" class="button">Descubre Turquía</a> <!-- Botón de acción -->
                             </section>
                         </section>
                     </section>
 
-                    <!-- EMIRATOS ÁRABES -->
+                    <!-- PAÍS 4: EMIRATOS ÁRABES -->
                     <section class="pais" id="emiratosarabes">
                         <section class="card-pais">
-                            <img src="imgs/paises/dubai.jpg" alt="Emiratos Árabes">
+                            <img src="imgs/paises/dubai.jpg" alt="Emiratos Árabes"> <!-- Imagen del país -->
                             <section class="contenido">
-                                <h3 class="titulo-pais">Emiratos Árabes</h3>
+                                <h3 class="titulo-pais">Emiratos Árabes</h3> <!-- Nombre del país -->
+
+                                <!-- Lista de ciudades y precios -->
                                 <ul class="lista-ciudades">
                                     <li><strong>Dubái</strong>
                                         <p class="precio">250&euro;</p>
@@ -580,7 +643,7 @@
                                         <p class="precio">210&euro;</p>
                                     </li>
                                 </ul>
-                                <a href="#" class="button">Descubre Emiratos Árabes</a>
+                                <a href="#" class="button">Descubre Emiratos Árabes</a> <!-- Botón de acción -->
                             </section>
                         </section>
                     </section>

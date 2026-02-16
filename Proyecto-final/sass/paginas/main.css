@@ -644,16 +644,12 @@ main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  /* hace que la imagen cubra todo el contenedor */
   filter: blur(2px);
-  /* desenfoca la imagen */
   z-index: 0;
-  /* queda detrás del contenido */
 }
 
 .seccion-principal > *:not(.bg-borrosa) {
   position: relative;
-  /* Mantiene el contenido encima del pseudo-elemento */
   z-index: 1;
 }
 
