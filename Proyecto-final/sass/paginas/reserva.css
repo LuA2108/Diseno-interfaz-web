@@ -642,6 +642,14 @@ main {
   display: flex;
 }
 
+.formulario-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
 .container-datos {
   display: flex;
   flex-direction: column;

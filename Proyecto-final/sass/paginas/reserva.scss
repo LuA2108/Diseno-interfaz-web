@@ -29,6 +29,13 @@ main {
     display: flex;         // Flexbox para organizar hijos
 }
 
+.formulario-principal {
+        display: flex; // Activar Flexbox
+        justify-content: center; // Centrar horizontalmente
+        align-items: center; // Centrar verticalmente opcional si quieres
+        flex-direction: column; // Apilar elementos verticalmente
+        padding: 20px; // Reducir padding en móviles
+    }
 
 // ===================== CONTENEDOR DE DATOS =====================
 .container-datos {
