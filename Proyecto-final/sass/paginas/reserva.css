@@ -18,9 +18,7 @@ header {
 .enlace-sesion > ul li > a {
   display: flex;
   align-items: center;
-  /* Alinea verticalmente */
   gap: 8px;
-  /* Espacio entre icono y texto */
   text-decoration: none;
 }
 
