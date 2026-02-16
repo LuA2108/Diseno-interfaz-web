@@ -576,6 +576,57 @@ h2 {
   /* mejora la legibilidad */
 }
 
+/* Media query para pantallas menores o iguales a 900px ============================== */
+@media (max-width: 900px) {
+  /* Permite que las pestañas bajen a la siguiente fila
+     cuando ya no entran en una sola línea */
+  .tab-content {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  /* Cambia las cards horizontales a formato vertical
+     para que se adapten mejor a tablet/móvil */
+  .card-horizontal {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-self: center;
+  }
+  /* Ajusta tamaño de las tarjetas */
+  .card {
+    width: 380px;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  /* ================= FOOTER RESPONSIVE ================= */
+  footer {
+    /* Cambia la distribución principal a columna
+       para que todo se apile verticalmente */
+    /* Hace que la sección del logo ocupe todo el ancho */
+    /* Apila las secciones del footer (Inicio, Destinos, etc.)
+       una debajo de otra */
+    /* Centra texto y contenido interno */
+  }
+  footer .container-sections {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .section1 {
+    width: 100%;
+    justify-content: center;
+  }
+  footer .section2 {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    gap: 30px;
+  }
+  footer .section-footer {
+    align-items: center;
+    text-align: center;
+  }
+}
 main {
   background-image: url("../../imgs/fondo-registro.png");
   background-repeat: no-repeat;

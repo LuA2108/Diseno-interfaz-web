@@ -1,14 +1,14 @@
-// IMPORTACION DE ESTILOS SCSS ==========================
-@import "../variables";
-@import "../mixin";
-@import "../cabecera";
-@import "../menu";
-@import "../card";
-@import "../footer";
-@import "../keyframes";
-@import "../reset";
+// ===================== IMPORTACIONES =====================
+// Variables, mixins y estilos separados por secciones
+@import "../variables";   // Variables globales (colores, fuentes, tamaños)
+@import "../mixin";       // Mixins reutilizables
+@import "../cabecera";    // Estilos del header
+@import "../menu";        // Estilos del menú
+@import "../card";        // Estilos de las cards
+@import "../footer";      // Estilos del footer
+@import "../keyframes";   // Animaciones CSS
+@import "../reset";       // Reset de estilos por defecto del navegador
 @import "../media";
-
 
 // ======================================================
 // ESTILO CUERPO PRINCIPAL ==============================
