@@ -183,7 +183,6 @@ li {
 
 .section-header {
   text-align: center;
-  /* centra el título */
 }
 
 /* ================================= */
@@ -195,27 +194,20 @@ li {
 
 .section-header {
   text-align: center;
-  /* centra el título */
   padding: 15px 0;
 }
 .section-header h2 {
   font-size: 28px;
-  /* tamaño principal */
   font-weight: 700;
-  /* negrita */
   color: #16002f;
-  /* tu color principal */
   margin: 0;
   letter-spacing: 0.5px;
-  /* mejora la legibilidad */
 }
 
 .card-header h3 {
   font-size: 22px;
-  /* tamaño destacado */
   font-weight: 700;
   color: #16002f;
-  /* color principal */
   margin-bottom: 15px;
   text-align: center;
   letter-spacing: 0.5px;
@@ -234,9 +226,7 @@ li {
 }
 .beneficios-list li {
   background-color: #e0f7e9;
-  /* fondo suave */
   color: #007700;
-  /* texto verde */
   padding: 6px 12px;
   border-radius: 5px;
   font-weight: 500;
@@ -264,10 +254,8 @@ li {
 .card-horizontal {
   display: flex;
   flex-direction: row;
-  /* fila horizontal */
   align-items: center;
   justify-content: space-between;
-  /* separa los bloques */
   gap: 20px;
   width: 100%;
   background-color: #f2f1f1;
@@ -379,9 +367,7 @@ li {
 /* Imagen al hacer hover */
 .pais img:hover {
   animation: crecerTarjeta 0.3s forwards;
-  /* ejecuta tu keyframes */
   cursor: pointer;
-  /* opcional */
 }
 
 .lista-ciudades li {

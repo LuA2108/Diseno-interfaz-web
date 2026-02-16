@@ -1,49 +1,5 @@
-<think>
-**Assessing the Task Scope**
+// ESTILO PARA LAS CARD DE LOS HTML =========================================
 
-I've analyzed the user's request. They want me to comment on a new block of SCSS/CSS code. The style should be consistent with the previous "simplified" version: short, direct comments explaining the "what" of each property and selector. The code covers card styles, section headers, lists, horizontal cards, and a destination page layout.
-
-
-**Deconstructing the Code**
-
-I'm breaking down the code into logical sections:
-1.  **Basic Card & Button:** `.card`, `.button`, `.card img`.
-2.  **Headers:** `.section-header`, `.card-header`.
-3.  **Benefits List:** `.beneficios-list`.
-4.  **Animations:** `.card:hover`, `.chincheta`.
-5.  **Horizontal Card:** `.card-horizontal`, `.cards-container`, images, info, dates, price.
-6.  **Destination Page:** `.continente`, `.paises`, `.pais`, images, lists, content.
-
-
-**Drafting Simplified Comments (Mental Draft)**
-
-*   `.card`: Border radius, shadow, background color.
-*   `.button`: Background variable, text color, padding, no border, mixin transition, hover effect.
-*   `.section-header`: Center text, padding. `h2`: Size, bold, color, spacing.
-*   `.beneficios-list`: Flex column, gap. `li`: Green background, text color, padding, radius.
-*   `.card:hover`: Animation keyframe.
-*   `.card-horizontal`: Flex row, space between, gap.
-*   `.card-info`: Flex grow (2).
-*   `.precio-oferta`: Line-through (strikethrough).
-*   `.paises`: Flex wrap, center.
-*   `.pais img:hover`: Animation on hover.
-
-
-**Refining the Comments**
-
-I'm ensuring the comments are in Spanish and fit the "simplified" criteria.
-*   Instead of "Establece el radio del borde a 5px", I'll use "Bordes redondeados".
-*   Instead of "Cambia el color de fondo al pasar el mouse", I'll use "Fondo al pasar cursor".
-*   I'll keep existing comments if they are good, or shorten them if they are too verbose. The user's code already has some comments (e.g., `/* centra el título */`), I will clean them up to match the requested style or leave them if they are already short. I will add comments to lines that don't have them.
-
-
-**Final Polish**
-
-I'm reviewing the generated comments to ensure every significant line has a brief explanation. I'll make sure the SCSS nesting is clear in the comments (e.g., "Estilo para h2 dentro del header").
-
-</think>Aquí tienes el código comentado con el mismo estilo simplificado y directo:
-
-```scss
 /* Card básica */
 .card {
     border-radius: 5px; // Bordes redondeados
