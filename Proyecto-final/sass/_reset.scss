@@ -20,6 +20,22 @@ button {
     cursor: pointer;
 }
 
+// ESTILO A TODOS LOS BOTONES  ============================
+.button {
+    background-color: $color-boton; // Color de fondo (variable)
+    color: #ffffff; // Texto blanco
+    border-radius: 5px; // Bordes redondeados
+    padding: 5px 25px; // Relleno vertical y horizontal
+    border: none; // Sin borde
+
+    @include transicion-background(0.5s, linear); // Mixin de transición
+
+    &:hover {
+        background-color: lighten(#16002f, 25%); // Aclara el fondo al pasar cursor
+    }
+}
+
+
 // ESTILO GENERAL A SEPARADOR =====================================
 hr {
     border: 1px solid white;

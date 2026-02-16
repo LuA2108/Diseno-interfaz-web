@@ -122,15 +122,15 @@ li {
   color: rgb(199, 199, 199);
   background-color: #270066;
   transition: 0.3s;
-  transition: font-size 0.9s linear, font-weight 0.9s linear;
+  transition: font-size 1.9s linear, font-weight 1.9s linear;
   transition: color 0.9s linear;
   transition: background 0.9s linear;
   border-radius: 4px;
 }
 
 .tab-link:hover {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 400;
   color: white;
   background-color: #4e00cc;
 }
@@ -164,18 +164,6 @@ li {
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   background-color: #f2f1f1;
-}
-
-.button {
-  background-color: #270066;
-  color: #ffffff;
-  border-radius: 5px;
-  padding: 5px 25px;
-  border: none;
-  transition: background 0.5s linear;
-}
-.button:hover {
-  background-color: rgb(81.6808510638, 0, 174.5);
 }
 
 .card img {
@@ -525,6 +513,18 @@ button {
   cursor: pointer;
 }
 
+.button {
+  background-color: #270066;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 5px 25px;
+  border: none;
+  transition: background 0.5s linear;
+}
+.button:hover {
+  background-color: rgb(81.6808510638, 0, 174.5);
+}
+
 hr {
   border: 1px solid white;
 }
@@ -681,10 +681,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: color 0.8s linear;
-}
-.formulario-principal button:hover {
-  color: #ffffff;
 }
 
 #miCarrusel-caracteristicas {
@@ -743,7 +739,6 @@ main {
   height: auto;
   margin: 0 10px;
   padding: 0;
-  background-color: transparent;
 }
 
 .linea-imgs {

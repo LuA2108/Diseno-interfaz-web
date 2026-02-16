@@ -7,19 +7,6 @@
     background-color: #f2f1f1; // Color de fondo gris claro
 }
 
-.button {
-    background-color: $color-boton; // Color de fondo (variable)
-    color: #ffffff; // Texto blanco
-    border-radius: 5px; // Bordes redondeados
-    padding: 5px 25px; // Relleno vertical y horizontal
-    border: none; // Sin borde
-
-    @include transicion-background(0.5s, linear); // Mixin de transición
-
-    &:hover {
-        background-color: lighten(#16002f, 25%); // Aclara el fondo al pasar cursor
-    }
-}
 
 .card img {
     height: 150px; // Altura fija para imágenes

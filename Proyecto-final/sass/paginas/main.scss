@@ -84,11 +84,6 @@ main {
         align-items: center; // Centrado vertical
         justify-content: center; // Centrado horizontal
 
-        @include transicion-color(0.8s, linear); // Mixin de transición de color
-    }
-
-    button:hover {
-        color: #ffffff; // Texto blanco al pasar el cursor
     }
 }
 
@@ -151,7 +146,6 @@ main {
     height: auto; // Alto automático
     margin: 0 10px; // Margen lateral
     padding: 0; // Sin relleno
-    background-color: transparent; // Fondo transparente
 }
 
 .linea-imgs {

@@ -85,15 +85,15 @@
     color: rgb(199, 199, 199); // Color texto inactivo
     background-color: $color-boton; // Fondo variable
     transition: 0.3s; // Transición suave general
-    @include transicion-font(0.9s, linear); // Mixin transición fuente
+    @include transicion-font(1.9s, linear); // Mixin transición fuente
     @include transicion-color(0.9s, linear); // Mixin transición color
     @include transicion-background(0.9s, linear); // Mixin transición fondo
     border-radius: 4px; // (Repetido) Bordes redondeados
 }
 
 .tab-link:hover {
-    font-size: 16px; // Aumenta tamaño fuente
-    font-weight: 500; // Aumenta grosor
+    font-size: 17px; // Aumenta tamaño fuente
+    font-weight: 400; // Aumenta grosor
     color: #ffff; // Texto blanco
     background-color: lighten($color-boton, 20%); // Fondo más claro
 }
