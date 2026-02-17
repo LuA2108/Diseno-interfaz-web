@@ -387,22 +387,22 @@ li {
 
 /* ============================ FOOTER ============================ */
 footer {
-  /* Fondo con gradiente horizontal personalizado */
+  /* Fondo con gradiente horizontal */
   background: linear-gradient(to right, #411774 20%, #7282c8 50%, #411774 78%);
   display: flex;
   flex-direction: column;
-  /* Contenedor general de las secciones del footer */
-  /* Sección izquierda (logo + frase) */
-  /* Sección derecha (columnas de enlaces) */
-  /* Estructura interna de cada columna del footer */
-  /* Logo del footer */
-  /* Línea divisoria */
+  /* ===== Contenedor principal (logo + columnas) ===== */
+  /* ===== Sección izquierda (logo y frase) ===== */
+  /* ===== Sección derecha (columnas de enlaces) ===== */
+  /* ===== Columnas individuales del footer ===== */
+  /* ===== Logo del footer ===== */
+  /* ===== Línea divisoria ===== */
+  /* ===== Efecto hover en enlaces ===== */
 }
 footer .container-sections {
   display: flex;
 }
 footer .section1 {
-  display: flex;
   width: 15%;
 }
 footer .section2 {
@@ -414,8 +414,8 @@ footer .section2 {
 footer .section-footer {
   display: flex;
   flex-direction: column;
-  /* Títulos (Inicio, Destinos, etc.) */
-  /* Contenedor de la lista */
+  /* Títulos de cada columna */
+  /* Lista de enlaces */
 }
 footer .section-footer h3 {
   text-align: center;
@@ -423,10 +423,7 @@ footer .section-footer h3 {
   font-size: 18px;
   padding: 10px;
 }
-footer .section-footer section {
-  display: flex;
-}
-footer .section-footer section ul {
+footer .section-footer ul {
   padding-top: 10px;
   display: flex;
   flex-direction: column;
@@ -443,9 +440,6 @@ footer .logo img {
 footer hr {
   width: 90%;
 }
-
-/* ============================ EFECTO HOVER EN ENLACES ============================ */
-/* Permite animar el enlace */
 footer li a {
   display: inline-block;
 }
@@ -460,12 +454,13 @@ footer li a:hover {
 }
 
 /* ============================ TEXTOS DEL LOGO ============================ */
+/* Aplica el mismo color a ambos textos */
 .text-logo1,
 .text-logo2 {
   color: #cd7f00;
 }
 
-/* Frase inferior del logo */
+/* Frase inferior destacada */
 .text-logo2 {
   font-size: 20px;
   padding: 40px;
