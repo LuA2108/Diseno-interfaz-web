@@ -58,7 +58,8 @@
 }
 
 .container-menus a {
-    font-size: 18px; // Tamaño de fuente enlaces
+    // Tamaño de fuente enlaces
+    font-size: 18px; 
 }
 
 // MENU DE LOS PAISES ====================================
@@ -113,7 +114,6 @@
     align-items: center; // Centrado vertical
 
 }
-
 
 /* Cuando el radio está seleccionado, aplicamos estilo a la etiqueta (label) correspondiente */
 #tab-europa:checked~.tabs-menu label[for="tab-europa"],

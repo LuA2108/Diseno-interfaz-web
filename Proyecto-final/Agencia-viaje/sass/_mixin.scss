@@ -5,10 +5,12 @@
 
 // Define mixin para animar tamaño y grosor de fuente
 @mixin transicion-font($tiempo, $tipo){ 
-    transition: font-size $tiempo $tipo, font-weight $tiempo $tipo; // Transición doble (tamaño y peso)
+    // Transición doble (tamaño y peso)
+    transition: font-size $tiempo $tipo, font-weight $tiempo $tipo; 
 }
 
 // Define mixin para animar el fondo
 @mixin transicion-background($tiempo, $tipo){ 
     transition: background $tiempo $tipo; // Aplica transición al background
 }
+

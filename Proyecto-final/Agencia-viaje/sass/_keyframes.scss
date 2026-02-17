@@ -1,8 +1,7 @@
 // ANIMACIONES (KEYFRAMES) DEFINIDOS ==========================================================
-// ============================================================================================
 
-// ============================================================================================
-// ANIMACION para mover ligeramente la tarjeta hacia arriba, aumentar su escala y darle sombra
+// ANIMACION para mover ligeramente la tarjeta hacia arriba, 
+// aumentar su escala y darle sombra
 @keyframes crecerTarjeta {
     from {
         transform: translateY(0) scale(1);
@@ -15,8 +14,8 @@
     }
 }
 
-// ============================================================================================
-// ANIMACION para mover ligeramente los elementos hacia la derecha ============================
+// ANIMACION para mover ligeramente los elementos 
+// hacia la derecha ============================
 @keyframes moverDerecha {
     0% {
         transform: translateX(0%);
@@ -27,8 +26,8 @@
     }
 }
 
-// ============================================================================================
-// ANIMACION para mover los elementos hacia la derecha desde izq ============================
+// ANIMACION para mover los elementos hacia ==
+// la derecha hasta la izq ===================
 @keyframes mover {
     0% {
         transform: translateX(100%);
