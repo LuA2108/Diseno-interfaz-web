@@ -1,0 +1,54 @@
+// ESTILO DEFINIDO PARA LA CABECERA ==================================================================================
+
+// ================================================================
+// Estilo de posicionamiento del header y color de fondo  =========
+header {
+    display: flex; // Activa Flexbox
+    flex-direction: column; // Orden vertical
+    background: linear-gradient(to right, // Fondo degradado horizontal
+            $gradiente-1 20%, // Color 1
+            $gradiente-2 50%, // Color 2
+            $gradiente-1 78%); // Color 1
+}
+
+// ================================================================
+// ESTILO A LA SECCIÓN DE SESIÓN (Registro y sesión) ==============
+.enlace-sesion>ul {
+    display: flex; // Flexbox para la lista
+    justify-content: end; // Alinea a la derecha
+    margin: 5px; // Margen exterior
+    font-size: 16px; // Tamaño texto
+    font-weight: 30px; // Grosor (OJO: 'px' es inválido aquí)
+    padding: 1px 8px; // Relleno vertical y horizontal
+    gap: 8px; // Espacio entre elementos
+    height: 1px;
+    li>a {
+        display: flex; // Flexbox para alinear icono/texto
+        align-items: center; // Centrado vertical
+        gap: 8px; // Espacio icono-texto
+        text-decoration: none; // Quita subrayado
+    }
+}
+
+// ================================================================
+// ESTILO AL CONTENEDOR DEL LOGO (Img y enlace) ===========
+.container-logo>a {
+    display: flex; // Flexbox
+    flex-direction: column; // Imagen sobre texto
+    align-items: center; // Centrado horizontal
+    font-family: $font-titulos; // Fuente variable
+    color: $color-logo; // Color variable
+    font-size: 25px; // Tamaño texto
+    img {
+        width: 100px; // Ancho imagen
+    }
+}
+
+.container-logo {
+    padding-bottom: 10px; // Espacio inferior
+}
+
+li {
+    list-style-type: none; // Quita viñetas de lista
+    color: $color-enlace; // Color texto variable
+}

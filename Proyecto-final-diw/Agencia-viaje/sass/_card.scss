@@ -1,0 +1,206 @@
+/* ======================= CARD BASE ==================== */
+.card {
+    border-radius: 5px; // Bordes redondeados
+    box-shadow: 2px 2px 5px rgba(0,0,0,.1); // Sombra suave
+    background: #f2f1f1; // Fondo gris claro
+
+    // Imagen dentro de la card
+    img {
+        height: 150px; // Altura fija
+    }
+
+    // Animación al pasar el cursor
+    &:hover {
+        animation: crecerTarjeta 1.25s ease forwards;
+    }
+}
+
+/* ======================= TITULOS ====================== */
+// Centra tanto section-header como card-header
+.section-header,
+.card-header {
+    text-align: center;
+}
+
+// Título principal de sección
+.section-header {
+    padding: 15px 0; // Espaciado vertical
+
+    h2 {
+        color: #16002f; // Color principal oscuro
+        margin: 0;
+        letter-spacing: .5px; // Espaciado entre letras
+    }
+}
+
+// Título interno de cada card
+.card-header h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #16002f;
+    margin-bottom: 15px;
+    letter-spacing: .5px;
+}
+
+/* ================= LISTA BENEFICIOS ================== */
+.beneficios-list {
+    display: flex;
+    flex-direction: column; // Lista vertical
+    gap: 10px;
+    padding: 10px;
+    margin: 0;
+    list-style: none; // Quita viñetas
+
+    li {
+        background: #e0f7e9; // Fondo verde claro
+        color: #007700; // Texto verde oscuro
+        padding: 6px 12px;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+    }
+}
+
+/* ================= CARD HORIZONTAL =================== */
+.card-horizontal {
+    display: flex; // Distribución en fila
+    align-items: center; // Centrado vertical
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    background: #f2f1f1;
+
+    // Imagen lateral
+    img {
+        width: 180px;
+        height: 120px;
+        border-radius: 4px;
+    }
+}
+
+// Contenedor general de cards horizontales
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* =========== INFO - FECHAS - PRECIO ================== */
+// Bloque de información principal
+.card-info {
+    flex: 2; // Ocupa más espacio
+
+    h3 {
+        margin-bottom: 8px;
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+        color: #555;
+    }
+}
+
+// Bloques secundarios (fechas y precio)
+.card-fechas,
+.card-precio {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+// Texto pequeño de fechas
+.card-fechas span {
+    font-size: 12px;
+    color: #888;
+}
+
+// Alineación del precio a la derecha
+.card-precio {
+    align-items: flex-end;
+}
+
+// Precio anterior (tachado)
+.precio-oferta {
+    text-decoration: line-through;
+    color: #a00;
+    font-size: 14px;
+}
+
+// Precio actual destacado
+.precio {
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(0,177,0);
+}
+
+/* ================== PAGINA DESTINOS ================== */
+// Contenedor por continente
+.continente {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+// Contenedor de países
+.paises {
+    display: flex;
+    flex-wrap: wrap; // Permite salto de línea
+    justify-content: center;
+}
+
+// Card individual de país
+.pais {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+
+    img {
+        width: 350px;
+        height: 150px;
+        border-radius: 5px;
+
+        // Animación al pasar el cursor
+        &:hover {
+            animation: crecerTarjeta .3s forwards;
+            cursor: pointer;
+        }
+    }
+}
+
+// Lista de ciudades
+.lista-ciudades li {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(0,22,123);
+}
+
+// Contenido interno de la card del país
+.contenido {
+    padding: 10px 5px;
+    background: #e1e1e1;
+    border-radius: 5px;
+
+    .button {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+// Títulos
+.titulo-pais {
+    padding-bottom: 10px;
+}
+
+.titulo-continente {
+    padding: 10px 0;
+    margin: 20px 0;
+    border-top: 1px solid #16002f;
+    border-bottom: 1px solid #16002f;
+}

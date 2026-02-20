@@ -1,0 +1,16 @@
+// Define mixin para animar color de texto
+@mixin transicion-color($tiempo, $tipo){ 
+    transition: color $tiempo $tipo; // Aplica transición a la propiedad color
+}
+
+// Define mixin para animar tamaño y grosor de fuente
+@mixin transicion-font($tiempo, $tipo){ 
+    // Transición doble (tamaño y peso)
+    transition: font-size $tiempo $tipo, font-weight $tiempo $tipo; 
+}
+
+// Define mixin para animar el fondo
+@mixin transicion-background($tiempo, $tipo){ 
+    transition: background $tiempo $tipo; // Aplica transición al background
+}
+

@@ -1,0 +1,728 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Denk+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:wght@200..1000&display=swap");
+header {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to right, #411774 20%, #7282c8 50%, #411774 78%);
+}
+
+.enlace-sesion > ul {
+  display: flex;
+  justify-content: end;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: 30px;
+  padding: 1px 8px;
+  gap: 8px;
+  height: 1px;
+}
+.enlace-sesion > ul li > a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.container-logo > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  color: #cd7f00;
+  font-size: 25px;
+}
+.container-logo > a img {
+  width: 100px;
+}
+
+.container-logo {
+  padding-bottom: 10px;
+}
+
+li {
+  list-style-type: none;
+  color: #bebebe;
+}
+
+.container-menus {
+  width: 100%;
+  padding: 12px;
+}
+.container-menus nav > ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.container-menus nav > ul li {
+  position: relative;
+}
+.container-menus nav > ul li a {
+  display: block;
+  padding: 10px 15px;
+  text-align: left;
+}
+.container-menus nav > ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background: linear-gradient(to bottom, #fca800, hsl(15, 100%, 50%));
+  border-radius: 10px;
+  min-width: 150px;
+  z-index: 2;
+}
+.container-menus nav > ul li {
+  /* Submenu del submenu (segundo nivel): a la derecha */
+}
+.container-menus nav > ul li > ul > li > ul {
+  display: none;
+  position: absolute;
+  top: 0; /* Misma altura que el ítem padre */
+  left: 100%; /* A la derecha del ítem padre */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background: linear-gradient(to bottom, #fca800, hsl(15, 100%, 50%));
+  border-radius: 10px;
+  min-width: 150px;
+  z-index: 2;
+}
+.container-menus nav > ul li:hover > ul {
+  display: block;
+}
+
+.container-menus a {
+  font-size: 18px;
+}
+
+.tabs-menu {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Ocultar los radio buttons */
+.tabs-section input[type=radio] {
+  display: none;
+}
+
+.tab-link {
+  flex: 1;
+  text-align: center;
+  padding: 12px 0;
+  cursor: pointer;
+  border-radius: 4px;
+  color: rgb(199, 199, 199);
+  background-color: #270066;
+  transition: 0.3s;
+  transition: font-size 1.9s linear, font-weight 1.9s linear;
+  transition: color 0.9s linear;
+  transition: background 0.9s linear;
+  border-radius: 4px;
+}
+
+.tab-link:hover {
+  font-size: 17px;
+  font-weight: 400;
+  color: white;
+  background-color: #4e00cc;
+}
+
+/* Contenido oculto por defecto */
+.tab-content {
+  display: none;
+}
+
+#tab-europa:checked ~ .tabs-content #section-europa,
+#tab-asia:checked ~ .tabs-content #section-asia,
+#tab-america:checked ~ .tabs-content #section-america,
+#tab-oriente:checked ~ .tabs-content #section-medio-oriente {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Cuando el radio está seleccionado, aplicamos estilo a la etiqueta (label) correspondiente */
+#tab-europa:checked ~ .tabs-menu label[for=tab-europa],
+#tab-asia:checked ~ .tabs-menu label[for=tab-asia],
+#tab-america:checked ~ .tabs-menu label[for=tab-america],
+#tab-oriente:checked ~ .tabs-menu label[for=tab-oriente] {
+  background-color: rgb(68.25, 0, 178.5);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ======================= CARD BASE ==================== */
+.card {
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  background: #f2f1f1;
+}
+.card img {
+  height: 150px;
+}
+.card:hover {
+  animation: crecerTarjeta 1.25s ease forwards;
+}
+
+/* ======================= TITULOS ====================== */
+.section-header,
+.card-header {
+  text-align: center;
+}
+
+.section-header {
+  padding: 15px 0;
+}
+.section-header h2 {
+  color: #16002f;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.card-header h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #16002f;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+/* ================= LISTA BENEFICIOS ================== */
+.beneficios-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+}
+.beneficios-list li {
+  background: #e0f7e9;
+  color: #007700;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* ================= CARD HORIZONTAL =================== */
+.card-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  background: #f2f1f1;
+}
+.card-horizontal img {
+  width: 180px;
+  height: 120px;
+  border-radius: 4px;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* =========== INFO - FECHAS - PRECIO ================== */
+.card-info {
+  flex: 2;
+}
+.card-info h3 {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+.card-info p {
+  font-size: 14px;
+  color: #555;
+}
+
+.card-fechas,
+.card-precio {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card-fechas span {
+  font-size: 12px;
+  color: #888;
+}
+
+.card-precio {
+  align-items: flex-end;
+}
+
+.precio-oferta {
+  text-decoration: line-through;
+  color: #a00;
+  font-size: 14px;
+}
+
+.precio {
+  font-size: 22px;
+  font-weight: bold;
+  color: rgb(0, 177, 0);
+}
+
+/* ================== PAGINA DESTINOS ================== */
+.continente {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.paises {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pais {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.pais img {
+  width: 350px;
+  height: 150px;
+  border-radius: 5px;
+}
+.pais img:hover {
+  animation: crecerTarjeta 0.3s forwards;
+  cursor: pointer;
+}
+
+.lista-ciudades li {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(0, 22, 123);
+}
+
+.contenido {
+  padding: 10px 5px;
+  background: #e1e1e1;
+  border-radius: 5px;
+}
+.contenido .button {
+  display: block;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.titulo-pais {
+  padding-bottom: 10px;
+}
+
+.titulo-continente {
+  padding: 10px 0;
+  margin: 20px 0;
+  border-top: 1px solid #16002f;
+  border-bottom: 1px solid #16002f;
+}
+
+/* ============================ FOOTER ============================ */
+footer {
+  /* Fondo con gradiente horizontal */
+  background: linear-gradient(to right, #411774 20%, #7282c8 50%, #411774 78%);
+  display: flex;
+  flex-direction: column;
+  /* ===== Contenedor principal (logo + columnas) ===== */
+}
+footer .container-sections {
+  display: flex;
+}
+footer {
+  /* ===== Sección izquierda (logo y frase) ===== */
+}
+footer .section1 {
+  width: 15%;
+}
+footer {
+  /* ===== Sección derecha (columnas de enlaces) ===== */
+}
+footer .section2 {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  margin: 40px;
+}
+footer {
+  /* ===== Columnas individuales del footer ===== */
+}
+footer .section-footer {
+  display: flex;
+  flex-direction: column;
+  /* Títulos de cada columna */
+}
+footer .section-footer h3 {
+  text-align: center;
+  color: aliceblue;
+  font-size: 18px;
+  padding: 10px;
+}
+footer .section-footer {
+  /* Lista de enlaces */
+}
+footer .section-footer ul {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+footer {
+  /* ===== Logo del footer ===== */
+}
+footer .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .logo img {
+  width: 10em;
+}
+footer {
+  /* ===== Línea divisoria ===== */
+}
+footer hr {
+  width: 90%;
+}
+footer {
+  /* ===== Efecto hover en enlaces ===== */
+}
+footer li a {
+  display: inline-block;
+}
+footer li a:hover {
+  animation: moverDerecha 0.75s ease;
+}
+
+/* ============================ COPYRIGHT ============================ */
+.copyright {
+  text-align: center;
+  color: white;
+}
+
+/* ============================ TEXTOS DEL LOGO ============================ */
+/* Aplica el mismo color a ambos textos */
+.text-logo1,
+.text-logo2 {
+  color: #cd7f00;
+}
+
+/* Frase inferior destacada */
+.text-logo2 {
+  font-size: 20px;
+  padding: 40px;
+}
+
+@keyframes crecerTarjeta {
+  from {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 8px 18px rgba(92, 92, 92, 0.12);
+  }
+  to {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 20px 32px 30px rgba(0, 0, 0, 0.12);
+  }
+}
+@keyframes moverDerecha {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+@keyframes mover {
+  0% {
+    transform: translateX(100%);
+    /* empieza fuera a la derecha */
+  }
+  100% {
+    transform: translateX(-100%);
+    /* termina fuera a la izquierda */
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.button {
+  background-color: #270066;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 5px 25px;
+  border: none;
+  transition: background 0.5s linear;
+}
+.button:hover {
+  background-color: rgb(81.6808510638, 0, 174.5);
+}
+
+hr {
+  border: 1px solid white;
+}
+
+a {
+  text-decoration: none;
+  color: #bebebe;
+  transition: color 0.6s linear;
+}
+a:hover {
+  color: #ffffff;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 1px 1px 0px rgb(189, 189, 189);
+  color: #270066;
+  /* tamaño principal */
+  font-weight: 600;
+  /* negrita */
+  color: #16002f;
+  /*color principal */
+  margin: 0;
+  letter-spacing: 0.5px;
+  /* mejora la legibilidad */
+}
+
+p {
+  font-family: "Nunito", sans-serif;
+}
+
+/* Media query para pantallas menores o iguales a 900px ============================== */
+@media (max-width: 900px) {
+  /* Permite que las pestañas bajen a la siguiente fila
+     cuando ya no entran en una sola línea */
+  .tab-content {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  /* Cambia las cards horizontales a formato vertical
+     para que se adapten mejor a tablet/móvil */
+  .card-horizontal {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-self: center;
+  }
+  /* Ajusta tamaño de las tarjetas */
+  .card {
+    width: 380px;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  /* ================= FOOTER RESPONSIVE ================= */
+  footer {
+    /* Cambia la distribución principal a columna
+       para que todo se apile verticalmente */
+  }
+  footer .container-sections {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer {
+    /* Hace que la sección del logo ocupe todo el ancho */
+  }
+  footer .section1 {
+    width: 100%;
+    justify-content: center;
+  }
+  footer {
+    /* Apila las secciones del footer (Inicio, Destinos, etc.)
+       una debajo de otra */
+  }
+  footer .section2 {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    gap: 30px;
+  }
+  footer {
+    /* Centra texto y contenido interno */
+  }
+  footer .section-footer {
+    align-items: center;
+    text-align: center;
+  }
+}
+.inicio {
+  background-color: #ffffff;
+}
+
+.titulos {
+  font-family: "Poppins", sans-serif;
+  color: rgb(250, 248, 248);
+  text-shadow: 2px 2px 2px black;
+  text-align: center;
+}
+
+.seccion-principal {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  overflow: hidden;
+  padding: 40px 0px;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.bg-borrosa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: blur(2px);
+  z-index: 0;
+}
+
+.seccion-principal > *:not(.bg-borrosa) {
+  position: relative;
+  z-index: 1;
+}
+
+.formulario-principal {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.formulario-principal input {
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  padding: 10px 15px;
+  transition: border-color 0.5s linear box-shadow 0.3s ease;
+  outline: none;
+}
+.formulario-principal input:focus {
+  border-color: #F39C12;
+  box-shadow: 0 0 5px #F39C12;
+}
+.formulario-principal button {
+  background-color: #270066;
+  border: none;
+  border-radius: 10px;
+  color: rgb(212, 212, 212);
+  padding: 5px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#miCarrusel-caracteristicas {
+  padding: 40px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+.fon {
+  background-color: rgba(138, 159, 166, 0.601);
+  padding: 50px;
+  border-radius: 15px;
+}
+
+.section-destacados {
+  text-align: center;
+  padding: 20px;
+}
+.section-destacados h2 {
+  padding-bottom: 20px;
+}
+
+.continente {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pagina-destinos h1 {
+  padding: 15px;
+  font-family: "Poppins", sans-serif;
+  color: #16002f;
+  border-bottom: 2px solid #16002f;
+  margin: 20px 20px;
+  border-top: 2px solid #16002f;
+}
+
+.container-linea-img {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 20px 0;
+}
+
+.container-linea-img h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  padding: 20px 0;
+}
+
+.icono-bandera {
+  width: 35px;
+  height: auto;
+  margin: 0 10px;
+  padding: 0;
+}
+
+.linea-imgs {
+  display: flex;
+  gap: 20px;
+  /* ancho según contenido total */
+  animation: mover 16s linear infinite;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.titulo-continente span {
+  transition: color 0.8s linear, text-shadow 0.4s linear;
+}
+.titulo-continente span:hover {
+  color: #5502b5;
+  text-shadow: 3px 3px 3px #16002f;
+}/*# sourceMappingURL=main.css.map */

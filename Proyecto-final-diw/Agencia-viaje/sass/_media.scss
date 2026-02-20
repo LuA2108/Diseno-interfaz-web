@@ -1,0 +1,61 @@
+/* Media query para pantallas menores o iguales a 900px ============================== */
+@media (max-width: 900px) {
+
+    /* Permite que las pestañas bajen a la siguiente fila
+       cuando ya no entran en una sola línea */
+    .tab-content {
+        flex-wrap: wrap; // Activa el salto de línea en flex
+        gap: 10px; // Espacio entre elementos
+    }
+
+    /* Cambia las cards horizontales a formato vertical
+       para que se adapten mejor a tablet/móvil */
+    .card-horizontal {
+        display: flex;
+        flex-direction: column; // Imagen arriba, texto abajo
+        text-align: center; // Centra el contenido
+        align-self: center;
+    }
+
+    /* Ajusta tamaño de las tarjetas */
+    .card {
+        width: 380px; // Ancho fijo para mantener diseño uniforme
+        height: auto; // Altura automática según contenido
+        object-fit: cover; // Ajusta imagen sin deformarla
+    }
+
+    /* ================= FOOTER RESPONSIVE ================= */
+    footer {
+
+        /* Cambia la distribución principal a columna
+           para que todo se apile verticalmente */
+        .container-sections {
+            flex-direction: column;
+            align-items: center; // Centra los bloques
+        }
+
+        /* Hace que la sección del logo ocupe todo el ancho */
+        .section1 {
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* Apila las secciones del footer (Inicio, Destinos, etc.)
+           una debajo de otra */
+        .section2 {
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0; // Reduce margen lateral
+            gap: 30px; // Espacio entre columnas
+        }
+
+        /* Centra texto y contenido interno */
+        .section-footer {
+            align-items: center;
+            text-align: center;
+        }
+
+    }
+
+}
+

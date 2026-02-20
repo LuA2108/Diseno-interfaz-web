@@ -1,0 +1,87 @@
+/* ============================ FOOTER ============================ */
+footer {
+    /* Fondo con gradiente horizontal */
+    background: linear-gradient(to right,
+            $gradiente-1 20%, // Primer color
+            $gradiente-2 50%, // Color central
+            $gradiente-1 78% // Vuelve al color inicial
+        );
+
+    display: flex;
+    flex-direction: column; // Apila el contenido verticalmente
+
+    /* ===== Contenedor principal (logo + columnas) ===== */
+    .container-sections { display: flex; } // Distribuye section1 y section2 en horizontal
+
+    /* ===== Sección izquierda (logo y frase) ===== */
+    .section1 { width: 15%; } // Ocupa solo una pequeña parte del ancho
+
+    /* ===== Sección derecha (columnas de enlaces) ===== */
+    .section2 {
+        flex: 1; // Ocupa el resto del espacio disponible
+        display: flex;
+        justify-content: space-around; // Espacio uniforme entre columnas
+        margin: 40px; // Separación exterior
+    }
+
+    /* ===== Columnas individuales del footer ===== */
+    .section-footer {
+        display: flex;
+        flex-direction: column; // Título arriba, lista debajo
+
+        /* Títulos de cada columna */
+        h3 {
+            text-align: center;
+            color: aliceblue;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        /* Lista de enlaces */
+        ul {
+            padding-top: 10px;
+            display: flex;
+            flex-direction: column; // Elementos en vertical
+            gap: 5px; // Espacio entre <li>
+        }
+    }
+
+    /* ===== Logo del footer ===== */
+    .logo {
+        display: flex;
+        flex-direction: column; // Imagen arriba, texto abajo
+        align-items: center; // Centrado horizontal
+
+        img { width: 10em;  } // Tamaño controlado del logo
+    }
+
+    /* ===== Línea divisoria ===== */
+    hr { width: 90%; } // No ocupa el 100% del ancho
+
+
+    /* ===== Efecto hover en enlaces ===== */
+    li a {
+        display: inline-block; // Permite aplicar animación
+
+        // Animación personalizada para mover los enlaces a la derecha
+        &:hover { animation: moverDerecha 0.75s ease; } 
+    }
+}
+
+/* ============================ COPYRIGHT ============================ */
+.copyright {
+    text-align: center; // Centra el texto
+    color: white; // Color blanco para contraste
+}
+
+/* ============================ TEXTOS DEL LOGO ============================ */
+
+/* Aplica el mismo color a ambos textos */
+.text-logo1,
+.text-logo2 { color: $color-logo; } // Variable definida en variables.scss
+
+/* Frase inferior destacada */
+.text-logo2 {
+    font-size: 20px;
+    padding: 40px;
+}
